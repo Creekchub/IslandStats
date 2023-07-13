@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles/image.css">
+<link rel="stylesheet" href="styles/general.css">
+<link rel="stylesheet" href="styles/bars.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Caprasimo&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="inputReciever.js"></script>
+
+<html>
+  <head></head>
+
+  <body>
+    <div class="header">
+      <img class="header-logo" src="images/islandstats-icon-trans-scaled.png">
+       <img class="header-text" src="images/logo-text-cool.png">
+    </div>
+
+    <div class="top-bar">
+      <form class="search-form" id="thePlayer" onsubmit="return false">
+        <input class="search-bar" id="myPlayer" type="text" placeholder="Search for Players" list="players" oninput="storeSearchValue()" autocomplete="off">
+        <datalist class="playerlister" id="players">
+          <option value="creekchub"></option>
+          <option value="ruderrr"></option>
+        </datalist>
+        <button onclick="playerWindow()">Search</button>
+      </form>
+    </div>
+    <div class="middle-bar">
+      <div style="grid-column: 1/5;">
+        <p>Coming soon...</p>
+      </div>
+    </div>
+    <div class="bottom-bar">
+      Coming soon...
+    </div>
+  </body>
+</html>
