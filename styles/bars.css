@@ -1,0 +1,73 @@
+.top-bar {
+  height: 120px;
+  margin-top: 40px;
+  background-color: rgba(119, 119, 255, 0.916);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.search-bar {
+  width: 30%;
+  height: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(60, 99, 255);
+  cursor: pointer;
+  outline: none;
+  color: rgb(77, 77, 77);
+  font-family: Kanit;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 12px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+
+.search-bar:hover {
+  transition: box-shadow 0.15s;
+  box-shadow: 0px 0px 10px rgba(90, 90, 90, 0.681)
+}
+
+.search-bar::placeholder {
+  font-size: 18px;
+}
+
+.middle-bar {
+  height: 340px;
+  background-color: rgba(165, 164, 255, 0.883);
+  border-style: solid;
+  border-width: 0px;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-color: black;
+}
+
+.tourney-servers-bar {
+  background-color: blue;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.island-warrior {
+  width: 120px;
+}
+.island-warrior-image {
+  width: 120px;
+}
+.island-warrior-text {
+  margin: auto;
+  display: inline-block;
+}

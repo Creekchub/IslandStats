@@ -1,0 +1,58 @@
+.tourney-links {
+  background-color: rgb(0, 238, 255);
+  display: flex;
+  height: 200px;
+  align-items: center;
+}
+
+.link-container {
+  flex: 1;
+  background-color: rgb(55, 255, 238);
+  margin-right: 10px;
+  margin-left: 10px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgb(117, 230, 255);
+}
+
+.link-image {
+  display: block;
+  margin: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 16px;
+  border-color: rgba(255, 255, 255, 0.91);
+  margin-top: 10px;
+  cursor: pointer;
+  transition: opacity 0.5s;
+  transition: box-shadow 0.15s;
+}
+
+.link-image:hover {
+  opacity: 0.9;
+  box-shadow: 0px 0px 12px rgba(24, 24, 24, 0.899)
+}
+
+.link-text {
+  width: 140px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: Belanosima;
+  color: rgb(15, 15, 15);
+}
+
+.discord-text-container {
+  margin-left: 14px;
+  background-color: rgb(102, 255, 252);
+  font-family: Kanit;
+  font-weight: 500;
+  width: 200px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(0, 204, 255);
+}
