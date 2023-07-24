@@ -116,7 +116,7 @@
 .header-bar {
   position:fixed;
   width: 100%;
-  background-image: url(../images/background-banner.webp);
+  background-image: url('../images/background-banner.webp');
   top: 0px;
   left: 0px;
   height: 70px;
