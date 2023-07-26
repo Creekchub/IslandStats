@@ -896,7 +896,7 @@ t: {
 let servers = {
   iw: 4,
   //ib: 3,
-  //it: 4
+  it: 4
 }
 
 let games = ['sb', 'tgttos', 'hitw', 'bb', 'pkw'];
