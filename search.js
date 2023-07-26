@@ -1,4 +1,274 @@
 let players = {
+  ori: {
+    it: {
+      2: {
+        sb: 224,
+        tgttos: 469,
+        hitw: 475,
+        bb: 720,
+      }
+    }
+  },
+  Leo: {
+    it: {
+      2: {
+        sb: 269,
+        tgttos: 1179,
+        hitw: 980,
+        bb: 870,
+      }
+    }
+  },
+  Ryu: {
+    it: {
+      2: {
+        sb: 288,
+        tgttos: 721,
+        hitw: 840,
+        bb: 1455,
+      }
+    }
+  },
+  Finbo: {
+    it: {
+      2: {
+        sb: 338,
+        tgttos: 1000,
+        hitw: 935,
+        bb: 1215,
+      }
+    }
+  },
+  Cvenus: {
+    it: {
+      2: {
+        sb: 210,
+        tgttos: 805,
+        hitw: 1125,
+        bb: 1620,
+      }
+    }
+  },
+  envy: {
+    it: {
+      2: {
+        sb: 266,
+        tgttos: 616,
+        hitw: 1640,
+        bb: 1305,
+      }
+    }
+  },
+  sharpestfork: {
+    it: {
+      2: {
+        sb: 666,
+        tgttos: 620,
+        hitw: 530,
+        bb: 2205,
+      }
+    }
+  },
+  Xiler: {
+    it: {
+      2: {
+        sb: 440,
+        tgttos: 1125,
+        hitw: 980,
+        bb: 1815,
+      }
+    }
+  },
+  ITZWBL_: {
+    it: {
+      2: {
+        sb: 589,
+        tgttos: 719,
+        hitw: 1555,
+        bb: 1440,
+      }
+    }
+  },
+  Kingscortcher: {
+    it: {
+      2: {
+        sb: 290,
+        tgttos: 1682,
+        hitw: 1435,
+        bb: 1410,
+      }
+    }
+  },
+  Andante: {
+    it: {
+      2: {
+        sb: 266,
+        tgttos: 1386,
+        hitw: 1600,
+        bb: 1635,
+      }
+    }
+  },
+  Hiitzhunter: {
+    it: {
+      2: {
+        sb: 429,
+        tgttos: 1445,
+        hitw: 2090,
+        bb: 990,
+      }
+    }
+  },
+  sppirit: {
+    it: {
+      2: {
+        sb: 568,
+        tgttos: 1869,
+        hitw: 880,
+        bb: 1620,
+      }
+    }
+  },
+  turtleonMC: {
+    it: {
+      2: {
+        sb: 554,
+        tgttos: 1597,
+        hitw: 1325,
+        bb: 1665,
+      }
+    }
+  },
+  Fu6u: {
+    it: {
+      2: {
+        sb: 266,
+        tgttos: 1938,
+        hitw: 1665,
+        bb: 1455,
+      }
+    }
+  },
+  Clovish: {
+    it: {
+      2: {
+        sb: 378,
+        tgttos: 1536,
+        hitw: 2040,
+        bb: 1350,
+      }
+    }
+  },
+  redralis: {
+    it: {
+      2: {
+        sb: 690,
+        tgttos: 1232,
+        hitw: 1590,
+        bb: 1665,
+      }
+    }
+  },
+  TheHiddenVoid: {
+    it: {
+      2: {
+        sb: 370,
+        tgttos: 2147,
+        hitw: 1575,
+        bb: 1620,
+      }
+    }
+  },
+  Nefasto: {
+    it: {
+      2: {
+        sb: 813,
+        tgttos: 1571,
+        hitw: 1455,
+        bb: 1815,
+      }
+    }
+  },
+  Witherbeast: {
+    it: {
+      2: {
+        sb: 381,
+        tgttos: 2036,
+        hitw: 2075,
+        bb: 1440,
+      }
+    }
+  },
+  Cho: {
+    it: {
+      2: {
+        sb: 909,
+        tgttos: 1876,
+        hitw: 1275,
+        bb: 1755,
+      }
+    }
+  },
+  Erik: {
+    it: {
+      2: {
+        sb: 789,
+        tgttos: 1416,
+        hitw: 1525,
+        bb: 2175,
+      }
+    }
+  },
+  Prythium: {
+    it: {
+      2: {
+        sb: 730,
+        tgttos: 2026,
+        hitw: 1500,
+        bb: 1770,
+      }
+    }
+  },
+  Pika: {
+    it: {
+      2: {
+        sb: 378,
+        tgttos: 1951,
+        hitw: 2425,
+        bb: 1770,
+      }
+    }
+  },
+  KBelik: {
+    it: {
+      2: {
+        sb: 965,
+        tgttos: 1724,
+        hitw: 1700,
+        bb: 1860,
+      }
+    }
+  },
+  forteo: {
+    it: {
+      2: {
+        sb: 1872,
+        tgttos: 1456,
+        hitw: 1385,
+        bb: 2115,
+      }
+    }
+  },
+  kewll: {
+    it: {
+      2: {
+        sb: 1664,
+        tgttos: 1896,
+        hitw: 1860,
+        bb: 2610,
+      }
+    }
+  },
   Doozim: {
     iw: {
       1: {
@@ -20,6 +290,14 @@ let players = {
     }
   },
   Rotomm: {
+    it: {
+      2: {
+        sb: 778,
+        tgttos: 1608,
+        hitw: 2160,
+        bb: 1935,
+      }
+    },
     iw: {
       1: {
         sb: 974,
@@ -59,6 +337,14 @@ let players = {
         tgttos: 1573,
         hitw: 1835,
       }
+    },
+    it: {
+      2: {
+        sb: 733,
+        tgttos: 1695,
+        hitw: 1840,
+        bb: 1680
+      }
     }
   },
   PlutoAndreas: {
@@ -90,6 +376,14 @@ let players = {
         bb: 1950,
         tgttos: 1796,
         hitw: 2035,
+      }
+    },
+    it: {
+      2: { 
+        sb: 466,
+        tgttos: 1832,
+        hitw: 1870,
+        bb: 1755
       }
     }
   },
@@ -243,6 +537,14 @@ let players = {
         tgttos: 1416,
         hitw: 1589,
       }
+    },
+    it: {
+      2: {
+        sb: 232,
+        tgttos: 1467,
+        hitw: 2105,
+        bb: 1890 
+      }
     }
   },
   VampireAyo: {
@@ -282,6 +584,14 @@ let players = {
         bb: 1770,
         tgttos: 1360,
         hitw: 1328,
+      }
+    },
+    it: {
+      2: {
+        sb: 381,
+        tgttos: 1526,
+        hitw: 922,
+        bb: 1050
       }
     }
   },
@@ -457,8 +767,69 @@ let players = {
       }
     }
   },
-
 }
+
+/*
+
+t: {
+    iw: {
+      1: {
+        sb: ,
+        bb: ,
+        tgttos: ,
+        hitw: ,
+      }
+    }
+  },
+
+*/
+
+/*let players = {
+  Doozim: {
+    iw: {
+      1: {
+        sb: 1448,
+        tgttos: 1803,
+        hitw: 2084,
+        bb: 2022
+      }
+    }
+  },
+  SomethingNeon: {
+    iw: {
+      1: {
+        sb: 1216,
+        tgttos: 1082,
+        hitw: 1095,
+        bb: 1812
+      }
+    }
+  },
+  Brunted: {
+    iw: {
+      1: {
+        sb: 1250,
+        tgttos: 1929,
+        hitw: 1749,
+        bb: 1932
+      },
+    },
+    ib: {
+      1: {
+        sb: 1700,
+        tgttos: 1500,
+        hitw: 1700,
+        bb: 1200,
+        pkw: 100,
+        sub: true
+      },
+      5: {
+        pkw: 1000,
+        noncannon: true
+      },
+    }
+  }
+}*/
 
 /*
 
