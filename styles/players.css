@@ -28,6 +28,7 @@
 }
 
 .coinCount {
+  position: relative;
   font-family: Kanit;
   color: rgb(70, 86, 255);
   font-size: 30px;
@@ -49,11 +50,15 @@
   width: 16px;
 }
 .coinImageBig {
-  width: 26px;
-  margin-left: 10px;
+  position: absolute;
+  width: 30px;
+  top: 8px;
+  right: 6px;
 }
 
 .displayDiv {
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-style:ridge;
   border-width: 3px;
   border-color: rgb(53, 76, 255);

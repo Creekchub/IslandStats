@@ -790,123 +790,65 @@ let servers = {
   it: 4
 }
 
+serverNames = {
+  iw: 'IW',
+  //ib: IB,
+  it: 'IT',
+}
+
+let serversA = Object.keys(servers);
+
 let games = ['sb', 'tgttos', 'hitw', 'bb', 'pkw'];
 
 //console.log(`Ruderrr's score is: ${ruderrr.ib[1].tgttos}`); //normal call
 let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST
 
-let print = "";
-function dynamicReturn(server) {
-  avrgCounter = 0;
-  totalAvrg = 0;
-  totalAvrgCalculated = 0;
-  print = " ";
-
-  for(let i = 1; i <= 20; i++) {
-    if(players[player] !== undefined) {
-      if(players[player][server] !== undefined) {
-        if(players[player][server][i] !== undefined) {
-          console.log('defined');
-          avrgCounter ++;
-          print = print + `<br>SB ${server}${i}: \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 ${players[player][server][i].sb}<img style="width: 12px;" src=images/coin.webp>`;
-          print = print + `<br>TGTTOS ${server}${i}: \xa0 ${players[player][server][i].tgttos}<img style="width: 12px;" src=images/coin.webp>`;
-          print = print + `<br>HITW ${server}${i}:\xa0\xa0\xa0\xa0\xa0\xa0 ${players[player][server][i].hitw}<img style="width: 12px;" src=images/coin.webp>`;
-          print = print + `<br>BB ${server}${i}: \xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 ${players[player][server][i].bb}<img style="width: 12px;" src=images/coin.webp>`;
-          totalAvrg = (players[player][server][i].sb + players[player][server][i].tgttos + players[player][server][i].hitw + players[player][server][i].bb) / servers[server]
-          totalAvrg = Math.round(totalAvrg);
-          totalAvrgCalculated = totalAvrgCalculated + totalAvrg;
-        print = print + `<br>Total:\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0\xa0 ${totalAvrg}<img style="width: 12px;" src=images/coin.webp><br>`;
+function getTotals() {
+  totalCoinsDisplay = 0;
+  totalCoinsDisplayTally = 0;
+  stats = "";
+  for(a = 0; a < serversA.length; a++) {
+    if(players[player][serversA[a]] !== undefined) {
+      eval('let ' + serversA[a] + 'Check ' + '= ' + 'document.getElementById(' + serversA[a] + 'toggle' + ')');
+      if(eval(serversA[a] + 'toggle').checked) {
+        for(b = 0; b < 50; b++) {
+          if(players[player][serversA[a]][b] !== undefined) {
+            totalCoinsDisplayTally++;
+            let gameTotal = 0;
+            subOn = 0;
+            for(c = 0; c < games.length; c++) {
+              if(players[player][serversA[a]][b][games[c]] !== undefined) {
+                if(players[player][serversA[a]][b].sub !== undefined) {
+                  let subChecker = document.getElementById('subCheck');
+                  if(subChecker.checked) {
+                    gameTotal = gameTotal + players[player][serversA[a]][b][games[c]];
+                    subOn++;
+                  }
+                }else {
+                  gameTotal = gameTotal + players[player][serversA[a]][b][games[c]];
+                }
+              }
+            }if(gameTotal !== 0) {
+              totalCoinsDisplay = totalCoinsDisplay + Math.round(gameTotal / eval('servers.' + serversA[a]));
+              totalCoinsDisplay = Math.round(totalCoinsDisplay / totalCoinsDisplayTally);
+              stats = stats + `<span class="roundNumber">${eval('serverNames.' + serversA[a])}-${b}</span> ${Math.round(gameTotal / eval('servers.' + serversA[a]))} / ${gameTotal} <img class="coinImage" src="images/coin.webp">`
+              if(subOn > 0) {
+                stats = stats + `<span class="subTag">sub</span><br>`
+              }else {
+                stats = stats + `<br>`
+              }
+            }
+          }
         }
-        } else {
-      }
-      }else {
       }
     }
-    totalAvrgCalculated = totalAvrgCalculated / avrgCounter;
-    totalAvrgCalculated = Math.round(totalAvrgCalculated);
-    totalAvrgCalculated = `<br>Total Average: ${totalAvrgCalculated}`;
-    print = print + totalAvrgCalculated;
-    if(totalAvrgCalculated === "<br>Total Average: NaN") {
-      print = " "
-      print = print + "No Stats Available";
-      document.getElementById(`show${server}`).innerHTML = print;
-      document.getElementById(`show${server}`).innerHTML = print;
-    } else {
-      console.log('else ran');
-      document.getElementById(`show${server}`).innerHTML = print;
-    }
-    console.log('Dynamic Return ran');
-}
-
-function getTotal(x) {
-  let total = (players[player][server][x].sb + players[player][server][x].tgttos + players[player][server][x].hitw + players[player][server][x].bb) / servers[server];
-  total = Math.round(total);
-  return `<br>Total: ${total}<br>`;
-}
-
-function getServerStats(serverInput) {
-  let decider = document.getElementById(`${serverInput}toggle`);
-  if(decider.checked){
-    dynamicReturn(`${serverInput}`);
-    document.getElementById(`show${serverInput}`).hidden = false;
-    document.getElementById(`${serverInput}div`).style.borderStyle="solid";
-  }else {
-    document.getElementById(`show${serverInput}`).innerHTML = "";
-    document.getElementById(`${serverInput}div`).style.borderStyle="none";
-    document.getElementById(`show${serverInput}`).style.borderStyle="none";
-    document.getElementById(`show${serverInput}`).hidden = true;
   }
+  document.getElementById('showStats').innerHTML = stats;
+  document.getElementById('coinCount').innerHTML = `${totalCoinsDisplay}<img class="coinImageBig" src="images/coin.webp">`;
 }
 
 function setPlayerName() {
   document.getElementById('playerName').innerHTML = player;
-}
-
-function getTotals() {
-  serverArray = Object.keys(servers);
-  let statDisplay = '<span style="font-size: 13px;">Total ÷ Rounds per game / Total</span>';
-  let totalAverage = 0;
-  let totalAverageCounter = 0;
-  for(i = 0; i < 20; i++) {
-    if(players[player][serverArray[i]] !== undefined) {
-      let onDecider = document.getElementById(`${serverArray[i]}toggle`);
-      if(onDecider.checked) {
-        statDisplay = statDisplay + `<br><br>${serverArray[i]} -`
-        for(r = 0; r < 30; r++) {
-          if(players[player][serverArray[i]][r] !== undefined) {
-            let subCheck = document.getElementById('subCheck');
-            if(players[player][serverArray[i]][r] !== undefined) {
-              if(players[player][serverArray[i]][r]['sub'] === undefined) {
-                totalAverageCounter++;
-                let totalCoins = 0;
-                for(g = 0; g < 10; g++) {
-                  if(players[player][serverArray[i]][r][games[g]] !== undefined) {
-                    totalCoins = totalCoins + players[player][serverArray[i]][r][games[g]];
-                  }
-                }statDisplay = statDisplay +  `<br><span class="roundNumber">${r}:</span>${Math.round(totalCoins / servers[serverArray[i]])} / ${totalCoins}<img src="images/coin.webp" class="coinImage">`;
-                totalAverage = totalAverage + Math.round(totalCoins / servers[serverArray[i]]);
-              }
-              else if(subCheck.checked) {
-                totalAverageCounter++;
-                let totalCoins = 0;
-                for(g = 0; g < 10; g++) {
-                  if(players[player][serverArray[i]][r][games[g]] !== undefined) {
-                    totalCoins = totalCoins + players[player][serverArray[i]][r][games[g]];
-                  }
-                }statDisplay = statDisplay +  `<br><span class="roundNumber">${r}:</span>${Math.round(totalCoins / servers[serverArray[i]])} / ${totalCoins}<img src="images/coin.webp" class="coinImage"><span class="subTag">SUB</span>`;
-                totalAverage = totalAverage + Math.round(totalCoins / servers[serverArray[i]]);
-              }
-            }
-         }
-       }
-     }
-  }
-  document.getElementById('showStats').innerHTML = statDisplay;
-  if(statDisplay === '') {
-    document.getElementById('showStats').innerHTML = 'Event Checkboxes are empty.<br><br>Select some checkboxes to include this players events.<br><br>IW = Island Warriors<br>IT = Island Tournaments<br>IB = Island Battles'
-  }
- }
- document.getElementById('coinCount').innerHTML = `${Math.round(totalAverage / totalAverageCounter)}<img src="images/coin.webp" class="coinImageBig">`
 }
 
 function getDataList() {//sets the searchbar list from object data

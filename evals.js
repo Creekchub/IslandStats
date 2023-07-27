@@ -772,10 +772,14 @@ let players = {
 
 //console.log(players['Toremood']['iw']['1'].sb)
 
-let playerName = 'Twility';
+let player = 'Twility';
 
-if(players[playerName].it['2'] !== undefined) {
-    console.log(players[playerName].it['2'].sb);
-}else {
-    console.log('YOURE STUPID( LOL)');
+let servers = {
+  iw: 4,
+  it: 4,
+  ib: 4,
+}
+
+function showTotal() {
+  console.log('among us is not dead');
 }
