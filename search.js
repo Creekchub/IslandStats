@@ -845,6 +845,7 @@ function getTotals() {
   }
   document.getElementById('showStats').innerHTML = stats;
   document.getElementById('coinCount').innerHTML = `${totalCoinsDisplay}<img class="coinImageBig" src="images/coin.webp">`;
+  getChart();
 }
 
 function setPlayerName() {
@@ -862,7 +863,36 @@ function getDataList() {//sets the searchbar list from object data
   }
 }
 
-function getChart() { // MAINTAINENCE
+function getChart() {
+  for(gameCounter = 0; gameCounter < games.length; gameCounter++) {
+    eval('var ' + games[gameCounter] + 'Counter' + ' = 0' + ';');
+  }
+
+  for(gameItt = 0; gameItt < games.length; gameItt++) {
+    eval('var ' + 'value' + games[gameItt] + ' = 0' + ';');
+    for(serverItt = 0; serverItt < serversA.length; serverItt++) {
+      if(players[player][serversA[serverItt]] !== undefined) {
+        for(roundItt = 0; roundItt < 50; roundItt++) {
+          if(players[player][serversA[serverItt]][roundItt] !== undefined) {
+            if(players[player][serversA[serverItt]][roundItt][games[gameItt]] !== undefined) {
+              console.log('I ran');
+              eval('value' + games[gameItt] + ' = ' + 'value' + games[gameItt] + ' + players[player][serversA[serverItt]][roundItt][games[gameItt]]');
+              eval(games[gameItt] + 'Counter++')
+            }
+          }
+        }
+      }
+    }
+  }
+  for(gameCaller = 0; gameCaller < games.length; gameCaller++) {
+    if(eval('value' + games[gameCaller]) !== undefined && eval('value' + games[gameCaller]) !== 0) {
+      console.log(eval('value' + games[gameCaller] +  ' / ' + games[gameCaller] + 'Counter'));
+    }
+  }
+}
+
+
+function getChartT() { // MAINTAINENCE
   let coinsSB =0, countSB = 0, coinsTGTTOS = 0, countTGTTOS = 0, coinsHITW = 0, countHITW = 0, coinsBB = 0, countBB = 0, coinsPKW = 0, countPKW = 0;
 
   togglesToArray = Object.keys(servers);
@@ -961,6 +991,7 @@ function getChart() { // MAINTAINENCE
       }
     }
   }
+  let amonger = 'sb';
   sbBar.data.datasets[0].data[0] = coinsSB / countSB;
   sbBar.update();
   tgttosBar.data.datasets[0].data[0] = coinsTGTTOS / countTGTTOS;
