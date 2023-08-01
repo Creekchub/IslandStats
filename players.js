@@ -993,7 +993,7 @@ let players = {
       }
     }
   },
-  Minelover: {
+  Mineloverr: {
     iw: {
       2: {
         sb: 847,
