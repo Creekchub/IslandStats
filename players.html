@@ -3,15 +3,14 @@
 <html>
   <head>
     <title>Player Stats</title>
+    <script src="players.js"></script>
     <script src="inputReciever.js"></script>
     <script src="search.js"></script>
     <link rel="stylesheet" href="styles/players.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="icon" type="image/x-icon" href="/images/islandstats-icon-trans-scaled.png">
   </head>
 
   <body onload="setPlayerName(); getDataList();" style="background-color: rgb(218, 221, 253);">
@@ -32,20 +31,20 @@
       <img src="" id="playerSkin" class="playerSkin">
       <div class="checkboxes">
         <div>
-          <input type="checkbox" id="iwtoggle" class="checkbox" onchange="getTotals()">
+          <input type="checkbox" id="iwtoggle" class="checkbox" onchange="getTotals(); setChecks();">
           <label class="checkLabel" for="iwtoggle">IW</label>
         </div>
         <div>
-          <input type="checkbox" id="ittoggle" class="checkbox" onchange="getTotals()">
-          <label class="checkLabel" for="iwtoggle">IT</label>
+          <input type="checkbox" id="ittoggle" class="checkbox" onchange="getTotals(); setChecks();">
+          <label class="checkLabel" for="ittoggle">IT</label>
         </div>
         <!--<div>
           <input type="checkbox" id="ibtoggle" class="checkbox" onchange="getTotals(); getChart();">
-          <label class="checkLabel" for="iwtoggle">IB</label>
+          <label class="checkLabel" for="ibtoggle">IB</label>
         </div>-->
         <div>
-          <input type="checkbox" id="subCheck" class="checkbox" onchange="getTotals(); getChart();">
-          <label class="checkLabel" for="iwtoggle">Sub</label>
+          <input type="checkbox" id="subCheck" class="checkbox" onchange="getTotals(); setChecks();">
+          <label class="checkLabel" for="subCheck">Sub</label>
         </div>
       </div>
     </div>
@@ -94,7 +93,7 @@
     );
 
     const dataSB = {
-      labels: ['SB'], //SKY BATTLE
+      labels: ['SB(x1.5)'], //SKY BATTLE
       datasets: [{
         label: 'Coins',
         data: [''],
@@ -116,7 +115,7 @@
         responsive: false,
         scales: {
           y: {
-            max: 400, //the cap
+            max: 520, //the cap
           }
         }
       }
@@ -226,7 +225,7 @@
     );
 
     const dataPKW = {
-      labels: ['PKW'], //SKY BATTLE
+      labels: ['PKW(x1.5)'], //SKY BATTLE
       datasets: [{
         label: 'Coins',
         data: [''],
@@ -248,7 +247,7 @@
         responsive: false,
         scales: {
           y: {
-            max: 400, //the cap
+            max: 560, //the cap
           }
         }
       }
@@ -258,5 +257,11 @@
        configPKW,
     );
       </script>
+    <script>
+      updateChecks();
+    </script>
+    <script>
+      getTotals();
+    </script>
   </body>
 </html>
