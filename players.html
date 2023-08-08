@@ -30,19 +30,19 @@
       <p id="coinCount" class="coinCount">0<img class="coinImageBig" src="images/coin.webp"></p>
       <img src="" id="playerSkin" class="playerSkin">
       <div class="checkboxes">
-        <div>
-          <input type="checkbox" id="iwtoggle" class="checkbox" onchange="getTotals(); setChecks();">
+        <div id="checkboxDiv">
+         <!-- <input type="checkbox" id="iwtoggle" class="checkbox" onchange="getTotals(); setChecks();">
           <label class="checkLabel" for="iwtoggle">IW</label>
         </div>
         <div>
           <input type="checkbox" id="ittoggle" class="checkbox" onchange="getTotals(); setChecks();">
           <label class="checkLabel" for="ittoggle">IT</label>
-        </div>
+        </div>-->
         <!--<div>
           <input type="checkbox" id="ibtoggle" class="checkbox" onchange="getTotals(); getChart();">
           <label class="checkLabel" for="ibtoggle">IB</label>
         </div>-->
-        <div>
+        <div id="subCheckDiv">
           <input type="checkbox" id="subCheck" class="checkbox" onchange="getTotals(); setChecks();">
           <label class="checkLabel" for="subCheck">Sub</label>
         </div>
@@ -257,6 +257,7 @@
        configPKW,
     );
       </script>
+      <script>makeChecks();</script>
     <script>
       updateChecks();
     </script>

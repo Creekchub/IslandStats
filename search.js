@@ -127,8 +127,18 @@ function getDataList() {//sets the searchbar list from object data
     let newData = document.createElement('option');
 
     newData.setAttribute('value', `${playerList[i]}`);
-
     document.getElementById('datalistPlayers').append(newData);
+  }
+}
+
+function makeChecks() { //example
+  for(i = 0; i < serversA.length; i++) {
+    let deezer = document.createElement('input');
+    deezer.setAttribute('type', 'checkbox');
+    deezer.setAttribute('id', `${serversA[i]}toggle`);
+    deezer.setAttribute('class', 'checkbox');
+    deezer.setAttribute('onchange', 'getTotals(); setChecks();');
+    document.getElementById('checkboxDiv').append(deezer);
   }
 }
 
