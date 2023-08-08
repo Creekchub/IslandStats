@@ -7,6 +7,14 @@
   top: -10px;
 }
 
+p {
+  font-family: Kanit;
+}
+
+span {
+  font-family: Kanit;
+}
+
 .top-bar {
   height: 120px;
   margin-top: 40px;

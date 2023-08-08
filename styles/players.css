@@ -1,3 +1,16 @@
+body {
+  height: 5000px;
+}
+
+.coinAveragePrescript {
+  font-family: Kanit;
+  font-size: 14px;
+  line-height: 13px;
+  color: rgb(42, 42, 42);
+  margin-bottom: 0px;
+  text-align: center;
+}
+
 .playerProfile {
   display: inline-block;
   width: 210px;
@@ -42,7 +55,7 @@
   border-color: rgb(103, 100, 204);
   border-width: 1px;
   border-radius: 14px;
-  margin-top: 16px;
+  margin-top: 6px;
   padding-bottom: 2px;
 }
 
@@ -82,8 +95,8 @@
 .checkboxes {
   margin-top: 10px;
   margin-bottom: 10px;
-  display: flex;
   justify-content: space-evenly;
+  outline: solid;
 }
 
 .checkbox {
@@ -91,7 +104,6 @@
 }
 
 .checkLabel {
-  display: block;
   font-family: Kanit;
   font-size: 15px;
   text-align: center;
@@ -116,6 +128,17 @@
   font-size: 14px;
   margin-right: 10px;
   color: rgb(0, 0, 0);
+}
+
+.subCheckDiv {
+  display: flex;
+  width: 100%;
+  outline:dashed;
+  outline-color: rgba(139, 139, 139, 0.494);
+  outline-width: 2px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 4px;
 }
 
 .header-bar {

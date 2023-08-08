@@ -39,8 +39,9 @@
   margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-family: Belanosima;
-  color: rgb(15, 15, 15);
+  font-family: Kanit;
+  font-weight: 500;
+  color: rgb(35, 35, 35);
 }
 
 .discord-text-container {
