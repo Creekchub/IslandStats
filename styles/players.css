@@ -95,12 +95,20 @@ body {
 .checkboxes {
   margin-top: 10px;
   margin-bottom: 10px;
-  justify-content: space-evenly;
-  outline: solid;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-right: 4px;
+  border-style: dotted;
+  border-radius: 10px;
+  border-color: rgba(74, 160, 235, 0.508);
+  position: relative;
 }
 
 .checkbox {
   cursor: pointer;
+  position: absolute;
+  right: 10px;
 }
 
 .checkLabel {
@@ -124,6 +132,11 @@ body {
   border-color: rgb(161, 0, 0);
 }
 
+label {
+  font-family: Kanit;
+  font-size: 15px;
+}
+
 .roundNumber {
   font-size: 14px;
   margin-right: 10px;
@@ -131,13 +144,7 @@ body {
 }
 
 .subCheckDiv {
-  display: flex;
   width: 100%;
-  outline:dashed;
-  outline-color: rgba(139, 139, 139, 0.494);
-  outline-width: 2px;
-  padding-top: 10px;
-  padding-bottom: 10px;
   padding-left: 4px;
 }
 

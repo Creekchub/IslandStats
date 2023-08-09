@@ -32,6 +32,8 @@
       <img src="" id="playerSkin" class="playerSkin">
       <div class="checkboxes">
         <div id="checkboxDiv">
+          <label for="subCheck">Sub</label>
+          <input type="checkbox" id="subCheck" class="checkbox" onchange="getTotals(); setChecks();"><br>
          <!-- <input type="checkbox" id="iwtoggle" class="checkbox" onchange="getTotals(); setChecks();">
           <label class="checkLabel" for="iwtoggle">IW</label>
         </div>
@@ -43,10 +45,10 @@
           <input type="checkbox" id="ibtoggle" class="checkbox" onchange="getTotals(); getChart();">
           <label class="checkLabel" for="ibtoggle">IB</label>
         </div>-->
-        <div class="subCheckDiv" id="subCheckDiv">
-          <label class="checkLabel" for="subCheck" style="margin-right: calc(100%);">Sub</label>
+        <!--<div class="subCheckDiv" id="subCheckDiv">
+          <label class="checkLabel" for="subCheck">Sub</label>
           <input type="checkbox" id="subCheck" class="checkbox" onchange="getTotals(); setChecks();">
-        </div>
+        </div>-->
       </div>
     </div>
     <script>
@@ -98,8 +100,6 @@
       datasets: [{
         label: 'Coins',
         data: [''],
-        backgroundColor: '#FEDB17',
-        borderColor: '#FFB600',
         borderWidth: 2
       },
     ],
@@ -131,8 +131,6 @@
       datasets: [{
         label: 'Coins',
         data: [''],
-        backgroundColor: '#FEDB17',
-        borderColor: '#FFB600',
         borderWidth: 2
       },
     ],
@@ -164,8 +162,6 @@
       datasets: [{
         label: 'Coins',
         data: [''],
-        backgroundColor: '#FEDB17',
-        borderColor: '#FFB600',
         borderWidth: 2
       },
     ],
@@ -197,8 +193,6 @@
       datasets: [{
         label: 'Coins',
         data: [''],
-        backgroundColor: '#FEDB17',
-        borderColor: '#FFB600',
         borderWidth: 2
       },
     ],
@@ -230,8 +224,6 @@
       datasets: [{
         label: 'Coins',
         data: [''],
-        backgroundColor: '#FEDB17',
-        borderColor: '#FFB600',
         borderWidth: 2
       },
     ],
@@ -264,6 +256,7 @@
     </script>
     <script>
       getTotals();
+      setChartColors();
     </script>
   </body>
 </html>

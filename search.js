@@ -11,9 +11,23 @@ let servers = {
 }
 
 serverNames = {
-  iw: 'IW',
+  iw: {
+    ac: 'IW',
+    full: 'Island Warriors'
+  },
   //ib: IB,
-  it: 'IT',
+  it: {
+    ac: 'IT',
+    full: 'Island Tournaments'
+  }
+}
+
+gameColors = {
+  sb: '#FF0000',
+  tgttos: '#FF8700',
+  bb: '#1BC419',
+  hitw: '#00E4FF',
+  pkw: '#FF00E4',
 }
 
 let serversA = Object.keys(servers);
@@ -59,7 +73,7 @@ function getTotals() {
             }if(gameTotal !== 0) {
               totalCoinsDisplay = totalCoinsDisplay + Math.round((gameTotal / returnServerRounds(`${serversA[a]}`, `${b}`)))
               totalCoinsDisplayTally++;
-              stats = stats + `<span class="roundNumber">${eval('serverNames.' + serversA[a])}-${b}</span> ${Math.round(gameTotal / returnServerRounds(`${serversA[a]}`, `${b}`))} <span style="color:rgb(29, 32, 255)">|</span> ${gameTotal} <img class="coinImage" src="images/coin.webp">`
+              stats = stats + `<span class="roundNumber">${eval('serverNames.' + serversA[a] + '.ac')}-${b}</span> ${Math.round(gameTotal / returnServerRounds(`${serversA[a]}`, `${b}`))} <span style="color:rgb(29, 32, 255)">|</span> ${gameTotal} <img class="coinImage" src="images/coin.webp">`
               if(subOn > 0) {
                 stats = stats + `<span class="subTag">sub</span><br>`
               }else {
@@ -133,12 +147,21 @@ function getDataList() {//sets the searchbar list from object data
 
 function makeChecks() { //example
   for(i = 0; i < serversA.length; i++) {
+    let deezer2 = document.createElement('label');
+    deezer2.setAttribute('for', `${serversA[i]}toggle`);
+    deezer2.setAttribute('id', `${serversA[i]}label`);
+    document.getElementById('checkboxDiv').append(deezer2);
+    document.getElementById(`${serversA[i]}label`).innerHTML = serverNames[serversA[i]].full;
+
     let deezer = document.createElement('input');
     deezer.setAttribute('type', 'checkbox');
     deezer.setAttribute('id', `${serversA[i]}toggle`);
     deezer.setAttribute('class', 'checkbox');
     deezer.setAttribute('onchange', 'getTotals(); setChecks();');
     document.getElementById('checkboxDiv').append(deezer);
+
+    let makeBreak = document.createElement('br');
+    document.getElementById('checkboxDiv').append(makeBreak);
   }
 }
 
@@ -190,5 +213,15 @@ function getChart() {
       pie.data.datasets[0].data[gameCaller] = 0;
       pie.update();
     }
+  }
+}
+
+function setChartColors() {
+  for(deemoager = 0; deemoager < games.length; deemoager++) {
+    eval(games[deemoager] + 'Bar.data.datasets[0].backgroundColor = ' + '`${gameColors[games[deemoager]]}`');
+    eval(games[deemoager] + 'Bar.data.datasets[0].borderColor = ' + '`${gameColors[games[deemoager]]}`');
+    pie.data.datasets[0].backgroundColor[deemoager] = `${gameColors[games[deemoager]]}`;
+    pie.update();
+    eval(games[deemoager] + 'Bar.update();')
   }
 }
