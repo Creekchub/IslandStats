@@ -9,3 +9,7 @@ function changeIT() {
 function changeIB() {
   window.open("https://discord.gg/ndyKvn6X96");
 }
+
+function shortcutHome() {
+  console.log('deeza');
+}

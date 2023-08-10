@@ -6,6 +6,7 @@
     <script src="players.js"></script>
     <script src="inputReciever.js"></script>
     <script src="search.js"></script>
+    <script src="navigator.js"></script>
     <link rel="stylesheet" href="styles/players.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +16,7 @@
 
   <body onload="setPlayerName(); getDataList();" style="background-color: rgb(218, 221, 253);">
     <div class="header-bar">
+        <a title="Home page" class="shortcutHome" href="index.html" ><img src="images/islandstats-icon-trans-scaled.png" style="position: absolute; width: 60px; top: 4px;"></a>
       <div class="search-row">
         <form  id="thePlayer" onsubmit="return false">
           <input class="search-bar-2" id="myPlayer" type="text" placeholder="Find Players" list="datalistPlayers" oninput="storeSearchValue()" autocomplete="off">

@@ -88,3 +88,14 @@ span {
   margin: auto;
   display: inline-block;
 }
+
+.islandStatsLogoText {
+  font-family: Kanit;
+  font-size: 30px;
+  margin-top: 70px;
+  margin-left: 8px;
+  margin-bottom: 0px;
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}

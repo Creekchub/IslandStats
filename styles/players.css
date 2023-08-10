@@ -1,5 +1,5 @@
 body {
-  height: 5000px;
+  height: 1200px;
 }
 
 .coinAveragePrescript {
@@ -233,4 +233,9 @@ body {
   position: absolute;
   right: 40px;
   top: 100px;
+}
+
+.islandStatsLogoText {
+  font-family: Kanit;
+  font-size: 50px;
 }
