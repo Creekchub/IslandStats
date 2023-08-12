@@ -4,10 +4,9 @@ let servers = {
     defaultRounds: 3,
     round1: 4
   },
-  //ib: 3,
-  it: {
+  /*it: {
     defaultRounds: 4,
-  }
+  }*/
 }
 
 serverNames = {

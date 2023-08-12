@@ -11,5 +11,5 @@ function changeIB() {
 }
 
 function shortcutHome() {
-  console.log('deeza');
+  window.open()
 }
