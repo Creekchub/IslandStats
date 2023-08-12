@@ -111,7 +111,7 @@ let players = {
       }
     }
   },
-  ori: {
+  /*ori: {
     it: {
       2: {
         sb: 224,
@@ -180,7 +180,7 @@ let players = {
         bb: 2205,
       }
     }
-  },
+  },*/
   Xiler: {
     it: {
       2: {
@@ -198,7 +198,7 @@ let players = {
         hitw: 942
       }
     }
-  },
+  },/*
   ITZWBL_: {
     it: {
       2: {
@@ -388,7 +388,7 @@ let players = {
         bb: 2610,
       }
     }
-  },
+  },*/
   Doozim: {
     iw: {
       1: {
