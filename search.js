@@ -89,7 +89,7 @@ function getTotals() {
     document.getElementById('coinCount').innerHTML = `${Math.round(totalCoinsDisplay / totalCoinsDisplayTally)}<img class="coinImageBig" src="images/coin.webp">`;
     getChart();
   }else {
-    document.getElementById('showStats').innerHTML = 'Event Checkboxes are empty.<br><br>Select some checkboxes to include this players events.<br><br>IW = Island Warriors<br>IT = Island Tournaments<br>IB = Island Battles</span>';
+    document.getElementById('showStats').innerHTML = 'Event Checkboxes are empty.<br><br>Select some checkboxes to include this players events.<br><br>Sub = Substitutions<br><br>IW = Island Warriors';//MAINTAINENCE
     document.getElementById('coinCount').innerHTML = "Coins"
     getChart();
   }
