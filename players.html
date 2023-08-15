@@ -14,7 +14,7 @@
     <link rel="icon" type="image/x-icon" href="/images/islandstats-icon-trans-scaled.png">
   </head>
 
-  <body onload="setPlayerName(); getDataList();" style="background-color: rgb(218, 221, 253);">
+  <body onload="getDataList();" style="background-color: rgb(218, 221, 253);">
     <div class="header-bar">
         <a title="Home page" class="shortcutHome" href="index.html" ><img src="images/islandstats-icon-trans-scaled.png" style="position: absolute; width: 60px; top: 4px;"></a>
       <div class="search-row">
@@ -252,7 +252,8 @@
        configPKW,
     );
       </script>
-      <script>makeChecks();
+      <script>
+      makeChecks();
       </script>
     <script>
       updateChecks();

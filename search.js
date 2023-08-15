@@ -123,6 +123,9 @@ function updateChecks() {
   }
   }
   let subRecalled = sessionStorage.getItem('subRecall');
+  if(subRecalled === null) {
+    document.getElementById('subCheck').checked = true;//MAINTAINENCE ( IF OTHER THAN SUBS)
+  }
   if(subRecalled === 'true') {
     document.getElementById('subCheck').checked = true;
   }
@@ -154,6 +157,10 @@ function makeChecks() { //example
 
     let deezer = document.createElement('input');
     deezer.setAttribute('type', 'checkbox');
+    let amonga = sessionStorage.getItem('checkRecalliw');
+    if(amonga === null) {
+      deezer.setAttribute('checked', 'true');
+    }
     deezer.setAttribute('id', `${serversA[i]}toggle`);
     deezer.setAttribute('class', 'checkbox');
     deezer.setAttribute('onchange', 'getTotals(); setChecks();');
