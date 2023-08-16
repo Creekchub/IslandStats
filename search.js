@@ -124,7 +124,7 @@ function updateChecks() {
   }
   let subRecalled = sessionStorage.getItem('subRecall');
   if(subRecalled === null) {
-    document.getElementById('subCheck').checked = true;//MAINTAINENCE ( IF OTHER THAN SUBS)
+    document.getElementById('subCheck').checked = true;//MAINTAINENCE ( IF OTHER THAN SUBS LIKE NONCANON)
   }
   if(subRecalled === 'true') {
     document.getElementById('subCheck').checked = true;
