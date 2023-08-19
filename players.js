@@ -609,7 +609,10 @@ let players = {
     },
     it: {
       1: {
-        sb: 500
+        sb: 500,
+        tgttos: 1700,
+        hitw: 1600,
+        bb: 2100
       }
     },
   },

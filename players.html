@@ -41,9 +41,9 @@
             <option value="4">4</option>
           </select>
           <label for="subCheck">Sub</label>
-          <input type="checkbox" id="subCheck" class="checkbox" onchange="getTotals(); setChecks(); getStats();"><br>
+          <input type="checkbox" id="subCheck" class="checkbox" onchange="getStats();"><br>
           <label for="noncanonCheck">Noncanon</label>
-          <input type="checkbox" id="noncanonCheck" class="checkbox" onchange="getTotals(); setChecks(); getStats();"><br>
+          <input type="checkbox" id="noncanonCheck" class="checkbox" onchange="getStats();"><br>
          <!-- <input type="checkbox" id="iwtoggle" class="checkbox" onchange="getTotals(); setChecks();">
           <label class="checkLabel" for="iwtoggle">IW</label>
         </div>
@@ -260,15 +260,8 @@
        configPKW,
     );
       </script>
-      <script>
-      makeChecks();
-      </script>
-    <script>
-      updateChecks();
-    </script>
     <script>
       getStats();
-      getTotals();
       setChartColors();
     </script>
     <script>

@@ -1,11 +1,24 @@
 
 let servers = {
   iw: {
-    defaultRounds: 4,
-    round2: 3
+    1: {
+      rounds: 4
+    },
+    2: {
+      rounds: 3
+    },
+    ChosenTeams: {
+      rounds: 3,
+      canon: false
+    }
   },
   it: {
-    defaultRounds: 4,
+    1: {
+      rounds: 4
+    },
+    2: {
+      rounds: 4
+    }
   }
 }
 
@@ -52,26 +65,55 @@ function getStats() {
   let countRound = 0;
   let totalCoins = 0;
 
+
   let roundSelect = document.getElementById('selectBox').value
 
   for(a = 0; a < serversA.length; a++) {
     if(players[player][serversA[a]] !== undefined) {
-      console.log('\n')
       let roundArray = Object.keys(players[player][serversA[a]]);
       for(b = 0; b < roundArray.length; b++) {
         if(players[player][serversA[a]][roundArray[b]] !== undefined) {
-          for(c = 0; c < games.length; c++) {
-            if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
-              totalCoins = 
+          if(roundSelect == servers[serversA[a]][roundArray[b]].rounds) {
+            if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
+              if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
+                countRound++;
+                for(c = 0; c < games.length; c++) {
+                  let gameCoins = 0;
+                  if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                    gameCoins = players[player][serversA[a]][roundArray[b]][games[c]];
+                    if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
+                      gameCoins = gameCoins * 1.5;
+                    }
+                    if(roundSelect == servers[serversA[a]][roundArray[b]].rounds) {
+                      totalCoins = totalCoins + gameCoins;
+                    }
+                  }
+                }
+              }
             }
+            /*countRound++;
+            for(c = 0; c < games.length; c++) {
+              let gameCoins = 0;
+              if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                gameCoins = players[player][serversA[a]][roundArray[b]][games[c]];
+                if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
+                  gameCoins = gameCoins * 1.5;
+                }
+                if(roundSelect == servers[serversA[a]][roundArray[b]].rounds) {
+                  totalCoins = totalCoins + gameCoins;
+                }
+              }
+            }*/
           }
         }
       }
     }
   }
+  console.log(countRound)
+  console.log(Math.round(totalCoins / countRound) + '\n')
 }
 
-function getTotals() {
+/*function getTotals() {
   totalCoinsDisplay = 0;
   totalCoinsDisplayTally = 0;
   stats = '<span style="font-size: 15px; color: lightgray;">Total coins ÷ rounds | Total</span><br>';
@@ -129,7 +171,7 @@ function getTotals() {
     document.getElementById('coinCount').innerHTML = "Coins"
     getChart();
   }
-}
+}*/
 
 function returnServerRounds(currentServer, currentRound) {
   if(eval('servers.' + currentServer + '.round' + currentRound) !== undefined) {
