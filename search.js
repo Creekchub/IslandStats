@@ -1,12 +1,12 @@
 
 let servers = {
   iw: {
-    defaultRounds: 3,
-    round1: 4
-  },
-  /*it: {
     defaultRounds: 4,
-  }*/
+    round2: 3
+  },
+  it: {
+    defaultRounds: 4,
+  }
 }
 
 serverNames = {
@@ -20,6 +20,18 @@ serverNames = {
     full: 'Island Tournaments'
   }
 }
+
+gameMods = {
+  sb: {
+    mod: 1.5
+  },
+  pkw: {
+    mod: 1.5
+  }
+}
+
+let modifiers = ['noncanon']
+
 
 gameColors = {
   sb: '#FF0000',
@@ -36,6 +48,29 @@ let games = ['sb', 'tgttos', 'hitw', 'bb', 'pkw'];
 //console.log(`Ruderrr's score is: ${ruderrr.ib[1].tgttos}`); //normal call
 let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST
 
+function getStats() {
+  let countRound = 0;
+  let totalCoins = 0;
+
+  let roundSelect = document.getElementById('selectBox').value
+
+  for(a = 0; a < serversA.length; a++) {
+    if(players[player][serversA[a]] !== undefined) {
+      console.log('\n')
+      let roundArray = Object.keys(players[player][serversA[a]]);
+      for(b = 0; b < roundArray.length; b++) {
+        if(players[player][serversA[a]][roundArray[b]] !== undefined) {
+          for(c = 0; c < games.length; c++) {
+            if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+              totalCoins = 
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 function getTotals() {
   totalCoinsDisplay = 0;
   totalCoinsDisplayTally = 0;
@@ -51,9 +86,9 @@ function getTotals() {
             for(c = 0; c < games.length; c++) {
               if(players[player][serversA[a]][b][games[c]] !== undefined) {
                 if(players[player][serversA[a]][b].sub !== undefined) {
-                  let subChecker = document.getElementById('subCheck');
+                  let subChecker = document.getElementById('subCheck'); //ADD MORE MODIFIERS (EG SUB NONCANON HERE)
                   if(subChecker.checked) {
-                    if(games[c] === 'sb' || games[c] === 'pkw') {
+                    if(games[c] === 'sb' || games[c] === 'pkw') { //SAME
                       gameTotal = gameTotal + (players[player][serversA[a]][b][games[c]] * 1.5);
                       subOn++;
                     }else {
@@ -61,7 +96,8 @@ function getTotals() {
                       subOn++;
                     }
                   }
-                }else {
+                }
+                else {
                   if(games[c] === 'sb' || games[c] === 'pkw') { // MAINTAINENCE GAMES THAT NEED MODS
                     gameTotal = gameTotal + (players[player][serversA[a]][b][games[c]] * 1.5);
                   }else {
@@ -89,7 +125,7 @@ function getTotals() {
     document.getElementById('coinCount').innerHTML = `${Math.round(totalCoinsDisplay / totalCoinsDisplayTally)}<img class="coinImageBig" src="images/coin.webp">`;
     getChart();
   }else {
-    document.getElementById('showStats').innerHTML = 'Event Checkboxes are empty.<br><br>Select some checkboxes to include this players events.<br><br>Sub = Substitutions<br><br>IW = Island Warriors';//MAINTAINENCE
+    document.getElementById('showStats').innerHTML = 'Event Checkboxes are empty.<br><br>Select some checkboxes to include this players events.<br><br>Sub = Substitutions<br><br>IW = Island Warriors';//MAINTAINENCE FOR NEW SERVER SUPPORT
     document.getElementById('coinCount').innerHTML = "Coins"
     getChart();
   }
@@ -163,7 +199,7 @@ function makeChecks() { //example
     }
     deezer.setAttribute('id', `${serversA[i]}toggle`);
     deezer.setAttribute('class', 'checkbox');
-    deezer.setAttribute('onchange', 'getTotals(); setChecks();');
+    deezer.setAttribute('onchange', 'getTotals(); setChecks(); getStats();');
     document.getElementById('checkboxDiv').append(deezer);
 
     let makeBreak = document.createElement('br');

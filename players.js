@@ -602,8 +602,16 @@ let players = {
         tgttos: 1330,
         bb: 1170,
         hitw: 248
+      },
+      ChosenTeams: {
+        sb: 3000,
       }
-    }
+    },
+    it: {
+      1: {
+        sb: 500
+      }
+    },
   },
   Spy_Games: {
     iw: {
