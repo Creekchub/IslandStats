@@ -64,7 +64,7 @@ let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST
 function getStats() {
   let countRound = 0;
   let totalCoins = 0;
-
+  let coinsTourneyDisplay = '';
 
   let roundSelect = document.getElementById('selectBox').value
 
@@ -77,18 +77,18 @@ function getStats() {
             if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
               if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
                 countRound++;
+                let coinsTourney = 0;
                 for(c = 0; c < games.length; c++) {
                   let gameCoins = 0;
                   if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
                     gameCoins = players[player][serversA[a]][roundArray[b]][games[c]];
                     if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
-                      gameCoins = gameCoins * 1.5;
+                      gameCoins = Math.round(gameCoins * 1.5);
                     }
-                    if(roundSelect == servers[serversA[a]][roundArray[b]].rounds) {
-                      totalCoins = totalCoins + gameCoins;
-                    }
+                    totalCoins = totalCoins + gameCoins;
+                    coinsTourney = coinsTourney + gameCoins;
                   }
-                }
+                }coinsTourneyDisplay = coinsTourneyDisplay + `${coinsTourney} `;
               }
             }
             /*countRound++;
@@ -109,8 +109,8 @@ function getStats() {
       }
     }
   }
-  console.log(countRound)
-  console.log(Math.round(totalCoins / countRound) + '\n')
+  console.log(coinsTourneyDisplay);
+  console.log(Math.round(totalCoins / countRound) + '\n\n')
 }
 
 /*function getTotals() {
