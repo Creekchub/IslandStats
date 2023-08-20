@@ -65,6 +65,8 @@ function getStats() {
   let countRound = 0;
   let totalCoins = 0;
   let coinsTourneyDisplay = '';
+  let appendCount = 0;
+  document.getElementById('displayDivDis2').innerHTML = '';
 
   let roundSelect = document.getElementById('selectBox').value
 
@@ -89,6 +91,13 @@ function getStats() {
                     coinsTourney = coinsTourney + gameCoins;
                   }
                 }coinsTourneyDisplay = coinsTourneyDisplay + `${coinsTourney} `;
+
+                appendCount++;
+                let oneRoundCoins = document.createElement('p');
+                oneRoundCoins.setAttribute('class', 'displayDivText');
+                oneRoundCoins.setAttribute('id', `coinTextAppend${appendCount}`);
+                document.getElementById('displayDivDis2').append(oneRoundCoins);
+                document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`; 
               }
             }
             /*countRound++;
@@ -109,8 +118,9 @@ function getStats() {
       }
     }
   }
-  console.log(coinsTourneyDisplay);
-  console.log(Math.round(totalCoins / countRound) + '\n\n')
+  if(coinsTourneyDisplay !== '') {
+    document.getElementById('coinCount').innerHTML = Math.round(totalCoins / countRound);
+  }
 }
 
 /*function getTotals() {

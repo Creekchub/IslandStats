@@ -67,7 +67,12 @@
       document.getElementById('playerSkin').src = skinURL;
     </script>
     <div class="displayDiv">
-      <span class="displayBox" id="showStats">Event Checkboxes are empty.<br><br>Select some checkboxes to include this players events.<br><br>IW = Island Warriors<br>IT = Island Tournaments<br>IB = Island Battles</span>
+      <div id="displayDivDis1" class="displayDivDiv">
+        <p style="" id="eventText" class="displayDivText">iw-2</p>
+      </div>
+      <div id="displayDivDis2" class="displayDivDiv2">
+        <p id="coinText" class="displayDivText">impostre</p>
+      </div>
     </div>
     <div class="chartMenu">
     </div>
@@ -260,9 +265,13 @@
        configPKW,
     );
       </script>
+      <script>
+        document.getElementById('selectBox').value = 3;
+      </script>
     <script>
       getStats();
       setChartColors();
+      getStats();
     </script>
     <script>
       setPlayerName();
