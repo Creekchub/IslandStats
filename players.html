@@ -266,6 +266,12 @@
       <script>
         document.getElementById('selectBox').value = 4;
       </script>
+      <script>
+        let amogasusser = sessionStorage.getItem('selectRecall');
+        if(amogasusser !== '') {
+          document.getElementById('selectBox').value = amogasusser;
+        }
+      </script>
     <script>
       getStats();
       setChartColors();

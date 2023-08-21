@@ -116,19 +116,6 @@ function getStats() {
                 document.getElementById(`coinTag${appendCount1}`).innerHTML = `${serverNames[serversA[a]].full} - ${roundArray[b]}`
               }
             }
-            /*countRound++;
-            for(c = 0; c < games.length; c++) {
-              let gameCoins = 0;
-              if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
-                gameCoins = players[player][serversA[a]][roundArray[b]][games[c]];
-                if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
-                  gameCoins = gameCoins * 1.5;
-                }
-                if(roundSelect == servers[serversA[a]][roundArray[b]].rounds) {
-                  totalCoins = totalCoins + gameCoins;
-                }
-              }
-            }*/
           }
         }
       }
@@ -137,8 +124,9 @@ function getStats() {
   if(coinsTourneyDisplay !== '') {
     document.getElementById('coinCount').innerHTML = `${Math.round(totalCoins / countRound)}<img src=images/coin.webp class="coinImageBig">`;
   }else {
-    document.getElementById('coinCount').innerHTML = ''
+    document.getElementById('coinCount').innerHTML = '0 <img src=images/coin.webp class="coinImageBig">'
   }
+  sessionStorage.setItem('selectRecall', roundSelect);
 }
 
 /*function getTotals() {
