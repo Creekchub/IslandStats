@@ -66,7 +66,9 @@ function getStats() {
   let totalCoins = 0;
   let coinsTourneyDisplay = '';
   let appendCount = 0;
+  let appendCount1 = 0;
   document.getElementById('displayDivDis2').innerHTML = '';
+  document.getElementById('displayDivDis1').innerHTML = '';
 
   let roundSelect = document.getElementById('selectBox').value
 
@@ -96,8 +98,22 @@ function getStats() {
                 let oneRoundCoins = document.createElement('p');
                 oneRoundCoins.setAttribute('class', 'displayDivText');
                 oneRoundCoins.setAttribute('id', `coinTextAppend${appendCount}`);
+                if(servers[serversA[a]][roundArray[b]].canon === false) {
+                  oneRoundCoins.setAttribute('style', 'color:orange');
+                }
                 document.getElementById('displayDivDis2').append(oneRoundCoins);
-                document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`; 
+                document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`;
+                if(players[player][serversA[a]][roundArray[b]].sub) {
+                  console.log('TRIGER')
+                  document.getElementById(`coinTextAppend${appendCount}`).innerHTML = document.getElementById(`coinTextAppend${appendCount}`).innerHTML + '<p class="subTag">Sub</p>'
+                }
+
+                appendCount1++;
+                let oneRoundTag = document.createElement('p');
+                oneRoundTag.setAttribute('id', `coinTag${appendCount1}`);
+                oneRoundTag.setAttribute('class', 'displayDivText');
+                document.getElementById('displayDivDis1').append(oneRoundTag);
+                document.getElementById(`coinTag${appendCount1}`).innerHTML = `${serverNames[serversA[a]].full} - ${roundArray[b]}`
               }
             }
             /*countRound++;
@@ -119,7 +135,9 @@ function getStats() {
     }
   }
   if(coinsTourneyDisplay !== '') {
-    document.getElementById('coinCount').innerHTML = Math.round(totalCoins / countRound);
+    document.getElementById('coinCount').innerHTML = `${Math.round(totalCoins / countRound)}<img src=images/coin.webp class="coinImageBig">`;
+  }else {
+    document.getElementById('coinCount').innerHTML = ''
   }
 }
 

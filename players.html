@@ -35,10 +35,10 @@
       <div class="checkboxes">
         <div id="checkboxDiv">
           <select id="selectBox" onchange="getStats()">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+            <option value="1">1 round</option>
+            <option value="2">2 round</option>
+            <option value="3">3 round</option>
+            <option value="4">4 round</option>
           </select>
           <label for="subCheck">Sub</label>
           <input type="checkbox" id="subCheck" class="checkbox" onchange="getStats();"><br>
@@ -68,10 +68,8 @@
     </script>
     <div class="displayDiv">
       <div id="displayDivDis1" class="displayDivDiv">
-        <p style="" id="eventText" class="displayDivText">iw-2</p>
       </div>
       <div id="displayDivDis2" class="displayDivDiv2">
-        <p id="coinText" class="displayDivText">impostre</p>
       </div>
     </div>
     <div class="chartMenu">
@@ -266,7 +264,7 @@
     );
       </script>
       <script>
-        document.getElementById('selectBox').value = 3;
+        document.getElementById('selectBox').value = 4;
       </script>
     <script>
       getStats();
