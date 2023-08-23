@@ -35,9 +35,9 @@
       <div class="checkboxes">
         <div id="checkboxDiv">
           <select id="selectBox" onchange="getStats()">
-            <option value="1">1 round</option>
-            <option value="2">2 round</option>
-            <option value="3">3 round</option>
+            <option value="all">Show All</option>
+            <option value="iw">Island Warriors</option>
+            <option value="it">Island Tournaments</option>
             <option value="4">4 round</option>
           </select>
           <label for="subCheck">Sub</label>
@@ -264,13 +264,6 @@
     );
       </script>
       <script>
-        document.getElementById('selectBox').value = 4;
-      </script>
-      <script>
-        let amogasusser = sessionStorage.getItem('selectRecall');
-        if(amogasusser !== '') {
-          document.getElementById('selectBox').value = amogasusser;
-        }
       </script>
     <script>
       getStats();

@@ -77,7 +77,7 @@ function getStats() {
       let roundArray = Object.keys(players[player][serversA[a]]);
       for(b = 0; b < roundArray.length; b++) {
         if(players[player][serversA[a]][roundArray[b]] !== undefined) {
-          if(roundSelect == servers[serversA[a]][roundArray[b]].rounds) {
+          if(roundSelect == serversA[a] || roundSelect == 'all') {
             if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
               if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
                 countRound++;
@@ -104,7 +104,6 @@ function getStats() {
                 document.getElementById('displayDivDis2').append(oneRoundCoins);
                 document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`;
                 if(players[player][serversA[a]][roundArray[b]].sub) {
-                  console.log('TRIGER')
                   document.getElementById(`coinTextAppend${appendCount}`).innerHTML = document.getElementById(`coinTextAppend${appendCount}`).innerHTML + '<p class="subTag">Sub</p>'
                 }
 
