@@ -2,6 +2,10 @@ body {
   height: 1200px;
 }
 
+p {
+  font-family: Kanit;
+}
+
 .coinAveragePrescript {
   font-family: Kanit;
   font-size: 14px;
@@ -83,7 +87,7 @@ body {
   background-color: rgb(135, 131, 255);
   display: flex;
   color: white;
-  width: 380px;
+  width: 500px;
   font-size: 18px;
   font-family: Kanit;
   font-weight: 400;
@@ -194,9 +198,18 @@ body {
 }
 
 .chartBox {
-  position: absolute;
-  right: 16px;
-  top: 480px;
+  width: 600px;
+  display: flex;
+  justify-content:space-between;
+}
+
+.chartMenu {
+}
+
+.gameChart {
+  display: inline-block;
+  margin-right: 2px;
+  margin-left: 2px;
 }
 
 .search-bar-2 {
@@ -258,7 +271,4 @@ body {
 }
 
 .pieChart {
-  position: absolute;
-  right: 40px;
-  top: 100px;
 }

@@ -72,15 +72,17 @@
       <div id="displayDivDis2" class="displayDivDiv2">
       </div>
     </div>
-    <div class="chartMenu">
     </div>
-    <canvas class="pieChart" id="pie" width="360" style="display: inline-block;"></canvas>
-      <div class="chartBox">
-        <canvas id="sbBar" width="80" height="260"; style="display: inline-block;"></canvas>
-        <canvas id="tgttosBar" width="80" height="260"; style="display: inline-block;"></canvas>
-        <canvas id="hitwBar" width="80" height="260"; style="display: inline-block;"></canvas>
-        <canvas id="bbBar" width="80" height="260"; style="display: inline-block;"></canvas>
-        <canvas id="pkwBar" width="80" height="260"; style="display: inline-block;"></canvas>
+    <br><div style="display:inline-block">
+      <div class="chartBox"> <!--MAINTAINENCE CHANGE "chartBox" WIDTH IF NEW GAME ADDED-->
+        <canvas class="gameChart" id="sbBar" width="80" height="260";></canvas>
+        <canvas class="gameChart" id="tgttosBar" width="80" height="260";></canvas>
+        <canvas class="gameChart" id="hitwBar" width="80" height="260";></canvas>
+        <canvas class="gameChart" id="bbBar" width="80" height="260";></canvas>
+        <canvas class="gameChart" id="pkwBar" width="80" height="260";></canvas>
+        <canvas class="gameChart" class="pieChart" id="pie" width="260"></canvas>
+    </div>
+    <p style="text-align:center;">Average coins per 1 round</p>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script> //game Chart <------
@@ -88,7 +90,7 @@
       labels: ['SB(x1.5)', 'TGTTOS', 'HITW', 'BB', 'PKW(x1.5)'], //SKY BATTLE
       datasets: [{
         label: 'Coins',
-        data: ['0', '0', '0', '0', '0'],
+        data: ['100', '100', '20', '5', '400'],
       },
     ],
     };
