@@ -34,12 +34,14 @@
       <img src="" id="playerSkin" class="playerSkin">
       <div class="checkboxes">
         <div id="checkboxDiv">
-          <select id="selectBox" onchange="getStats()">
-            <option value="all">Show All</option>
-            <option value="iw">Island Warriors</option>
-            <option value="it">Island Tournaments</option>
-            <option value="4">4 round</option>
-          </select>
+          <div style="display: flex; justify-content: center;">
+            <select id="selectBox" onchange="getStats()" style="display:block; font-family: Kanit; background-color: rgb(128, 128, 255); color: white; border-color: rgb(106, 86, 206); border-radius: 6px;">
+              <option value="all">Show All</option>
+              <option value="iw">Island Warriors</option>
+              <option value="it">Island Tournaments</option>
+              <option value="4">4 round</option>
+            </select>
+          </div>
           <label for="subCheck">Sub</label>
           <input type="checkbox" id="subCheck" class="checkbox" onchange="getStats();"><br>
           <label for="noncanonCheck">Noncanon</label>
@@ -66,12 +68,14 @@
       let skinURL = `https://mc-heads.net/body/${playerSkinReq}/.png`
       document.getElementById('playerSkin').src = skinURL;
     </script>
-    <div class="displayDiv">
-      <div id="displayDivDis1" class="displayDivDiv">
-      </div>
-      <div id="displayDivDis2" class="displayDivDiv2">
-      </div>
     </div>
+    <div class="displayDiv">
+      <div class="displayDivInner">
+        <div id="displayDivDis1" class="displayDivDiv">
+        </div>
+        <div id="displayDivDis2" class="displayDivDiv2">
+        </div>
+      </div>
     </div>
     <br><div style="display:inline-block">
       <div class="chartBox"> <!--MAINTAINENCE CHANGE "chartBox" WIDTH IF NEW GAME ADDED-->
@@ -80,34 +84,39 @@
         <canvas class="gameChart" id="hitwBar" width="80" height="260";></canvas>
         <canvas class="gameChart" id="bbBar" width="80" height="260";></canvas>
         <canvas class="gameChart" id="pkwBar" width="80" height="260";></canvas>
-        <canvas class="gameChart" class="pieChart" id="pie" width="260"></canvas>
+        <canvas class="gameChart" class="pieChart" id="radar" width="260"></canvas>
     </div>
     <p style="text-align:center;">Average coins per 1 round</p>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script> //game Chart <------
-     const dataPie = {
-      labels: ['SB(x1.5)', 'TGTTOS', 'HITW', 'BB', 'PKW(x1.5)'], //SKY BATTLE
+     const dataRadar = {
+      labels: ['SB', 'BB', 'TGTTOS', 'PKW', 'HITW'], //SKY BATTLE
       datasets: [{
-        label: 'Coins',
-        data: ['100', '100', '20', '5', '400'],
+        label: 'Low Coin Games x1.5',
+        data: ['0', '0', '0', '0', '0'],
       },
     ],
     };
-    const configPie = {
-      type: 'pie',
-      data: dataPie,
+    const configRadar = {
+      type: 'radar',
+      data: dataRadar,
       options: {
         plugins: {
         },
         responsive: false,
         scales: {
+          r: {
+            beginAtZero: true,
+            min: 0,
+            max: 600,
+          }
         }
       }
     };
-    const pie = new Chart(
-      document.getElementById('pie'), 
-       configPie,
+    const radar = new Chart(
+      document.getElementById('radar'), 
+       configRadar,
     );
 
     const dataSB = {
@@ -265,14 +274,19 @@
        configPKW,
     );
       </script>
-      <script>
+      <script> // REMEMBERS THE USERS CHOICE OF 'selectBox' !
+      let deeza1 = sessionStorage.getItem('selectRecall');
+        for(variable1 = 0;variable1 < serversA.length; variable1++) {
+          if(deeza1 === serversA[variable1] || deeza1 === 'all') {
+            document.getElementById('selectBox').value = deeza1;
+          }
+        }
       </script>
-    <script>
+    <script> //SETS STATS AFTER
       getStats();
       setChartColors();
-      getStats();
     </script>
-    <script>
+    <script> //SETS THE PLAYERS LARGE IGN
       setPlayerName();
     </script>
   </body>

@@ -85,7 +85,6 @@ p {
   border-width: 3px;
   border-color: rgb(53, 76, 255);
   background-color: rgb(135, 131, 255);
-  display: flex;
   color: white;
   width: 500px;
   font-size: 18px;
@@ -96,10 +95,15 @@ p {
   padding-right: 8px;
   padding-bottom: 12px;
   min-height: 200px;
-  position: absolute;
   top: 218px;
   left: 260px;
   border-radius: 6px;
+  float: right;
+  margin-top: 180px;
+}
+
+.displayDivInner {
+  display: flex;
 }
 
 .displayDivDiv {

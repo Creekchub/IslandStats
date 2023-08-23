@@ -22,6 +22,7 @@ let servers = {
   }
 }
 
+
 serverNames = {
   iw: {
     ac: 'IW',
@@ -58,6 +59,14 @@ let serversA = Object.keys(servers);
 
 let games = ['sb', 'tgttos', 'hitw', 'bb', 'pkw'];
 
+let gameOrderRadar = { // MAINTAINENCE IF NEW GAME ADDED
+  sb: 0,
+  bb: 1,
+  tgttos: 2,
+  pkw: 3,
+  hitw: 4,
+}
+
 //console.log(`Ruderrr's score is: ${ruderrr.ib[1].tgttos}`); //normal call
 let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST
 
@@ -89,7 +98,7 @@ function getStats() {
                     if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
                       gameCoins = Math.round(gameCoins * 1.5);
                     }
-                    totalCoins = totalCoins + gameCoins;
+                    totalCoins = totalCoins + Math.round(gameCoins / servers[serversA[a]][roundArray[b]].rounds);
                     coinsTourney = coinsTourney + gameCoins;
                   }
                 }coinsTourneyDisplay = coinsTourneyDisplay + `${coinsTourney} `;
@@ -120,12 +129,58 @@ function getStats() {
       }
     }
   }
+  getChartStats();
   if(coinsTourneyDisplay !== '') {
     document.getElementById('coinCount').innerHTML = `${Math.round(totalCoins / countRound)}<img src=images/coin.webp class="coinImageBig">`;
   }else {
     document.getElementById('coinCount').innerHTML = '0 <img src=images/coin.webp class="coinImageBig">'
   }
   sessionStorage.setItem('selectRecall', roundSelect);
+}
+
+
+
+function getChartStats() {
+  for(ab = 0; ab < games.length; ab++) { //makes variables for use
+    eval('var coins' + games[ab] + ' = 0');
+    eval('var count' + games[ab] + ' = 0');
+  };
+  let roundSelect = document.getElementById('selectBox').value;
+
+  for(a = 0; a < serversA.length; a++) {
+    if(players[player][serversA[a]] !== undefined) {
+      let roundArray = Object.keys(players[player][serversA[a]]);
+      for(b = 0; b < roundArray.length; b++) {
+        if(players[player][serversA[a]][roundArray[b]] !== undefined) {
+          if(roundSelect == serversA[a] || roundSelect == 'all') {
+            if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
+              if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
+                for(c = 0; c < games.length; c++) {
+                  if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                    let coinsTemp = 0;
+                    coinsTemp = Math.round(players[player][serversA[a]][roundArray[b]][games[c]] / servers[serversA[a]][roundArray[b]].rounds);
+                    if(games[c] === 'sb' || games[c] === 'pkw') {  //MAINTAINENCE IF NEW GAME IS ADDED
+                      coinsTemp = coinsTemp * 1.5
+                    }
+                    eval('count' + games[c] + '++;');
+                   // eval('coins' + games[c] + ' = ' + 'coins' + games[c] + ' + ' + coinsTemp);
+                   eval('coins' + games[c] + ' += coinsTemp');
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  for(d = 0; d < games.length; d++) {
+    eval(games[d] + 'Bar.data.datasets[0].data[0] = Math.round(' + 'coins' + games[d] + ' / ' + 'count' + games[d] + ')');
+    eval(games[d] + 'Bar.update();');
+
+    eval('radar.data.datasets[0].data[' + gameOrderRadar[games[d]] + '] = ' + 'Math.round(coins' + games[d] + ' / ' + 'count' + games[d] + ')');
+    radar.update();
+  }
 }
 
 /*function getTotals() {
@@ -264,7 +319,7 @@ function makeChecks() { //example
   }
 }
 
-function getChart() {
+/*function getChart() {
   for(gameCounter = 0; gameCounter < games.length; gameCounter++) {
     eval('var ' + games[gameCounter] + 'Counter' + ' = 0' + ';');
   }
@@ -313,14 +368,12 @@ function getChart() {
       pie.update();
     }
   }
-}
+}*/
 
 function setChartColors() {
   for(deemoager = 0; deemoager < games.length; deemoager++) {
     eval(games[deemoager] + 'Bar.data.datasets[0].backgroundColor = ' + '`${gameColors[games[deemoager]]}`');
     eval(games[deemoager] + 'Bar.data.datasets[0].borderColor = ' + '`${gameColors[games[deemoager]]}`');
-    pie.data.datasets[0].backgroundColor[deemoager] = `${gameColors[games[deemoager]]}`;
-    pie.update();
     eval(games[deemoager] + 'Bar.update();')
   }
 }
