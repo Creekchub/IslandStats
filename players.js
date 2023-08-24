@@ -1,4 +1,24 @@
 let players = {
+  MrManzo: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1570,
+        sb: 214,
+        bb: 1350,
+        tgttos: 1406,
+      }
+    },
+  },
+  Nugdub: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1315,
+        sb: 966,
+        bb: 1245,
+        tgttos: 1335,
+      }
+    },
+  },
   Oceanseaas: {
     iw: {
       2: {
@@ -36,7 +56,13 @@ let players = {
         tgttos: 1000,
         bb: 994,
         hitw: 713,
-      }
+      },
+      ChosenTeams1: {
+        hitw: 990,
+        sb: 182,
+        bb: 900,
+        tgttos: 1000,
+      },
     }
   },
   LargeEpicMan: {
@@ -48,6 +74,26 @@ let players = {
         hitw: 873,
       }
     }
+  },
+  Envaderam: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 985,
+        sb: 750,
+        bb: 1410,
+        tgttos: 1321,
+      }
+    },
+  },
+  OOramen00: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 710,
+        sb: 78,
+        bb: 1200,
+        tgttos: 763,
+      }
+    },
   },
   Fawnardvark: {
     iw: {
@@ -68,17 +114,29 @@ let players = {
         bb: 1531,
         hitw: 678,
         sub: true
-      }
+      },
+      ChosenTeams1: {
+        hitw: 975,
+        sb: 502,
+        bb: 1440,
+        tgttos: 1262,
+      },
     }
   },
-  Mellojellocello: {
+  MellojelloCello: {
     iw: {
       2: {
         sb: 402,
         tgttos: 1330,
         bb: 1573,
         hitw: 1503,
-      }
+      },
+      ChosenTeams1: {
+        hitw: 1455,
+        sb: 194,
+        bb: 1350,
+        tgttos: 1288,
+      },
     }
   },
   Kaimaxon: {
@@ -111,7 +169,7 @@ let players = {
       }
     }
   },
-  Xiler: {
+  Xiler40k: {
     it: {
       2: {
         sb: 440,
@@ -126,7 +184,13 @@ let players = {
         tgttos: 1362,
         bb: 772,
         hitw: 942
-      }
+      },
+      ChosenTeams1: {
+        hitw: 1240,
+        sb: 264,
+        bb: 1440,
+        tgttos: 1160,
+      },
     }
   },
   Doozim: {
@@ -152,8 +216,34 @@ let players = {
         bb: 1935,
         tgttos: 1929,
         hitw: 1750,
-      }
+      },
+      ChosenTeams1: {
+        hitw: 1750,
+        sb: 544,
+        bb: 1755,
+        tgttos: 1817,
+      },
     }
+  },
+  BreadEaterPeter: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1240,
+        sb: 548,
+        bb: 1140,
+        tgttos: 1232,
+      }
+    },
+  },
+  Unacceptableness: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1385,
+        sb: 566,
+        bb: 1560,
+        tgttos: 1242,
+      }
+    },
   },
   Rotomm: {
     it: {
@@ -227,7 +317,13 @@ let players = {
         tgttos: 1386,
         bb: 1262,
         hitw: 1122
-      }
+      },
+      ChosenTeams1: {
+        hitw: 1600,
+        sb: 400,
+        bb: 1065,
+        tgttos: 1074,
+      },
     }
   },
   cxost: {
@@ -240,6 +336,26 @@ let players = {
         sub: true
       }
     }
+  },
+  StezeyMC: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1260,
+        sb: 548,
+        bb: 1245,
+        tgttos: 1148,
+      }
+    },
+  },
+  Orlandillo: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 695,
+        sb: 316,
+        bb: 1005,
+        tgttos: 1096,
+      }
+    },
   },
   Toremood: {
     iw: {
@@ -254,7 +370,13 @@ let players = {
         tgttos: 1158,
         bb: 994,
         hitw: 1445
-      }
+      },
+      ChosenTeams1: {
+        hitw: 925,
+        sb: 888,
+        bb: 1620,
+        tgttos: 1377,
+      },
     },
     it: {
       2: { 
@@ -328,8 +450,34 @@ let players = {
         tgttos: 1516,
         bb: 1010,
         hitw: 1653
-      }
+      },
+      ChosenTeams1: {
+        hitw: 1345,
+        sb: 378,
+        bb: 1530,
+        tgttos: 1464,
+      },
     }
+  },
+  Bitslap: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1230,
+        sb: 504,
+        bb: 1275,
+        tgttos: 1113,
+      }
+    },
+  },
+  SethKingOfRats: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 910,
+        sb: 148,
+        bb: 930,
+        tgttos: 785,
+      }
+    },
   },
   GrudgingComb: {
     iw: {
@@ -353,6 +501,16 @@ let players = {
       }
     }
   },
+  Gnighty: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1165,
+        sb: 272,
+        bb: 1065,
+        tgttos: 1401,
+      }
+    },
+  },
   SomethingNeon: {
     iw: {
       1: {
@@ -369,6 +527,16 @@ let players = {
       }
     }
   },
+  SourishCandle69: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1250,
+        sb: 972,
+        bb: 1320,
+        tgttos: 1133,
+      }
+    },
+  },
   EeveesXM: {
     iw: {
       1: {
@@ -382,7 +550,13 @@ let players = {
         tgttos: 1022,
         bb: 1337,
         hitw: 1551
-      }
+      },
+      ChosenTeams1: {
+        hitw: 850,
+        sb: 1166,
+        bb: 1245,
+        tgttos: 1211,
+      },
     }
   },
   Cookithy: {
@@ -395,6 +569,16 @@ let players = {
       }
     }
   },
+  Yasamas: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1260,
+        sb: 604,
+        bb: 1305,
+        tgttos: 1305,
+      }
+    },
+  },
   Konzid: {
     iw: {
       1: {
@@ -404,6 +588,16 @@ let players = {
         hitw: 1685,
       }
     }
+  },
+  KomaSwirls: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 905,
+        sb: 712,
+        bb: 1500,
+        tgttos: 486,
+      }
+    },
   },
   Collroll: {
     iw: {
@@ -444,7 +638,13 @@ let players = {
         tgttos: 1250,
         bb: 1010,
         hitw: 1492
-      }
+      },
+      ChosenTeams1: {
+        hitw: 890,
+        sb: 382,
+        bb: 1260,
+        tgttos: 1189,
+      },
     },
     it: {
       2: {
@@ -509,6 +709,16 @@ let players = {
       }
     }
   },
+  QiwiMC: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1225,
+        sb: 482,
+        bb: 1500,
+        tgttos: 1461,
+      }
+    },
+  },
   Bafes: {
     iw: {
       1: {
@@ -518,6 +728,16 @@ let players = {
         hitw: 972,
       }
     }
+  },
+  Forbie: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1155,
+        sb: 352,
+        bb: 1395,
+        tgttos: 1501,
+      }
+    },
   },
   Gree1000: {
     iw: {
@@ -585,7 +805,13 @@ let players = {
         tgttos: 1366,
         bb: 1307,
         hitw: 980
-      }
+      },
+      ChosenTeams1: {
+        hitw: 580,
+        sb: 306,
+        bb: 1065,
+        tgttos: 1118,
+      },
     }
   },
   Creekchub: {
@@ -603,9 +829,12 @@ let players = {
         bb: 1170,
         hitw: 248
       },
-      ChosenTeams: {
-        sb: 3000,
-      }
+      ChosenTeams1: {
+        hitw: 1360,
+        sb: 724,
+        bb: 1155,
+        tgttos: 1692,
+      },
     },
     it: {
       1: {
@@ -642,6 +871,16 @@ let players = {
       }
     }
   },
+  Xstevey: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1225,
+        sb: 1074,
+        bb: 1245,
+        tgttos: 982,
+      }
+    },
+  },
   Sky2516: {
     iw: {
       1: {
@@ -651,6 +890,16 @@ let players = {
         hitw: 1096,
       }
     }
+  },
+  Skyoreos: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 1425,
+        sb: 474,
+        bb: 1410,
+        tgttos: 1066,
+      }
+    },
   },
   Trash_Panda2007: {
     iw: {
@@ -675,7 +924,13 @@ let players = {
         tgttos: 814,
         bb: 1278,
         hitw: 1197
-      }
+      },
+      ChosenTeams1: {
+        hitw: 1320,
+        sb: 226,
+        bb: 1080,
+        tgttos: 1032,
+      },
     }
   },
   DANTCE: {
@@ -751,7 +1006,13 @@ let players = {
         tgttos: 1790,
         bb: 1573,
         hitw: 1870,
-      }
+      },
+      ChosenTeams1: {
+        hitw: 625,
+        sb: 374,
+        bb: 1800,
+        tgttos: 1599,
+      }, 
     }
   },
   Umendan: {
@@ -811,7 +1072,13 @@ let players = {
         tgttos: 1594,
         bb: 1573,
         hitw: 1716,
-      }
+      },
+      ChosenTeams1: {
+        hitw: 1480,
+        sb: 300,
+        bb: 1350,
+        tgttos: 1398,
+      },
     }
   },
   Sneapky: {
@@ -844,6 +1111,16 @@ let players = {
       }
     }
   },
+  ItzmeSZ: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 775,
+        sb: 618,
+        bb: 1305,
+        tgttos: 1143,
+      }
+    },
+  },
   LeonardoPLK: {
     iw: {
       2: {
@@ -851,7 +1128,13 @@ let players = {
         tgttos: 1265,
         bb: 1084,
         hitw: 728,
-      }
+      },
+      ChosenTeams1: {
+        hitw: 950,
+        sb: 194,
+        bb: 765,
+        tgttos: 783,
+      },
     }
   },
   DaJamesMayo: {
@@ -865,13 +1148,23 @@ let players = {
       }
     }
   },
+  sunsrr: {
+    iw: {
+      ChosenTeams1: {
+        hitw: 925,
+        sb: 182,
+        bb: 930,
+        tgttos: 1004,
+      }
+    },
+  },
 }
 
 /*
 
 t: {
   iw: {
-    2: {
+    ChosenTeams1: {
       sb: ,
       tgttos: ,
       bb: ,

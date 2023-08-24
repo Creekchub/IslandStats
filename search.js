@@ -7,7 +7,7 @@ let servers = {
     2: {
       rounds: 3
     },
-    ChosenTeams: {
+    ChosenTeams1: {
       rounds: 3,
       canon: false
     }
