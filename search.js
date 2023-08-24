@@ -287,6 +287,8 @@ function updateChecks() {
     document.getElementById('subCheck').checked = false;
   }
 }
+
+
 function setPlayerName() {
   document.getElementById('playerName').innerHTML = player;
 }
