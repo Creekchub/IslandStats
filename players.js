@@ -123,7 +123,7 @@ let players = {
       },
     }
   },
-  MellojelloCello: {
+  sirgello: { //MELLOJELLOCELLO
     iw: {
       2: {
         sb: 402,
