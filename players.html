@@ -282,6 +282,21 @@
           }
         }
       </script>
+      <script>
+        let subRecall = sessionStorage.getItem('subCheckRecall');
+        if(subRecall === 'true') {
+          document.getElementById('subCheck').checked = true;
+        }else {
+          document.getElementById('subCheck').checked = false;
+        }
+
+        let ncRecall = sessionStorage.getItem('ncCheckRecall');
+        if(ncRecall === 'true') {
+          document.getElementById('noncanonCheck').checked = true;
+        }else {
+          document.getElementById('noncanonCheck').checked = false;
+        }
+      </script>
     <script> //SETS STATS AFTER
       getStats();
       setChartColors();

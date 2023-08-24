@@ -12,14 +12,14 @@ let servers = {
       canon: false
     }
   },
-  it: {
+  /*it: {
     1: {
       rounds: 4
     },
     2: {
       rounds: 4
     }
-  }
+  }*/
 }
 
 
@@ -136,6 +136,12 @@ function getStats() {
     document.getElementById('coinCount').innerHTML = '0 <img src=images/coin.webp class="coinImageBig">'
   }
   sessionStorage.setItem('selectRecall', roundSelect);
+
+  let subCheckRecallVar1 = document.getElementById('subCheck').checked;
+  sessionStorage.setItem('subCheckRecall', subCheckRecallVar1);
+
+  let ncCheckRecallVar1 = document.getElementById('noncanonCheck').checked;
+  sessionStorage.setItem('ncCheckRecall', ncCheckRecallVar1);
 }
 
 
