@@ -39,7 +39,7 @@ let players = {
       }
     }
   },
-  MattySP: {
+  MaTTySp: {
     iw: {
       2: {
         sb: 48,
@@ -85,7 +85,7 @@ let players = {
       }
     },
   },
-  OOramen00: {
+  '00ramen00': {
     iw: {
       ChosenTeams1: {
         hitw: 710,
@@ -95,7 +95,7 @@ let players = {
       }
     },
   },
-  Fawnardvark: {
+  FawnAardvark: {
     iw: {
       2: {
         sb: 374,
@@ -159,7 +159,7 @@ let players = {
       }
     }
   },
-  Nightmarine: {
+  Envared: {
     iw: {
       2: {
         sb: 515,
@@ -427,7 +427,7 @@ let players = {
       }
     }
   },
-  Chionphobia: {
+  Chionophobia: {
     iw: {
       1: {
         sb: 376,
@@ -599,7 +599,7 @@ let players = {
       }
     },
   },
-  Collroll: {
+  Coleroll: {
     iw: {
       1: {
         sb: 796,
@@ -719,7 +719,7 @@ let players = {
       }
     },
   },
-  Bafes: {
+  PurplePrincess81: {
     iw: {
       1: {
         sb: 808,
@@ -739,7 +739,7 @@ let players = {
       }
     },
   },
-  Gree1000: {
+  Gre1000: {
     iw: {
       1: {
         sb: 712,
@@ -1015,7 +1015,7 @@ let players = {
       }, 
     }
   },
-  Umendan: {
+  Men_Magnet: {
     iw: {
       2: {
         sb: 819,
@@ -1091,7 +1091,7 @@ let players = {
       }
     }
   },
-  Txciic: {
+  ignToxic: {
     iw: {
       2: {
         sb: 548,
@@ -1174,3 +1174,23 @@ t: {
 },
 
 */
+
+async function getUsernameToUUID(username) {
+  const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`);
+  const data = await response.json();
+  
+  if (data && data.id) {
+    return data.id;
+  } else {
+  }
+}
+
+let playersArray = Object.keys(players);
+
+
+let theNum = 100;
+for(aa = theNum -20; aa < theNum; aa++) {
+  let username = `${playersArray[aa]}`;
+  getUsernameToUUID(username)
+  .then(uuid => console.log(`${username}: ${uuid}`))
+}
