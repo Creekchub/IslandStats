@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/analyzer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="players.js"></script>
+    <script src="search.js"></script>
+  </head>
+  <body>
+    <div class="panel">
+      <div class="small-panel">
+        <p style="margin-bottom: 2px;" class="text">Player 1</p>
+        <img class="head-image" src="https://mc-heads.net/avatar/cxost/100">
+        <p class="text">cxost</p>
+        <p class="text-coins"><img class="text-coin-small" src="images/coin.webp" style="opacity:0;">1500<img class="text-coin-small" src="images/coin.webp"></p><br>
+      </div>
+      <div class="small-panel">
+        <p style="margin-bottom: 2px;" class="text">Player 1</p>
+        <img class="head-image" src="https://mc-heads.net/avatar/cxost/100">
+        <p class="text">cxost</p>
+        <p class="text-coins"><img class="text-coin-small" src="images/coin.webp" style="opacity:0;">1500<img class="text-coin-small" src="images/coin.webp"></p><br>
+      </div>
+      <div class="small-panel">
+        <p style="margin-bottom: 2px;" class="text">Player 1</p>
+        <img class="head-image" src="https://mc-heads.net/avatar/cxost/100">
+        <p class="text">cxost</p>
+        <p class="text-coins"><img class="text-coin-small" src="images/coin.webp" style="opacity:0;">1500<img class="text-coin-small" src="images/coin.webp"></p><br>
+      </div>
+      <div class="small-panel">
+        <p style="margin-bottom: 2px;" class="text">Player 1</p>
+        <img class="head-image" src="https://mc-heads.net/avatar/cxost/100">
+        <p class="text">cxost</p>
+        <p class="text-coins"><img class="text-coin-small" src="images/coin.webp" style="opacity:0;">1500<img class="text-coin-small" src="images/coin.webp"></p><br>
+      </div>
+      <div class="canvases">
+        <canvas style="margin-left: 2%" id="radar" height="200" width="200"></canvas>
+      </div>
+      <div class="team-score">
+        <span>amoga</span>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+      const dataRadar = {
+        labels: ['SB', 'BB', 'TGTTOS', 'PKW', 'HITW'], //SKY BATTLE
+        datasets: [{
+          label: 'Low Coin Games x1.5',
+          data: ['0', '0', '0', '0', '0'],
+        },
+      ],
+      };
+      const configRadar = {
+        type: 'radar',
+        data: dataRadar,
+        options: {
+          plugins: {
+          },
+          responsive: false,
+          scales: {
+            r: {
+              beginAtZero: true,
+              min: 0,
+              max: 600,
+            }
+          }
+        }
+      };
+      const radar = new Chart(
+        document.getElementById('radar'),
+         configRadar,
+      );
+    </script>
+  </body>
+</html>
