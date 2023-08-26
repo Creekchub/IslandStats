@@ -8,5 +8,6 @@ function storeSearchValue() {
 }
 
 function playerWindow() {
-  window.location.href = "players.html";
+  let currentSelPlayer = sessionStorage.getItem('playerQuery');
+  window.location.href = `players.html?player=${currentSelPlayer}`;
 }

@@ -68,7 +68,9 @@ let gameOrderRadar = { // MAINTAINENCE IF NEW GAME ADDED
 }
 
 //console.log(`Ruderrr's score is: ${ruderrr.ib[1].tgttos}`); //normal call
-let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST
+//let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST ( OLD METHOD )
+const urlParams = new URLSearchParams(window.location.search);
+let player = urlParams.get('player');
 
 function getStats() {
   let countRound = 0;
