@@ -1158,6 +1158,16 @@ let players = {
       }
     },
   },
+  Notch: {
+    iw: {
+      1: {
+        sb: 0,
+        hitw: 0,
+        tgttos: 0,
+        bb: 0,
+      }
+    }
+  }
 }
 
 /*

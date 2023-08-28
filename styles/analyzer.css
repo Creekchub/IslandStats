@@ -13,23 +13,33 @@ body {
   border-radius: 6px;
   margin-top: 16px;
   min-height: 16px;
-  display: flex;
-  justify-content: space-around;
+  box-shadow: 0px 0px 6px rgba(14, 14, 14, 0.802);
 }
 
 .small-panel {
   display: inline-block;
+  width: 10%;
   padding: 12px;
   padding-left: 16px;
   padding-right: 16px;
 }
 
 .text {
-  color: white;
+  color: rgb(218, 218, 218);
   font-family: Kanit;
   text-align: center;
   margin-top: 2px;
   margin-bottom: 0px;
+  font-size: 100%;
+}
+
+.text-sub {
+  color: rgb(218, 218, 218);
+  font-family: Kanit;
+  text-align: center;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  font-size: 100%;
 }
 
 .text-coins {
@@ -38,27 +48,96 @@ body {
   text-align: center;
   margin-top: 2px;
   margin-bottom: 0px;
+  font-size: 100%;
+  position: relative;
 }
 
 .text-coin-small {
-  width: 14px;
-  padding-left: 2x;
+  width: 16px;
+  padding-left: 3px;
+  padding-right: 2px;
+  position: absolute;
+}
+
+.text-coin-score {
+  width: 8%;
+  padding-left: 3px;
   padding-right: 2px;
 }
 
 .head-image {
-  width: 80px;
+  width: 100%;
   border-style: solid;
   border-color: rgb(50, 50, 50);
   border-radius: 8px;
 }
 
 .team-score {
-  background-color: red;
   border-style: solid;
+  border-left-width: 3px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
   border-color: rgb(74, 74, 255);
-  width: 100px;
   display: inline-block;
-  flex: 0 0 100px;
+  flex: 0 0 200px;;
+  color: rgb(218, 218, 218);
+  font-family: Kanit;
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.canvases {
   margin-left: auto;
+  margin-right: auto;
+}
+
+.checkLabel {
+  cursor:pointer;
+  margin-left: 6px;
+  font-family: Kanit;
+  color: white;
+}
+
+.checkBox {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.single-panel {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-bar-player {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: rgb(212, 206, 255);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 6px;
+  border-color: rgb(74, 74, 255);
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  cursor: pointer;
+}
+
+.checkDiv {
+  border-style: solid;
+  display: inline-block;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 4px;
+  padding-left: 4px;
+  background-color: rgb(74, 80, 255);
+  border-color: blue;
+  border-width: 1px;
+  border-radius: 4px;
+  margin-top: 12px;
+  margin-left: 42%;
+  margin-right: 42%;
+  width: 16%;
 }
