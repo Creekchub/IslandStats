@@ -16,8 +16,6 @@ function getStatsA(currentP, currentS) {
   let appendCount = 0;
   let appendCount1 = 0;
 
-  let teamCoins = 0;
-
   if(players[playerRN] !== undefined) {
   for(a = 0; a < serversA.length; a++) {
     if(players[playerRN][serversA[a]] !== undefined) {
@@ -52,6 +50,14 @@ function getStatsA(currentP, currentS) {
   }else {
     document.getElementById(`coinstextD${currentP}S${currentS}`).innerHTML = '0<img class="text-coin-small" src="images/coin.webp">'
   }
+  /*console.log(parseInt(document.getElementById(`coinstextD0S0`).innerHTML))
+  for(dItt = 0; dItt < document.getElementById('selectDis').value; dItt++) {
+    let teamScoreTotal = 0;
+    for(cItt = 0; cItt < document.getElementById('teamNumberCount').value; cItt++) {
+      teamScoreTotal = teamScoreTotal + parseInt(document.getElementById(`coinstextD${dItt}S${cItt}`).innerHTML);
+    }
+    document.getElementById(`teamScore${dItt}`).innerHTML = teamScoreTotal;
+  }*/
 }
 }
 
@@ -75,16 +81,24 @@ function setToBlanks(currentPanel, currentSmall) {
   document.getElementById(`headD${currentPanel}S${currentSmall}`).src = `https://mc-heads.net/avatar/Notch/100`;
   document.getElementById(`nameD${currentPanel}S${currentSmall}`).innerHTML = 'Notch'
   document.getElementById(`myPlayerD${currentPanel}S${currentSmall}`).value = ''
+  document.getElementById(`coinstextD${currentPanel}S${currentSmall}`).innerHTML = `0<img class="text-coin-small" src="images/coin.webp">`
 }
 
 function changeHeadAll() {
-   for(aDee = 0; aDee < document.getElementById('selectDis').value; aDee++) {
-    let teamTotalScore = 0;
-     for(bDee = 0; bDee < document.getElementById('teamNumberCount').value; bDee++) {
-       getStatsA(aDee, bDee);
-     }
-   }
- }
+  for(aDee = 0; aDee < document.getElementById('selectDis').value; aDee++) {
+  let teamTotalScore = 0;
+    for(bDee = 0; bDee < document.getElementById('teamNumberCount').value; bDee++) {
+      getStatsA(aDee, bDee);
+    } 
+  }
+  for(aDee = 0; aDee < document.getElementById('selectDis').value; aDee++) {
+    let teamScoreTotal = 0;
+    for(bDee = 0; bDee < document.getElementById('teamNumberCount').value; bDee++) {
+    teamScoreTotal = teamScoreTotal + parseInt(document.getElementById(`coinstextD${aDee}S${bDee}`).innerHTML);
+  }
+    document.getElementById(`teamScore${aDee}`).innerHTML = `${teamScoreTotal}<img class="text-coin-small" src="images/coin.webp">`;
+  }
+}
 
 let dataRadar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];
 let radar = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];
@@ -105,7 +119,7 @@ function generatePageContent() {
       pageContent = pageContent + `
       <div class="small-panel">
       <form class="search-form" id="thePlayerD${a}S${b}" onsubmit="return false">
-        <input class="search-bar-player" id="myPlayerD${a}S${b}" type="text" placeholder="Add Player" list="datalistPlayers" autocomplete="off" onchange="changeHead(${a}, ${b});" onclick="setToBlanks(${a}, ${b}); changeHeadAll();">
+        <input class="search-bar-player" id="myPlayerD${a}S${b}" type="text" placeholder="Add Player" list="datalistPlayers" autocomplete="off" oninput="changeHead(${a}, ${b}); changeHeadAll();" onclick="setToBlanks(${a}, ${b});">
         <datalist class="playerlister" id="datalistPlayers">
           <option>TheImpostor</option>
         </datalist>
@@ -165,6 +179,39 @@ function generatePageContent() {
        configRadar[a],
     );
   }
-  radar[0].data.datasets[0].data[0] = 500;
-  radar[0].update();
+}
+
+function getChartA(currPanel, currSmall) {
+  for(ab = 0; ab < games.length; ab++) { //makes variables for use
+    eval('var coins' + games[ab] + ' = 0');
+    eval('var count' + games[ab] + ' = 0');
+  };
+  
+  let playerC = document.getElementById(`nameD${currPanel}S${currSmall}`).innerHTML;
+
+  for(a = 0; a < serversA.length; a++) {
+    if(players[playerC][serversA[a]] !== undefined) {
+      let roundArray = Object.keys(players[playerC][serversA[a]]);
+      for(b = 0; b < roundArray.length; b++) {
+        if(players[playerC][serversA[a]][roundArray[b]] !== undefined) {
+            if((document.getElementById('noncanonCheckbox').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
+              if((players[playerC][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheckbox').checked) || players[playerC][serversA[a]][roundArray[b]].sub === undefined) {
+                for(c = 0; c < games.length; c++) {
+                  if(players[playerC][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                    let coinsTemp = 0;
+                    coinsTemp = Math.round(players[playerC][serversA[a]][roundArray[b]][games[c]] / servers[serversA[a]][roundArray[b]].rounds);
+                    if(games[c] === 'sb' || games[c] === 'pkw') {  //MAINTAINENCE IF NEW GAME IS ADDED
+                      coinsTemp = coinsTemp * 1.5
+                    }
+                    eval('count' + games[c] + '++;');
+                   // eval('coins' + games[c] + ' = ' + 'coins' + games[c] + ' + ' + coinsTemp);
+                   eval('coins' + games[c] + ' += coinsTemp');
+                }
+              }
+            }
+           }
+        }
+      }
+    }
+  }
 }

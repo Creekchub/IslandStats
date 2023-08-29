@@ -11,7 +11,7 @@
   </head>
   <body id="bodyAnalyzer">
     <div class="checkDiv">
-      <p class="text">Include:</p>
+      <p class="text-sub" style="font-size: 16px;">Include:</p>
       <div style="display: inline-block;">
         <label class="checkLabel" for="subCheckbox">Substitutions</label><br>
         <label class="checkLabel" for="noncanonCheckbox">Noncanon</label>
@@ -20,6 +20,7 @@
         <input class="checkBox" style="margin-bottom: 8px; margin-top: 6px;" id="subCheckbox" type="checkbox" onchange="changeHeadAll();"><br>
         <input class="checkBox" id="noncanonCheckbox" type="checkbox" onchange="changeHeadAll();">
       </div>
+      <p style="font-size: 16px; font-family: Kanit; color: white; margin: 0px; display: inline-block">Number of teams:</p>
       <select id="selectDis" onchange="generatePageContent();">
         <option value="10">10</option>
         <option value="1">1</option>
@@ -38,6 +39,7 @@
         <option value="15">15</option>
         <option value="16">16</option>
       </select>
+      <p style="font-size: 16px; font-family: Kanit; color: white; margin: 0px; display: inline-block">Players per team:</p>
       <select id="teamNumberCount" onchange="generatePageContent();">
         <option value="4">4</option>
         <option value="1">1</option>
