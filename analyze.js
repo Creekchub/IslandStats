@@ -1,4 +1,5 @@
 function getDataList() {
+  document.getElementById('datalistPlayers').innerHTML = '';
   let playerList = Object.keys(players);
   for(i = 0; i <= playerList.length - 1; i++) {
     let newData = document.createElement('option');
@@ -87,8 +88,13 @@ function setToBlanks(currentPanel, currentSmall) {
 function changeHeadAll() {
   for(aDee = 0; aDee < document.getElementById('selectDis').value; aDee++) {
   let teamTotalScore = 0;
+  for(aNum2 = 0; aNum2 < games.length; aNum2++) {
+    radar[aDee].data.datasets[0].data[aNum2] = 0;
+    radar[aDee].update();
+  }
     for(bDee = 0; bDee < document.getElementById('teamNumberCount').value; bDee++) {
       getStatsA(aDee, bDee);
+      getChartA(aDee, bDee);
     } 
   }
   for(aDee = 0; aDee < document.getElementById('selectDis').value; aDee++) {
@@ -148,7 +154,7 @@ function generatePageContent() {
     dataRadar[a] = {
       labels: ['SB', 'BB', 'TGTTOS', 'PKW', 'HITW'], //SKY BATTLE
       datasets: [{
-        label: 'Low Coin Games x1.5',
+        label: 'Coins',
         data: ['0', '0', '0', '0', '0'],
       },
     ],
@@ -164,7 +170,10 @@ function generatePageContent() {
           r: {
             beginAtZero: true,
             min: 0,
-            max: 600,
+            max: (500 * document.getElementById('teamNumberCount').value),
+            ticks: {
+              display: false
+            }
           }
         },
         legend: {
@@ -179,6 +188,7 @@ function generatePageContent() {
        configRadar[a],
     );
   }
+  getDataList();
 }
 
 function getChartA(currPanel, currSmall) {
@@ -209,9 +219,15 @@ function getChartA(currPanel, currSmall) {
                 }
               }
             }
-           }
+          }
         }
       }
+    }
+  }
+  for(aNum = 0; aNum < games.length; aNum++) {
+    if(eval('coins' + games[aNum]) !== 0) {
+      radar[currPanel].data.datasets[0].data[gameOrderRadar[games[aNum]]] = parseInt(radar[currPanel].data.datasets[0].data[gameOrderRadar[games[aNum]]]) + eval('coins' + games[aNum] + ' / count' + games[aNum]);
+      radar[currPanel].update();
     }
   }
 }
