@@ -17,10 +17,11 @@
         <label class="checkLabel" for="noncanonCheckbox">Noncanon</label>
       </div>
       <div style="display: inline-block; margin-left: 10px;">
-        <input class="checkBox" style="margin-bottom: 8px; margin-top: 6px;" id="subCheckbox" type="checkbox"><br>
-        <input class="checkBox" id="noncanonCheckbox" type="checkbox">
+        <input class="checkBox" style="margin-bottom: 8px; margin-top: 6px;" id="subCheckbox" type="checkbox" onchange="changeHeadAll();"><br>
+        <input class="checkBox" id="noncanonCheckbox" type="checkbox" onchange="changeHeadAll();">
       </div>
       <select id="selectDis" onchange="generatePageContent();">
+        <option value="10">10</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -28,8 +29,23 @@
         <option value="5">5</option>
         <option value="6">6</option>
         <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+      </select>
+      <select id="teamNumberCount" onchange="generatePageContent();">
+        <option value="4">4</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
       </select>
     </div>
+    <div id="bigDiv"></div>
   </body>
   <script id="scriptDiv"></script>
   <script>

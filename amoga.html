@@ -1,0 +1,46 @@
+<div class="panel">
+      <div id="single-panel-target" class="single-panel">
+        <div class="small-panel">
+          <form class="search-form" id="thePlayer${number1}" onsubmit="return false">
+            <input class="search-bar-player" id="myPlayer${number1}" type="text" placeholder="Add Player" list="datalistPlayers" autocomplete="off" onchange="changeHead('${number1}');" onclick="setToBlanks(${number1});">
+            <datalist class="playerlister" id="datalistPlayers">
+              <option>TheImpostor</option>
+            </datalist>
+          </form>
+          <img class="head-image" src="https://mc-heads.net/avatar/cxost/100" id="head${number1}">
+          <p class="text" id="name${number1}">cxost</p>
+          <p class="text-coins" id="coinstext${number1}">8000<img class="text-coin-small" src="images/coin.webp"></p><br>
+        </div>
+        <div class="small-panel">
+          <form class="search-form" id="thePlayer${number2}" onsubmit="return false">
+            <input class="search-bar-player" id="myPlayer${number2}" type="text" placeholder="Add Player" list="datalistPlayers" autocomplete="off" onchange="changeHead('${number2}');" onclick="setToBlanks(${number2});">
+          </form>
+          <img class="head-image" src="https://mc-heads.net/avatar/cxost/100" id="head${number2}">
+          <p class="text" id="name${number2}">cxost</p>
+          <p class="text-coins" id="coinstext${number2}">8000<img class="text-coin-small" src="images/coin.webp"></p><br>
+        </div>
+        <div class="small-panel">
+          <form class="search-form" id="thePlayer${number3}" onsubmit="return false">
+            <input class="search-bar-player" id="myPlayer${number3}" type="text" placeholder="Add Player" list="datalistPlayers" autocomplete="off" onchange="changeHead('${number3}');" onclick="setToBlanks(${number3});">
+          </form>
+          <img class="head-image" src="https://mc-heads.net/avatar/cxost/100" id="head${number3}">
+          <p class="text" id="name${number3}">cxost</p>
+          <p class="text-coins" id="coinstext${number3}">8000<img class="text-coin-small" src="images/coin.webp"></p><br>
+        </div>
+        <div class="small-panel">
+          <form class="search-form" id="thePlayer${number4}" onsubmit="return false">
+            <input class="search-bar-player" id="myPlayer${number4}" type="text" placeholder="Add Player" list="datalistPlayers" autocomplete="off" onchange="changeHead('${number4}');" onclick="setToBlanks(${number4});">
+          </form>
+          <img class="head-image" src="https://mc-heads.net/avatar/cxost/100" id="head${number4}">
+          <p class="text" id="name${number4}">cxost</p>
+          <p class="text-coins" id="coinstext${number4}">8000<img class="text-coin-small" src="images/coin.webp"></p><br>
+        </div>
+        <div class="canvases">
+          <canvas style="margin-left: 2%" id="radar${graphNum}" height="200" width="200"></canvas>
+        </div>
+        <div class="team-score">
+          <p class="text">Team Score</p>
+          <p id="teamScore${graphNum}" class="text-sub"><img style="opacity: 0;" class="text-coin-score" src="images/coin.webp">6000<img class="text-coin-score" src="images/coin.webp"></p>
+        </div>
+      </div>
+    </div>
