@@ -130,8 +130,8 @@ function generatePageContent() {
           <option>TheImpostor</option>
         </datalist>
       </form>
-      <img class="head-image" src="https://mc-heads.net/avatar/Notch/100" id="headD${a}S${b}">
-      <p class="text" id="nameD${a}S${b}">Notch</p>
+      <img class="head-image" src="https://mc-heads.net/avatar/Notch/100" id="headD${a}S${b}" onclick="customPlayer(${a}, ${b});" title="Add custom player">
+      <p class="text" id="nameD${a}S${b}" onclick="playerSiteNav(${a}, ${b});" style="cursor:pointer;">Notch</p>
       <p class="text-coins" id="coinstextD${a}S${b}">0<img class="text-coin-small" src="images/coin.webp"></p><br>
     </div>
     `
@@ -192,30 +192,38 @@ function generatePageContent() {
 }
 
 function getChartA(currPanel, currSmall) {
-  for(ab = 0; ab < games.length; ab++) { //makes variables for use
-    eval('var coins' + games[ab] + ' = 0');
-    eval('var count' + games[ab] + ' = 0');
-  };
+  if(players[document.getElementById(`nameD${currPanel}S${currSmall}`).innerHTML] !== undefined) {
+    for(ab = 0; ab < games.length; ab++) { //makes variables for use
+      eval('var coins' + games[ab] + ' = 0');
+      eval('var count' + games[ab] + ' = 0');
+    };
+    
+    let playerC = document.getElementById(`nameD${currPanel}S${currSmall}`).innerHTML;
   
-  let playerC = document.getElementById(`nameD${currPanel}S${currSmall}`).innerHTML;
-
-  for(a = 0; a < serversA.length; a++) {
-    if(players[playerC][serversA[a]] !== undefined) {
-      let roundArray = Object.keys(players[playerC][serversA[a]]);
-      for(b = 0; b < roundArray.length; b++) {
-        if(players[playerC][serversA[a]][roundArray[b]] !== undefined) {
-            if((document.getElementById('noncanonCheckbox').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
-              if((players[playerC][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheckbox').checked) || players[playerC][serversA[a]][roundArray[b]].sub === undefined) {
-                for(c = 0; c < games.length; c++) {
-                  if(players[playerC][serversA[a]][roundArray[b]][games[c]] !== undefined) {
-                    let coinsTemp = 0;
-                    coinsTemp = Math.round(players[playerC][serversA[a]][roundArray[b]][games[c]] / servers[serversA[a]][roundArray[b]].rounds);
-                    if(games[c] === 'sb' || games[c] === 'pkw') {  //MAINTAINENCE IF NEW GAME IS ADDED
-                      coinsTemp = coinsTemp * 1.5
-                    }
+    for(a = 0; a < serversA.length; a++) {
+      if(players[playerC][serversA[a]] !== undefined) {
+        let roundArray = Object.keys(players[playerC][serversA[a]]);
+        for(b = 0; b < roundArray.length; b++) {
+          if(players[playerC][serversA[a]][roundArray[b]] !== undefined) {
+              if((document.getElementById('noncanonCheckbox').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
+                if((players[playerC][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheckbox').checked) || players[playerC][serversA[a]][roundArray[b]].sub === undefined) {
+                  for(c = 0; c < games.length; c++) {
+                    if(players[playerC][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                      let coinsTemp = 0;
+                      coinsTemp = Math.round(players[playerC][serversA[a]][roundArray[b]][games[c]] / servers[serversA[a]][roundArray[b]].rounds);
+                      if(games[c] === 'sb' || games[c] === 'pkw') {  //MAINTAINENCE IF NEW GAME IS ADDED
+                        coinsTemp = coinsTemp * 1.5
+                      }
+                      eval('count' + games[c] + '++;');
+                     // eval('coins' + games[c] + ' = ' + 'coins' + games[c] + ' + ' + coinsTemp);
+                     eval('coins' + games[c] + ' += coinsTemp');
+                  }else {
+                    let coinsTempC = 0;
+                    coinsTempC = (parseInt(document.getElementById('defaultCoinValue').value));
                     eval('count' + games[c] + '++;');
                    // eval('coins' + games[c] + ' = ' + 'coins' + games[c] + ' + ' + coinsTemp);
-                   eval('coins' + games[c] + ' += coinsTemp');
+                   eval('coins' + games[c] + ' += coinsTempC');
+                  }
                 }
               }
             }
@@ -223,11 +231,36 @@ function getChartA(currPanel, currSmall) {
         }
       }
     }
+    for(aNum = 0; aNum < games.length; aNum++) {
+      if(eval('coins' + games[aNum]) !== 0) {
+        radar[currPanel].data.datasets[0].data[gameOrderRadar[games[aNum]]] = parseInt(radar[currPanel].data.datasets[0].data[gameOrderRadar[games[aNum]]]) + eval('coins' + games[aNum] + ' / count' + games[aNum]);
+        radar[currPanel].update();
+      }
+    }
   }
-  for(aNum = 0; aNum < games.length; aNum++) {
-    if(eval('coins' + games[aNum]) !== 0) {
-      radar[currPanel].data.datasets[0].data[gameOrderRadar[games[aNum]]] = parseInt(radar[currPanel].data.datasets[0].data[gameOrderRadar[games[aNum]]]) + eval('coins' + games[aNum] + ' / count' + games[aNum]);
+  else {
+    let customPlayerCoinChart = document.getElementById(`coinstextD${currPanel}S${currSmall}`).innerHTML;
+    customPlayerCoinChart = parseInt(customPlayerCoinChart);
+    customPlayerCoinChart = (customPlayerCoinChart / 4);
+    for(chartCustomItt = 0; chartCustomItt < games.length; chartCustomItt++) {
+      radar[currPanel].data.datasets[0].data[gameOrderRadar[games[chartCustomItt]]] = parseInt(radar[currPanel].data.datasets[0].data[gameOrderRadar[games[chartCustomItt]]]) + parseInt(customPlayerCoinChart);
       radar[currPanel].update();
     }
+  }
+}
+
+function customPlayer(panelC, smallC) {
+  let customPlayerName = prompt("Enter custom player's name.")
+  let customCoins = prompt("Enter custom player's coins.")
+  document.getElementById(`nameD${panelC}S${smallC}`).innerHTML = customPlayerName;
+  document.getElementById(`headD${panelC}S${smallC}`).src = `https://mc-heads.net/avatar/${customPlayerName}/100`;
+  document.getElementById(`coinstextD${panelC}S${smallC}`).innerHTML = `${customCoins}<img class="text-coin-small" src="images/coin.webp">`
+  changeHeadAll();
+}
+
+function playerSiteNav(panel1, panel2) {
+  let playerNameNav = document.getElementById(`nameD${panel1}S${panel2}`).innerHTML;
+  if(players[playerNameNav] !== undefined) {
+    window.open(`https://islandstats.net/players.html?player=${playerNameNav}`);
   }
 }

@@ -1161,10 +1161,11 @@ let players = {
   Notch: {
     iw: {
       1: {
-        sb: 0,
+        sb: 0, //MAINTAINENCE IF NEW GAME
         hitw: 0,
         tgttos: 0,
         bb: 0,
+        pkw: 0,
       }
     }
   }
