@@ -252,10 +252,15 @@ function getChartA(currPanel, currSmall) {
 function customPlayer(panelC, smallC) {
   let customPlayerName = prompt("Enter custom player's name.")
   let customCoins = prompt("Enter custom player's coins.")
-  document.getElementById(`nameD${panelC}S${smallC}`).innerHTML = customPlayerName;
-  document.getElementById(`headD${panelC}S${smallC}`).src = `https://mc-heads.net/avatar/${customPlayerName}/100`;
-  document.getElementById(`coinstextD${panelC}S${smallC}`).innerHTML = `${customCoins}<img class="text-coin-small" src="images/coin.webp">`
-  changeHeadAll();
+  if(isNaN(customCoins)) {
+    customCoins = 0;
+  }
+  if(customPlayerName != undefined && customCoins !== undefined) {
+    document.getElementById(`nameD${panelC}S${smallC}`).innerHTML = customPlayerName;
+    document.getElementById(`headD${panelC}S${smallC}`).src = `https://mc-heads.net/avatar/${customPlayerName}/100`;
+    document.getElementById(`coinstextD${panelC}S${smallC}`).innerHTML = `${customCoins}<img class="text-coin-small" src="images/coin.webp">`
+    changeHeadAll();
+  }
 }
 
 function playerSiteNav(panel1, panel2) {
