@@ -2,14 +2,17 @@
 let servers = {
   iw: {
     1: {
-      rounds: 4
+      rounds: 4,
+      gamesM: 1,
     },
     2: {
-      rounds: 3
-    },
-    ChosenTeams1: {
       rounds: 3,
-      canon: false
+      gamesM: 1,
+    },
+    'Chosen Teams 1': {
+      rounds: 3,
+      canon: false,
+      gamesM: 1,
     }
   },
   /*it: {
@@ -20,6 +23,24 @@ let servers = {
       rounds: 4
     }
   }*/
+  hitw: {
+    1: {
+      gamesM: 4,
+      rounds: 4
+    }
+  },
+  ib: {
+    1: {
+      rounds: 3,
+      gamesM: 1,
+    }
+  },
+  mccic: {
+    'O.B Chosen 1': {
+      rounds: 3,
+      gamesM: 1
+    }
+  }
 }
 
 
@@ -32,6 +53,18 @@ serverNames = {
   it: {
     ac: 'IT',
     full: 'Island Tournaments'
+  },
+  hitw: {
+    ac: 'HITW',
+    full: 'HITW Dojo'
+  },
+  ib: {
+    ac: 'IB',
+    full: 'Island Battles'
+  },
+  mccic: {
+    ac: 'MCCIC',
+    full: 'MCCI Community'
   }
 }
 
@@ -78,6 +111,108 @@ function getStats() {
   let coinsTourneyDisplay = '';
   let appendCount = 0;
   let appendCount1 = 0;
+  document.getElementById('statTourneyDiv').innerHTML = '';
+
+  let roundSelect = document.getElementById('tourneySelect').value
+
+  for(a = 0; a < serversA.length; a++) {
+    if(players[player][serversA[a]] !== undefined) {
+      let roundArray = Object.keys(players[player][serversA[a]]);
+      for(b = 0; b < roundArray.length; b++) {
+        if(players[player][serversA[a]][roundArray[b]] !== undefined) {
+          if(roundSelect == serversA[a] || roundSelect == 'all') {
+            if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
+              if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
+                let coinsTourney = 0;
+                for(c = 0; c < games.length; c++) {
+                  let gameCoins = 0;
+                  if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                    let gamesSelected = document.getElementById('gameSelect').value;
+                    if(games[c] === gamesSelected || gamesSelected === 'all') {
+                      countRound++;
+                      gameCoins = players[player][serversA[a]][roundArray[b]][games[c]];
+                    if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
+                      gameCoins = Math.round(gameCoins * 1.5);
+                    }
+                    if(servers[serversA[a]][roundArray[b]].gamesM !== 1) {
+                      totalCoins = totalCoins + Math.round((gameCoins / servers[serversA[a]][roundArray[b]].rounds) * servers[serversA[a]][roundArray[b]].gamesM);
+                    }else {
+                      totalCoins = totalCoins + Math.round(gameCoins / servers[serversA[a]][roundArray[b]].rounds);
+                    }
+                    coinsTourney = coinsTourney + gameCoins;
+                    }
+                  }
+                }coinsTourneyDisplay = coinsTourneyDisplay + `${coinsTourney} `;
+
+                //appendCount++;
+                /*let oneRoundCoins = document.createElement('div');
+                oneRoundCoins.setAttribute('class', 'displayDivText');
+                oneRoundCoins.setAttribute('id', `coinTextAppend${appendCount}`);
+                if(servers[serversA[a]][roundArray[b]].canon === false) {
+                  oneRoundCoins.setAttribute('style', 'color:orange');
+                }
+                document.getElementById('displayDivDis2').append(oneRoundCoins);
+                document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`;
+                if(players[player][serversA[a]][roundArray[b]].sub) {
+                  document.getElementById(`coinTextAppend${appendCount}`).innerHTML = document.getElementById(`coinTextAppend${appendCount}`).innerHTML + '<p class="subTag">Sub</p>'
+                }
+
+                appendCount1++;
+                let oneRoundTag = document.createElement('p');
+                oneRoundTag.setAttribute('id', `coinTag${appendCount1}`);
+                oneRoundTag.setAttribute('class', 'displayDivText');
+                document.getElementById('displayDivDis1').append(oneRoundTag);
+                document.getElementById(`coinTag${appendCount1}`).innerHTML = `${serverNames[serversA[a]].full} - ${roundArray[b]}`*/
+                //document.getElementById('statTourneyDiv').innerHTML = ''
+                if(coinsTourney !== 0) {
+                  document.getElementById('statTourneyDiv').innerHTML = document.getElementById('statTourneyDiv').innerHTML + `
+              <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px calc(50% - 45px) 30px; margin-bottom: 8px;">
+                <div style="display: flex;">
+                  <img src="images/logo/${serversA[a]}.webp" style="width: 30px; grid-column-start: 1; border-radius: 6px;">
+                  <span style="grid-column-start: 1; align-self: center; color: white; font-family: Kanit; padding-left: 10px;">${roundArray[b]}</span>
+                </div>
+                <img src="images/wip.webp" style="width: 30px;">
+                <div style="display: flex">
+                  <span style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} / ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
+                  <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
+                </div>
+                <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
+              </div>
+                `//ADD IMAGES AND DODGEBOLT LATER HERE HERE HERE
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  getChartStats();
+  if(coinsTourneyDisplay !== '') {
+    if(document.getElementById('gameSelect').value === 'all') {
+      document.getElementById('coinAverageStat').innerHTML = `${Math.round((totalCoins / countRound) * 4)}`;
+    }else {
+      document.getElementById('coinAverageStat').innerHTML = `${Math.round(totalCoins / countRound)}`;
+    }
+  }else {
+    document.getElementById('coinAverageStat').innerHTML = '0'
+  }
+  sessionStorage.setItem('selectRecall', roundSelect);
+
+  let subCheckRecallVar1 = document.getElementById('subCheck').checked;
+  sessionStorage.setItem('subCheckRecall', subCheckRecallVar1);
+
+  let ncCheckRecallVar1 = document.getElementById('noncanonCheck').checked;
+  sessionStorage.setItem('ncCheckRecall', ncCheckRecallVar1);
+}
+
+//OLD OUTDATED CODE ( LIKE RUDERRR )
+function getStatsOLD() {
+  let countRound = 0;
+  let totalCoins = 0;
+  let coinsTourneyDisplay = '';
+  let appendCount = 0;
+  let appendCount1 = 0;
   document.getElementById('displayDivDis2').innerHTML = '';
   document.getElementById('displayDivDis1').innerHTML = '';
 
@@ -100,7 +235,11 @@ function getStats() {
                     if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
                       gameCoins = Math.round(gameCoins * 1.5);
                     }
-                    totalCoins = totalCoins + Math.round(gameCoins / servers[serversA[a]][roundArray[b]].rounds);
+                    if(servers[serversA[a]][roundArray[b]].gamesM !== 1) {
+                      totalCoins = totalCoins + Math.round((gameCoins / servers[serversA[a]][roundArray[b]].rounds) * servers[serversA[a]][roundArray[b]].gamesM);
+                    }else {
+                      totalCoins = totalCoins + Math.round(gameCoins / servers[serversA[a]][roundArray[b]].rounds);
+                    }
                     coinsTourney = coinsTourney + gameCoins;
                   }
                 }coinsTourneyDisplay = coinsTourneyDisplay + `${coinsTourney} `;
@@ -149,6 +288,51 @@ function getStats() {
 
 
 function getChartStats() {
+  for(ab = 0; ab < games.length; ab++) { //makes variables for use
+    eval('var coins' + games[ab] + ' = 0');
+    eval('var count' + games[ab] + ' = 0');
+  };
+  let roundSelect = document.getElementById('tourneySelect').value;
+
+  for(a = 0; a < serversA.length; a++) {
+    if(players[player][serversA[a]] !== undefined) {
+      let roundArray = Object.keys(players[player][serversA[a]]);
+      for(b = 0; b < roundArray.length; b++) {
+        if(players[player][serversA[a]][roundArray[b]] !== undefined) {
+          if(roundSelect == serversA[a] || roundSelect == 'all') {
+            if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
+              if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
+                for(c = 0; c < games.length; c++) {
+                  if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                    let coinsTemp = 0;
+                    coinsTemp = Math.round(players[player][serversA[a]][roundArray[b]][games[c]] / servers[serversA[a]][roundArray[b]].rounds);
+                    if(games[c] === 'sb' || games[c] === 'pkw') {  //MAINTAINENCE IF NEW GAME IS ADDED
+                      coinsTemp = coinsTemp * 1.5
+                    }
+                    eval('count' + games[c] + '++;');
+                   // eval('coins' + games[c] + ' = ' + 'coins' + games[c] + ' + ' + coinsTemp);
+                   eval('coins' + games[c] + ' += coinsTemp');
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  for(d = 0; d < games.length; d++) {
+    eval('Bar.data.datasets[0].data[' + gameOrderRadar[games[d]] + '] = Math.round(' + 'coins' + games[d] + ' / ' + 'count' + games[d] + ')');
+    eval('Bar.update();');
+
+    eval('radar.data.datasets[0].data[' + gameOrderRadar[games[d]] + '] = ' + 'Math.round(coins' + games[d] + ' / ' + 'count' + games[d] + ')');
+    radar.update();
+  }
+}
+
+//OLD GRANPA CODE BEWARE
+
+function getChartStatsOLD() {
   for(ab = 0; ab < games.length; ab++) { //makes variables for use
     eval('var coins' + games[ab] + ' = 0');
     eval('var count' + games[ab] + ' = 0');

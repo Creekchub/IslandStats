@@ -1,0 +1,242 @@
+body {
+  background-color: rgb(61, 61, 61);
+  margin: 0px;
+  height: 2000px;
+}
+
+.dee {
+  background-color: rgb(51, 51, 51);;
+}
+
+.top-bar {
+  background-image: url('../../styles/background-imagery.webp');
+  height: 70px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(98, 98, 255);
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.logo-text {
+  position: absolute;
+  font-family: Kanit;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+  left: 80px;
+  margin: 0px;
+  bottom: 12px;
+}
+
+.logo-image {
+  position: absolute;
+  width: 70px;
+}
+
+.search-bar {
+  display: inline-block;
+  width: 70%;
+  height: 36px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(60, 99, 255);
+  cursor: pointer;
+  outline: none;
+  color: rgb(77, 77, 77);
+  font-family: Kanit;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 20px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+
+.search-bar:hover {
+  transition: box-shadow 0.15s;
+  box-shadow: 0px 0px 10px rgba(90, 90, 90, 0.681)
+}
+
+.search-bar::placeholder {
+  font-size: 18px;
+}
+
+.search-form {
+  display: block;
+  width: 32%;
+  margin-left: 34%;
+  margin-right: 34%;
+  height: 38px;
+}
+
+
+.search-button{ 
+  background-color: white;
+  color: rgba(77, 77, 77, 0.855);
+  border-style: solid;
+  border-color: rgb(60, 99, 255);
+  border-width: 3px;
+  height: 36px;
+  margin-left: 6px;
+  border-radius: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: Kanit;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding-bottom: 30px;
+  min-width: 80px;
+  max-width: 80px;
+}
+
+
+.playerProfile {
+  display: inline-block;
+  border-radius: 12px;
+  padding: 6px;
+  margin-left: 76px;
+  margin-top: 16px;
+}
+
+.playerName {
+  display: block;
+  color: white;
+  text-align:center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 22px;
+  font-family: Kanit;
+  width: 180px;
+  overflow-wrap: break-word;
+  background-color: rgb(51, 51, 51);
+  border-radius: 12px;
+}
+
+.chartDiv {
+  display: inline-block;
+  width: calc(100% - 310px);
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.chartDivInner {
+  display: flex;
+  justify-content: center;
+}
+
+.gameChart {
+  background-color: rgb(51, 51, 51);
+  border-radius: 24px;
+  margin-left: 20px;
+  padding: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(51, 71, 255, 0.504);
+}
+
+.statsDiv {
+  margin-top: 24px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: rgb(51, 51, 51);
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.playerInfoSpan {
+  display: grid;
+  height: 124px;
+  grid-template-columns: 40% 20% 40%;
+  padding: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(51, 71, 255, 0.504);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.playerinfogrid {
+  border-color: rgba(33, 33, 33, 0.802);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.coinAverage {
+  font-family: Kanit;
+  color: white;
+  font-weight: 600;
+  font-size: 70px;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.coinCoinAverage {
+  margin-top: 4px;
+  padding-left: 6px;
+  width: 60px;
+  align-self: center
+}
+
+.tooltiphelpAverage {
+  width: 20px;
+  align-self:center;
+  justify-self: flex-end
+}
+
+.playerHeadImage {
+  border-radius: 6px;
+}
+
+.statTourneyDiv {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(51, 71, 255, 0.504);
+  padding: 8px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.selectBox {
+  background-color:rgb(72, 93, 255);
+  color: white;
+  border-color: rgb(46, 71, 255);
+  padding: 4px;
+  font-family: Kanit;
+  text-align: center;
+  font-weight: 500;
+  width: 180px;
+}
+
+.playerAvatar {
+  height: 432px;
+  width: 180px;
+}
+
+.checkBox {
+  width: 20px;
+  height: 20px;
+  margin: 0px;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+
+.modsDiv {
+  padding: 8px;
+  border-color: rgba(51, 71, 255, 0.504);
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-right-style: solid;
+  border-left-style: solid;
+  display: flex;
+  justify-content: space-around;
+}
+
+.checkBoxTag {
+  color: white;
+  font-family: Kanit;
+  align-self: center
+}

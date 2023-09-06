@@ -1,0 +1,198 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/player/general.css">
+    <script src="inputReciever.js"></script>
+    <script src="players.js"></script>
+    <script src="search.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  
+    <link rel="icon" type="image/x-icon" href="/images/islandstats-icon-trans-scaled.png">
+  </head>
+  <body>
+    <div class="top-bar">
+       <a href="index.html"><img src="images/islandstats-icon-trans-scaled.png" class="logo-image"></a>
+       <a href="index.html">><p class="logo-text">Home</p></a>
+       <form class="search-form"  id="thePlayer" onsubmit="return false">
+        <input class="search-bar" id="myPlayer" type="text" placeholder="Find Players" list="datalistPlayers" oninput="storeSearchValue()" autocomplete="off">
+        <datalist class="playerlister" id="datalistPlayers">
+          <option>MrBeast</option>
+        </datalist>
+        <button class="search-button" onclick="playerWindow()">Search</button>
+      </form>
+    </div>
+    <span style="position: absolute; font-family: Kanit; color: rgba(199, 199, 199, 0.544); font-size: 10px; left: 10px; top: 80px;">Sky Battle and PKW are <br>multiplied x1.5 EVERYWHERE</span>
+    <div class="playerProfile">
+      <p class="playerName" id="playerName">Amonger</p><br>
+      <img src="https://mc-heads.net/body/notch/.png" id="playerAvatar" class="playerAvatar">
+    </div>
+    <div class="chartDiv">
+      <div class="chartDivInner">
+        <canvas class="gameChart" id="Bar" width="360" height="360";></canvas>
+        <canvas class="gameChart" class="pieChart" id="radar" width="360"></canvas>
+      </div>
+    </div>
+    <div class="statsDiv">
+      <div class="playerInfoSpan">
+        <div class="playerinfogrid" style="grid-column-start: 1; border-right-style: dashed;">
+          <p class="coinAverage" id="coinAverageStat">1500</p><img src="images/coin.webp" class="coinCoinAverage"><img src="images/questionmarkinfo.webp.png" class="tooltiphelpAverage" title="This is an average of how the player should perform in a 1 round tournament">
+        </div>
+
+        <div class="playerinfogrid" style="grid-column-start: 2;">
+          <img id="headImage" class="playerHeadImage" src="https://mc-heads.net/avatar/Notch/100">
+        </div>
+
+        <div class="playerinfogrid" style="grid-column-start: 3; border-left-style: dashed;">
+          <p class="coinAverage">0</p><img style="width: 50px; height: 50px; padding-left: 12px; align-self: center" src="images/crown.webp">
+          <p class="coinAverage" style="margin-left: 24px;">0</p><img style="width: 50px; height: 50px; padding-left: 12px; align-self: center" src="images/dodgebolt.webp">
+        </div>
+      </div>
+      <div class="modsDiv">
+        <div style="align-self: center">
+         <div style="display: flex; margin-bottom: 4px;">
+          <input type="checkbox" id="subCheck" class="checkBox" onclick="getStats();"><span class="checkBoxTag">Substitutions</span>
+         </div>
+          <div style="display: flex;">
+            <input type="checkbox" id="noncanonCheck" class="checkBox" onclick="getStats();"><span class="checkBoxTag">Noncanon</span>
+          </div>
+        </div>
+        <div>
+          <select class="selectBox" id="tourneySelect" style="margin-bottom: 4px;" onclick="getStats();">
+            <option value="all">Show all Tournaments</option> <!--MAINTAINENCE IF NEW SERVER ADDED-->
+            <option value="iw">Island Warriors</option>
+            <option value="mccic">Island Community</option>
+          </select><br>
+          <select class="selectBox" id="gameSelect" onclick="getStats();"> <!--MAINTAINENCE IF NEW GAME ADDED-->
+            <option value="all">Show all Games</option>
+            <option value="sb">Sky Battle</option>
+            <option value="tgttos">TGTTOS</option>
+            <option value="bb">Battle Box</option>
+            <option value="hitw">HITW</option>
+            <option value="pkw">PKW</option>
+          </select>
+        </div>
+      </div>
+      <div class="statTourneyDiv" id="statTourneyDiv">
+        <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px calc(50% - 45px) 30px; margin-bottom: 8px;">
+          <div style="display: flex;">
+            <img src="images/logo/iw.webp" style="width: 30px; grid-column-start: 1; border-radius: 6px;">
+            <span style="grid-column-start: 1; align-self: center; color: white; font-family: Kanit; padding-left: 10px;">Chosen teams</span>
+          </div>
+          <img src="images/orange.webp" style="width: 30px;">
+          <div style="display: flex">
+            <span style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">1500</span>
+            <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
+          </div>
+          <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
+        </div>
+        <!--<div style="display: grid; grid-template-columns: calc(50% - 15px) 30px calc(50% - 45px) 30px; margin-bottom: 8px;">
+          <div style="display: flex;">
+            <img src="images/logo/mccic.webp" style="width: 30px; grid-column-start: 1; border-radius: 6px;">
+            <span style="grid-column-start: 1; align-self: center; color: white; font-family: Kanit; padding-left: 10px;">Chosen teams</span>
+          </div>
+          <img src="images/orange.webp" style="width: 30px;">
+          <div style="display: flex">
+            <span style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">141234321412</span>
+            <img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">
+          </div>
+          <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
+        </div>-->
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script> //game Chart <------
+    const dataBar = {
+      labels: ['SB', 'BB', 'TGTTOS', 'PKW', 'HITW'], //SKY BATTLE
+      datasets: [{
+        label: 'Coins',
+        data: [],
+        borderWidth: 2
+      },
+    ],
+    };
+    const dataRadar = {
+      labels: ['SB', 'BB', 'TGTTOS', 'PKW', 'HITW'], //RADAR CHART
+      datasets: [{
+        label: 'Coins',
+        data: ['0', '0', '0', '0', '0'],
+      },
+    ],
+    };
+    const configRadar = {
+      type: 'radar',
+      data: dataRadar,
+      options: {
+        plugins: {
+        },
+        responsive: false,
+        scales: {
+          r: {
+            beginAtZero: true,
+            min: 0,
+            max: 600,
+          }
+        }
+      }
+    };
+    const radar = new Chart(
+      document.getElementById('radar'), 
+       configRadar,
+    );
+
+    const configBar = {
+      type: 'bar',
+      data: dataBar,
+      options: {
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        responsive: false,
+        scales: {
+          y: {
+            max: 600, //the cap
+          }
+        }
+      }
+    };
+    const Bar = new Chart(
+      document.getElementById('Bar'), 
+       configBar,
+    );
+      </script>
+  <script> // REMEMBERS THE USERS CHOICE OF 'selectBox' !
+    let deeza1 = sessionStorage.getItem('selectRecall');
+      for(variable1 = 0;variable1 < serversA.length; variable1++) {
+        if(deeza1 === serversA[variable1] || deeza1 === 'all') {
+          document.getElementById('tourneySelect').value = deeza1;
+        }
+      }
+    </script>
+    <script>
+      let subRecall = sessionStorage.getItem('subCheckRecall');
+      if(subRecall === 'true') {
+        document.getElementById('subCheck').checked = true;
+      }else {
+        document.getElementById('subCheck').checked = false;
+      }
+
+      let ncRecall = sessionStorage.getItem('ncCheckRecall');
+      if(ncRecall === 'true') {
+        document.getElementById('noncanonCheck').checked = true;
+      }else {
+        document.getElementById('noncanonCheck').checked = false;
+      }
+    </script>
+  <script>
+    getDataList();
+    let skinURL = `https://mc-heads.net/body/${player}/.png`;
+    document.getElementById('playerAvatar').src = skinURL;
+    document.getElementById('headImage').src = `https://mc-heads.net/avatar/${player}/100`;
+    document.getElementById('playerName').innerHTML = player;
+  </script>
+  <script>
+    getStats();
+  </script>
+</html>

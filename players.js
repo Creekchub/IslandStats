@@ -1,7 +1,207 @@
 let players = {
+  Darrk_Cobraa: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1005,
+        sb:282,
+        tgttos:789,
+        hitw:900,
+      }
+    },
+  },
+  CursedArrow: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:705,
+        sb:320,
+        tgttos:1219,
+        hitw:735,
+      }
+    },
+  },
+  HiStuffGuy: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1155,
+        sb:326,
+        tgttos:958,
+        hitw:670,
+      }
+    },
+  },
+  Improver_: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1185,
+        sb:90,
+        tgttos:729,
+        hitw:1145,
+      }
+    },
+  },
+  iiGirts: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:705,
+        sb:500,
+        tgttos:1179,
+        hitw:865,
+      }
+    },
+  },
+  Arcticsime: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1410,
+        sb:226,
+        tgttos:967,
+        hitw:820,
+      }
+    },
+  },
+  Knight_Bread: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1290,
+        sb:150,
+        tgttos:827,
+        hitw:1200,
+      }
+    },
+  },
+  '1tz_st0rmy': { //stormy //its stormy itsstormy
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1440,
+        sb:210,
+        tgttos:1040,
+        hitw:790,
+      }
+    },
+  },
+  Ushiey: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:975,
+        sb:518,
+        tgttos:1212,
+        hitw:980,
+      }
+    },
+  },
+  eweamy: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:870,
+        sb:430,
+        tgttos:1283,
+        hitw:1115,
+      }
+    },
+  },
+  Darknyes: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1020,
+        sb:492,
+        tgttos:900,
+        hitw:1335,
+      }
+    },
+  },
+  GizzieMisse: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1020,
+        sb:494,
+        tgttos:900,
+        hitw:1335,
+      }
+    },
+  },
+  SkeppyAmp: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:870,
+        sb:466,
+        tgttos:1047,
+        hitw:1370,
+      }
+    },
+  },
+  frogqy: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1155,
+        sb:320,
+        tgttos:993,
+        hitw:1330,
+      }
+    },
+  },
+  Danes_: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:990,
+        sb:592,
+        tgttos:761,
+        hitw:1570,
+      }
+    },
+  },
+  Skullad:{
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1230,
+        sb:576,
+        tgttos:822,
+        hitw:1325,
+      }
+    },
+  },
+  MisterPiston: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1080,
+        sb:220,
+        tgttos:1212,
+        hitw:1560,
+      }
+    },
+  },
+  Point_: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1590,
+        sb:348,
+        tgttos:1331,
+        hitw:835,
+      }
+    },
+  },
+  CyaNideJ: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1200,
+        sb:652,
+        tgttos:907,
+        hitw:1505,
+      }
+    },
+  },
+  Yamsabag: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1545,
+        sb:420,
+        tgttos:1270,
+        hitw:1110,
+      }
+    },
+  },
   MrManzo: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1570,
         sb: 214,
         bb: 1350,
@@ -11,13 +211,21 @@ let players = {
   },
   Nugdub: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1315,
         sb: 966,
         bb: 1245,
         tgttos: 1335,
       }
     },
+    ib: {
+      1: {
+        hitw: 1220,
+        tgttos: 1708,
+        pkw: 642,
+        sb: 704
+      }
+    }
   },
   Oceanseaas: {
     iw: {
@@ -57,7 +265,7 @@ let players = {
         bb: 994,
         hitw: 713,
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 990,
         sb: 182,
         bb: 900,
@@ -77,7 +285,7 @@ let players = {
   },
   Envaderam: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 985,
         sb: 750,
         bb: 1410,
@@ -87,7 +295,7 @@ let players = {
   },
   '00ramen00': {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 710,
         sb: 78,
         bb: 1200,
@@ -115,13 +323,22 @@ let players = {
         hitw: 678,
         sub: true
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 975,
         sb: 502,
         bb: 1440,
         tgttos: 1262,
       },
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1485,
+        sb:694,
+        tgttos:1165,
+        hitw:1445,
+        sub: true
+      }
+    },
   },
   sirgello: { //MELLOJELLOCELLO
     iw: {
@@ -131,7 +348,7 @@ let players = {
         bb: 1573,
         hitw: 1503,
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1455,
         sb: 194,
         bb: 1350,
@@ -185,7 +402,7 @@ let players = {
         bb: 772,
         hitw: 942
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1240,
         sb: 264,
         bb: 1440,
@@ -217,7 +434,7 @@ let players = {
         tgttos: 1929,
         hitw: 1750,
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1750,
         sb: 544,
         bb: 1755,
@@ -227,17 +444,25 @@ let players = {
   },
   BreadEaterPeter: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1240,
         sb: 548,
         bb: 1140,
         tgttos: 1232,
       }
     },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:795,
+        sb:474,
+        tgttos:1165,
+        hitw:1260,
+      }
+    },
   },
   Unacceptableness: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1385,
         sb: 566,
         bb: 1560,
@@ -273,7 +498,15 @@ let players = {
         hitw: 1860,
         sub: true
       }
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1515,
+        sb:714,
+        tgttos:1559,
+        hitw:1185,
+      }
+    },
   },
   qHusky: {
     iw: {
@@ -318,7 +551,7 @@ let players = {
         bb: 1262,
         hitw: 1122
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1600,
         sb: 400,
         bb: 1065,
@@ -339,7 +572,7 @@ let players = {
   },
   StezeyMC: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1260,
         sb: 548,
         bb: 1245,
@@ -349,7 +582,7 @@ let players = {
   },
   Orlandillo: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 695,
         sb: 316,
         bb: 1005,
@@ -371,7 +604,7 @@ let players = {
         bb: 994,
         hitw: 1445
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 925,
         sb: 888,
         bb: 1620,
@@ -405,9 +638,17 @@ let players = {
         tgttos: 1300,
         hitw: 1600,
       }
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1395,
+        sb:734,
+        tgttos:1341,
+        hitw:1215,
+      }
+    },
   },
-  Prospect: {
+  Proxpect: { //Prospect
     iw: {
       1: {
         sb: 926,
@@ -415,7 +656,16 @@ let players = {
         tgttos: 1300,
         hitw: 1600,
       }
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1485,
+        sb:694,
+        tgttos:1165,
+        hitw:1445,
+        sub: true
+      }
+    },
   },
   MeanAtoh: {
     iw: {
@@ -435,7 +685,15 @@ let players = {
         tgttos: 1911,
         hitw: 1930,
       }
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1200,
+        sb:284,
+        tgttos:825,
+        hitw:1650,
+      }
+    },
   },
   Jsharps7: {
     iw: {
@@ -451,7 +709,7 @@ let players = {
         bb: 1010,
         hitw: 1653
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1345,
         sb: 378,
         bb: 1530,
@@ -461,7 +719,7 @@ let players = {
   },
   Bitslap: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1230,
         sb: 504,
         bb: 1275,
@@ -471,7 +729,7 @@ let players = {
   },
   SethKingOfRats: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 910,
         sb: 148,
         bb: 930,
@@ -501,13 +759,21 @@ let players = {
       }
     }
   },
-  Gnighty: {
+  gnighty: { //Gnighty
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1165,
         sb: 272,
         bb: 1065,
         tgttos: 1401,
+      }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1200,
+        sb:660,
+        tgttos:1124,
+        hitw:1240,
       }
     },
   },
@@ -529,7 +795,7 @@ let players = {
   },
   SourishCandle69: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1250,
         sb: 972,
         bb: 1320,
@@ -551,13 +817,21 @@ let players = {
         bb: 1337,
         hitw: 1551
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 850,
         sb: 1166,
         bb: 1245,
         tgttos: 1211,
       },
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:705,
+        sb:914,
+        tgttos:762,
+        hitw:705,
+      }
+    },
   },
   Cookithy: {
     iw: {
@@ -567,15 +841,31 @@ let players = {
         tgttos: 1723,
         hitw: 1180,
       }
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1530,
+        sb:357,
+        tgttos:1247,
+        hitw:1755,
+      }
+    },
   },
   Yasamas: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1260,
         sb: 604,
         bb: 1305,
         tgttos: 1305,
+      }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1005,
+        sb:310,
+        tgttos:1082,
+        hitw:775,
       }
     },
   },
@@ -591,7 +881,7 @@ let players = {
   },
   KomaSwirls: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 905,
         sb: 712,
         bb: 1500,
@@ -639,7 +929,7 @@ let players = {
         bb: 1010,
         hitw: 1492
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 890,
         sb: 382,
         bb: 1260,
@@ -711,7 +1001,7 @@ let players = {
   },
   QiwiMC: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1225,
         sb: 482,
         bb: 1500,
@@ -731,11 +1021,19 @@ let players = {
   },
   Forbie: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1155,
         sb: 352,
         bb: 1395,
         tgttos: 1501,
+      }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:795,
+        sb:540,
+        tgttos:1173,
+        hitw:695,
       }
     },
   },
@@ -806,7 +1104,7 @@ let players = {
         bb: 1307,
         hitw: 980
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 580,
         sb: 306,
         bb: 1065,
@@ -829,7 +1127,7 @@ let players = {
         bb: 1170,
         hitw: 248
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1360,
         sb: 724,
         bb: 1155,
@@ -873,7 +1171,7 @@ let players = {
   },
   Xstevey: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1225,
         sb: 1074,
         bb: 1245,
@@ -893,7 +1191,7 @@ let players = {
   },
   Skyoreos: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1425,
         sb: 474,
         bb: 1410,
@@ -925,7 +1223,7 @@ let players = {
         bb: 1278,
         hitw: 1197
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1320,
         sb: 226,
         bb: 1080,
@@ -1007,7 +1305,7 @@ let players = {
         bb: 1573,
         hitw: 1870,
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 625,
         sb: 374,
         bb: 1800,
@@ -1055,7 +1353,7 @@ let players = {
       }
     }
   },
-  VoidPT: {
+  TheVoidPT: { //VoidPT
     iw: {
       2: {
         sb: 600,
@@ -1063,7 +1361,15 @@ let players = {
         bb: 1027,
         hitw: 1429,
       }
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:975,
+        sb:230,
+        tgttos:1549,
+        hitw:1775,
+      }
+    },
   },
   Voidol: {
     iw: {
@@ -1073,7 +1379,7 @@ let players = {
         bb: 1573,
         hitw: 1716,
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 1480,
         sb: 300,
         bb: 1350,
@@ -1099,7 +1405,15 @@ let players = {
         bb: 1054,
         hitw: 1664,
       }
-    }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:975,
+        sb:282,
+        tgttos:765,
+        hitw:1520,
+      }
+    },
   },
   SuitSnap: {
     iw: {
@@ -1113,7 +1427,7 @@ let players = {
   },
   ItzmeSZ: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 775,
         sb: 618,
         bb: 1305,
@@ -1129,7 +1443,7 @@ let players = {
         bb: 1084,
         hitw: 728,
       },
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 950,
         sb: 194,
         bb: 765,
@@ -1150,7 +1464,7 @@ let players = {
   },
   sunsrr: {
     iw: {
-      ChosenTeams1: {
+      'Chosen Teams 1': {
         hitw: 925,
         sb: 182,
         bb: 930,
@@ -1168,6 +1482,46 @@ let players = {
         pkw: 0,
       }
     }
+  },
+  ayeetus: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1485,
+        sb:602,
+        tgttos:1267,
+        hitw:1465,
+      }
+    },
+  },
+  FromaPutsti: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1335,
+        sb:796,
+        tgttos:1210,
+        hitw:1445,
+      }
+    },
+  },
+  fuey: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:795,
+        sb:366,
+        tgttos:1156,
+        hitw:1230,
+      }
+    },
+  },
+  _Joekr: { //Joker joe
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1275,
+        sb:238,
+        tgttos:1098,
+        hitw:930,
+      }
+    },
   }
 }
 
@@ -1175,7 +1529,7 @@ let players = {
 
 t: {
   iw: {
-    ChosenTeams1: {
+    'Chosen Teams 1': {
       sb: ,
       tgttos: ,
       bb: ,
