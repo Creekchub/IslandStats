@@ -77,6 +77,14 @@ gameMods = {
   }
 }
 
+gameNames = {
+  hitw: 'HITW',
+  bb: 'BB',
+  tgttos: 'TGTTOS',
+  sb: 'SB',
+  pkw: 'PKW',
+}
+
 let modifiers = ['noncanon']
 
 
@@ -209,6 +217,9 @@ function getStats() {
     }
   }
   getChartStats();
+  if(totalCoins === 0) {
+    document.getElementById('coinAverageStat').innerHTML = '0';
+  }
   if(coinsTourneyDisplay !== '') {
     if(totalCoins !== 0) {
       if(document.getElementById('gameSelect').value === 'all') {
@@ -344,14 +355,23 @@ function getChartStats() {
       }
     }
   }
-  //Bar.data.labels = '';
-  //Bar.data.datasets[0].data = ''
+  Bar.data.datasets[0].data = [];
+  Bar.data.labels = [];
+  Bar.data.labels[0] = 'No Games';
+  Bar.update();
+  radar.data.labels = [];
+  radar.data.labels[0] = 'No Games';
+  radar.data.labels[1] = 'No Games';
+  radar.data.labels[2] = 'No Games';
+  radar.data.labels[3] = 'No Games';
+  radar.data.datasets[0].data = [];
+  radar.update();
   let e = 0;
   for(d = 0; d < games.length; d++) {
     if(eval('coins' + gameOrderName[d]) !== 0) {
-      Bar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameOrderName[d]}`;
+      Bar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameNames[gameOrderName[d]]}`;
       eval('Bar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
-      radar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameOrderName[d]}`;
+      radar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameNames[gameOrderName[d]]}`;
       eval('radar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
       Bar.update();
       radar.update();
