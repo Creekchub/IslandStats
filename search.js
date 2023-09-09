@@ -210,14 +210,16 @@ function getStats() {
   }
   getChartStats();
   if(coinsTourneyDisplay !== '') {
-    if(document.getElementById('gameSelect').value === 'all') {
-      document.getElementById('coinAverageStat').innerHTML = `${Math.round((totalCoins / countRound) * 4)}`;
+    if(totalCoins !== 0) {
+      if(document.getElementById('gameSelect').value === 'all') {
+        document.getElementById('coinAverageStat').innerHTML = `${Math.round((totalCoins / countRound) * 4)}`;
+      }else {
+        document.getElementById('coinAverageStat').innerHTML = `${Math.round(totalCoins / countRound)}`;
+      }
     }else {
-      document.getElementById('coinAverageStat').innerHTML = `${Math.round(totalCoins / countRound)}`;
+      document.getElementById('coinAverageStat').innerHTML = '0'
     }
-  }else {
-    document.getElementById('coinAverageStat').innerHTML = '0'
-  }
+    }
   sessionStorage.setItem('selectRecall', roundSelect);
 
   let subCheckRecallVar1 = document.getElementById('subCheck').checked;
