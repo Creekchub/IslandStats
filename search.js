@@ -100,12 +100,21 @@ let gameOrderRadar = { // MAINTAINENCE IF NEW GAME ADDED
   hitw: 4,
 }
 
+let gameOrderName = {
+  0: 'sb',
+  1: 'bb',
+  2: 'tgttos',
+  3: 'pkw',
+  4: 'hitw',
+}
+
 //console.log(`Ruderrr's score is: ${ruderrr.ib[1].tgttos}`); //normal call
 //let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST ( OLD METHOD )
 const urlParams = new URLSearchParams(window.location.search);
 let player = urlParams.get('player');
 
 function getStats() {
+  let idFor = 0;
   let countRound = 0;
   let totalCoins = 0;
   let coinsTourneyDisplay = '';
@@ -165,20 +174,32 @@ function getStats() {
                 document.getElementById(`coinTag${appendCount1}`).innerHTML = `${serverNames[serversA[a]].full} - ${roundArray[b]}`*/
                 //document.getElementById('statTourneyDiv').innerHTML = ''
                 if(coinsTourney !== 0) {
+                  idFor++;
                   document.getElementById('statTourneyDiv').innerHTML = document.getElementById('statTourneyDiv').innerHTML + `
-              <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px calc(50% - 45px) 30px; margin-bottom: 8px;">
+              <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px 30% calc(20% - 45px) 30px; margin-bottom: 8px;">
                 <div style="display: flex;">
                   <img src="images/logo/${serversA[a]}.webp" style="width: 30px; grid-column-start: 1; border-radius: 6px;">
                   <span style="grid-column-start: 1; align-self: center; color: white; font-family: Kanit; padding-left: 10px;">${roundArray[b]}</span>
                 </div>
-                <img src="images/wip.webp" style="width: 30px;">
+                <img id="imageTeam${idFor}" src="images/blank.webp" style="width: 30px;">
+                <div style="display: flex" id="divS${idFor}">
+                </div>
                 <div style="display: flex">
-                  <span style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} / ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
+                  <span id="tourneytag${idFor}" style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} / ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
                   <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
                 </div>
                 <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
               </div>
                 `//ADD IMAGES AND DODGEBOLT LATER HERE HERE HERE
+                  if(servers[serversA[a]][roundArray[b]].canon === false) {
+                    document.getElementById(`divS${idFor}`).innerHTML = document.getElementById(`divS${idFor}`).innerHTML + `<span class="noncanontag" id="noncanontag${idFor}">Noncanon</span>`;
+                  }
+                  if(players[player][serversA[a]][roundArray[b]].sub !== undefined) {
+                    document.getElementById(`divS${idFor}`).innerHTML = document.getElementById(`divS${idFor}`).innerHTML + `<span class="subtag" id="subtag${idFor}">Sub</span>`;
+                  }
+                  if(players[player][serversA[a]][roundArray[b]].team !== undefined) {
+                    document.getElementById(`imageTeam${idFor}`).src = `images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`;
+                  }
                 }
               }
             }
@@ -321,12 +342,19 @@ function getChartStats() {
       }
     }
   }
+  //Bar.data.labels = '';
+  //Bar.data.datasets[0].data = ''
+  let e = 0;
   for(d = 0; d < games.length; d++) {
-    eval('Bar.data.datasets[0].data[' + gameOrderRadar[games[d]] + '] = Math.round(' + 'coins' + games[d] + ' / ' + 'count' + games[d] + ')');
-    eval('Bar.update();');
-
-    eval('radar.data.datasets[0].data[' + gameOrderRadar[games[d]] + '] = ' + 'Math.round(coins' + games[d] + ' / ' + 'count' + games[d] + ')');
-    radar.update();
+    if(eval('coins' + gameOrderName[d]) !== 0) {
+      Bar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameOrderName[d]}`;
+      eval('Bar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
+      radar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameOrderName[d]}`;
+      eval('radar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
+      Bar.update();
+      radar.update();
+      e++;
+    }
   }
 }
 

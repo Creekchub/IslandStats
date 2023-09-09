@@ -12,3 +12,18 @@ t: {
 },
 
 */
+
+/*if(eval('coins' + games[d]) !== 0) {
+      Bar.data.labels[gameOrderRadar[games[d]]] = `${games[d]}`
+      eval('Bar.data.datasets[0].data[' + gameOrderRadar[games[d]] + '] = Math.round(' + 'coins' + games[d] + ' / ' + 'count' + games[d] + ')');
+      Bar.update();
+    }*/
+
+    /*eval('radar.data.datasets[0].data[' + gameOrderRadar[games[d]] + '] = ' + 'Math.round(coins' + games[d] + ' / ' + 'count' + games[d] + ')');
+    radar.update();*/
+    /*if(eval('coins' + games[d]) !== 0) {
+      Bar.data.labels[e] = `${games[e]}`
+      eval('Bar.data.datasets[0].data[' + e + '] = Math.round(' + 'coins' + games[e] + ' / ' + 'count' + games[e] + ')');
+      Bar.update();
+      e++;
+    }*/

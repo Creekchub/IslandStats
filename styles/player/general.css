@@ -240,3 +240,29 @@ body {
   font-family: Kanit;
   align-self: center
 }
+
+.noncanontag {
+  font-family: Kanit;
+  color: rgb(210, 210, 210);
+  font-size: 10px;
+  align-self: center;
+  background-color: rgb(214, 139, 0);
+  border-radius: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 1px;
+  margin-left: 20%;
+}
+
+.subtag {
+  font-family: Kanit;
+  color: rgb(210, 210, 210);
+  font-size: 10px;
+  align-self: center;
+  background-color: rgb(255, 0, 0);
+  border-radius: 8px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 1px;
+  margin-left: 20%;
+}
