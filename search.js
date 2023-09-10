@@ -4,10 +4,14 @@ let servers = {
     1: {
       rounds: 4,
       gamesM: 1,
+      win: 'green',
+      dodgebolt: 'pink',
     },
     2: {
       rounds: 3,
       gamesM: 1,
+      win: 'yellow',
+      dodgebolt: 'pink',
     },
     'Chosen Teams 1': {
       rounds: 3,
@@ -15,14 +19,6 @@ let servers = {
       gamesM: 1,
     }
   },
-  /*it: {
-    1: {
-      rounds: 4
-    },
-    2: {
-      rounds: 4
-    }
-  }*/
   hitw: {
     1: {
       gamesM: 4,
@@ -38,7 +34,7 @@ let servers = {
   mccic: {
     'O.B Chosen 1': {
       rounds: 3,
-      gamesM: 1
+      gamesM: 1,
     }
   }
 }
@@ -121,6 +117,19 @@ let gameOrderName = {
 const urlParams = new URLSearchParams(window.location.search);
 let player = urlParams.get('player');
 
+function checkImage(url, itteration) {
+  var request = new XMLHttpRequest();
+  request.open("GET", url, true);
+  request.send();
+  request.onload = function() {
+    status = request.status;
+    if (request.status == 200) //if(statusText == OK)
+    {
+      document.getElementById(`imageTeam${itteration}`).src = url;
+    }
+  }
+}
+
 function getStats() {
   let idFor = 0;
   let countRound = 0;
@@ -128,85 +137,98 @@ function getStats() {
   let coinsTourneyDisplay = '';
   let appendCount = 0;
   let appendCount1 = 0;
+  let winCount = 0;
+  let dodgeboltCount = 0;
   document.getElementById('statTourneyDiv').innerHTML = '';
 
   let roundSelect = document.getElementById('tourneySelect').value
-
-  for(a = 0; a < serversA.length; a++) {
-    if(players[player][serversA[a]] !== undefined) {
-      let roundArray = Object.keys(players[player][serversA[a]]);
-      for(b = 0; b < roundArray.length; b++) {
-        if(players[player][serversA[a]][roundArray[b]] !== undefined) {
-          if(roundSelect == serversA[a] || roundSelect == 'all') {
-            if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
-              if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
-                let coinsTourney = 0;
-                for(c = 0; c < games.length; c++) {
-                  let gameCoins = 0;
-                  if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
-                    let gamesSelected = document.getElementById('gameSelect').value;
-                    if(games[c] === gamesSelected || gamesSelected === 'all') {
-                      countRound++;
-                      gameCoins = players[player][serversA[a]][roundArray[b]][games[c]];
-                    if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
-                      gameCoins = Math.round(gameCoins * 1.5);
+  if(players[player] !== undefined) {
+    for(a = 0; a < serversA.length; a++) {
+      if(players[player][serversA[a]] !== undefined) {
+        let roundArray = Object.keys(players[player][serversA[a]]);
+        for(b = 0; b < roundArray.length; b++) {
+          if(players[player][serversA[a]][roundArray[b]] !== undefined) {
+            if(roundSelect == serversA[a] || roundSelect == 'all') {
+              if((document.getElementById('noncanonCheck').checked && servers[serversA[a]][roundArray[b]].canon === false) || servers[serversA[a]][roundArray[b]].canon === undefined) {
+                if((players[player][serversA[a]][roundArray[b]].sub === true && document.getElementById('subCheck').checked) || players[player][serversA[a]][roundArray[b]].sub === undefined) {
+                  let coinsTourney = 0;
+                  if(players[player][serversA[a]][roundArray[b]].team !== undefined) { //dodgebolt and wins calculator
+                    if(servers[serversA[a]][roundArray[b]].win === players[player][serversA[a]][roundArray[b]].team) {
+                      winCount++;
                     }
-                    if(servers[serversA[a]][roundArray[b]].gamesM !== 1) {
-                      totalCoins = totalCoins + Math.round((gameCoins / servers[serversA[a]][roundArray[b]].rounds) * servers[serversA[a]][roundArray[b]].gamesM);
-                    }else {
-                      totalCoins = totalCoins + Math.round(gameCoins / servers[serversA[a]][roundArray[b]].rounds);
-                    }
-                    coinsTourney = coinsTourney + gameCoins;
+                    if(servers[serversA[a]][roundArray[b]].dodgebolt === players[player][serversA[a]][roundArray[b]].team) {
+                      dodgeboltCount++;
                     }
                   }
-                }coinsTourneyDisplay = coinsTourneyDisplay + `${coinsTourney} `;
-
-                //appendCount++;
-                /*let oneRoundCoins = document.createElement('div');
-                oneRoundCoins.setAttribute('class', 'displayDivText');
-                oneRoundCoins.setAttribute('id', `coinTextAppend${appendCount}`);
-                if(servers[serversA[a]][roundArray[b]].canon === false) {
-                  oneRoundCoins.setAttribute('style', 'color:orange');
-                }
-                document.getElementById('displayDivDis2').append(oneRoundCoins);
-                document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`;
-                if(players[player][serversA[a]][roundArray[b]].sub) {
-                  document.getElementById(`coinTextAppend${appendCount}`).innerHTML = document.getElementById(`coinTextAppend${appendCount}`).innerHTML + '<p class="subTag">Sub</p>'
-                }
-
-                appendCount1++;
-                let oneRoundTag = document.createElement('p');
-                oneRoundTag.setAttribute('id', `coinTag${appendCount1}`);
-                oneRoundTag.setAttribute('class', 'displayDivText');
-                document.getElementById('displayDivDis1').append(oneRoundTag);
-                document.getElementById(`coinTag${appendCount1}`).innerHTML = `${serverNames[serversA[a]].full} - ${roundArray[b]}`*/
-                //document.getElementById('statTourneyDiv').innerHTML = ''
-                if(coinsTourney !== 0) {
-                  idFor++;
-                  document.getElementById('statTourneyDiv').innerHTML = document.getElementById('statTourneyDiv').innerHTML + `
-              <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px 30% calc(20% - 45px) 30px; margin-bottom: 8px;">
-                <div style="display: flex;">
-                  <img src="images/logo/${serversA[a]}.webp" style="width: 30px; grid-column-start: 1; border-radius: 6px;">
-                  <span style="grid-column-start: 1; align-self: center; color: white; font-family: Kanit; padding-left: 10px;">${roundArray[b]}</span>
-                </div>
-                <img id="imageTeam${idFor}" src="images/blank.webp" style="width: 30px;">
-                <div style="display: flex" id="divS${idFor}">
-                </div>
-                <div style="display: flex">
-                  <span id="tourneytag${idFor}" style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} / ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
-                  <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
-                </div>
-                <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
-              </div>
-                `//ADD IMAGES AND DODGEBOLT LATER HERE HERE HERE
+                  for(c = 0; c < games.length; c++) {
+                    let gameCoins = 0;
+                    if(players[player][serversA[a]][roundArray[b]][games[c]] !== undefined) {
+                      let gamesSelected = document.getElementById('gameSelect').value;
+                      if(games[c] === gamesSelected || gamesSelected === 'all') {
+                        countRound++;
+                        gameCoins = players[player][serversA[a]][roundArray[b]][games[c]];
+                      if(games[c] == 'sb' || games[c] == 'pkw') { // MAINTAINENCE FOR MORE MODDED GAMES
+                        gameCoins = Math.round(gameCoins * 1.5);
+                      }
+                      if(servers[serversA[a]][roundArray[b]].gamesM !== 1) {
+                        totalCoins = totalCoins + Math.round((gameCoins / servers[serversA[a]][roundArray[b]].rounds) * servers[serversA[a]][roundArray[b]].gamesM);
+                      }else {
+                        totalCoins = totalCoins + Math.round(gameCoins / servers[serversA[a]][roundArray[b]].rounds);
+                      }
+                      coinsTourney = coinsTourney + gameCoins;
+                      }
+                    }
+                  }coinsTourneyDisplay = coinsTourneyDisplay + `${coinsTourney} `;
+  
+                  //appendCount++;
+                  /*let oneRoundCoins = document.createElement('div');
+                  oneRoundCoins.setAttribute('class', 'displayDivText');
+                  oneRoundCoins.setAttribute('id', `coinTextAppend${appendCount}`);
                   if(servers[serversA[a]][roundArray[b]].canon === false) {
-                    document.getElementById(`divS${idFor}`).innerHTML = document.getElementById(`divS${idFor}`).innerHTML + `<span class="noncanontag" id="noncanontag${idFor}">Noncanon</span>`;
+                    oneRoundCoins.setAttribute('style', 'color:orange');
                   }
-                  if(players[player][serversA[a]][roundArray[b]].sub !== undefined) {
-                    document.getElementById(`divS${idFor}`).innerHTML = document.getElementById(`divS${idFor}`).innerHTML + `<span class="subtag" id="subtag${idFor}">Sub</span>`;
+                  document.getElementById('displayDivDis2').append(oneRoundCoins);
+                  document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`;
+                  if(players[player][serversA[a]][roundArray[b]].sub) {
+                    document.getElementById(`coinTextAppend${appendCount}`).innerHTML = document.getElementById(`coinTextAppend${appendCount}`).innerHTML + '<p class="subTag">Sub</p>'
                   }
-                  if(players[player][serversA[a]][roundArray[b]].team !== undefined) {
-                    document.getElementById(`imageTeam${idFor}`).src = `images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`;
+  
+                  appendCount1++;
+                  let oneRoundTag = document.createElement('p');
+                  oneRoundTag.setAttribute('id', `coinTag${appendCount1}`);
+                  oneRoundTag.setAttribute('class', 'displayDivText');
+                  document.getElementById('displayDivDis1').append(oneRoundTag);
+                  document.getElementById(`coinTag${appendCount1}`).innerHTML = `${serverNames[serversA[a]].full} - ${roundArray[b]}`*/
+                  //document.getElementById('statTourneyDiv').innerHTML = ''
+                  if(coinsTourney !== 0) {
+                    idFor++;
+                    document.getElementById('statTourneyDiv').innerHTML = document.getElementById('statTourneyDiv').innerHTML + `
+                <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px 30% calc(20% - 45px) 30px; margin-bottom: 8px;">
+                  <div style="display: flex;">
+                    <img src="images/logo/${serversA[a]}.webp" style="width: 30px; grid-column-start: 1; border-radius: 6px;">
+                    <span style="grid-column-start: 1; align-self: center; color: white; font-family: Kanit; padding-left: 10px;">${roundArray[b]}</span>
+                  </div>
+                  <img id="imageTeam${idFor}" src="images/team/generic.webp" style="width: 30px;">
+                  <div style="display: flex" id="divS${idFor}">
+                  </div>
+                  <div style="display: flex">
+                    <span id="tourneytag${idFor}" style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} / ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
+                    <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
+                  </div>
+                  <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
+                </div>
+                  `//ADD IMAGES AND DODGEBOLT LATER HERE HERE HERE
+                    if(servers[serversA[a]][roundArray[b]].canon === false) {
+                      document.getElementById(`divS${idFor}`).innerHTML = document.getElementById(`divS${idFor}`).innerHTML + `<span class="noncanontag" id="noncanontag${idFor}">Noncanon</span>`;
+                    }
+                    if(players[player][serversA[a]][roundArray[b]].sub !== undefined) {
+                      document.getElementById(`divS${idFor}`).innerHTML = document.getElementById(`divS${idFor}`).innerHTML + `<span class="subtag" id="subtag${idFor}">Sub</span>`;
+                    }
+                    if(players[player][serversA[a]][roundArray[b]].team !== undefined) {
+                      document.getElementById(`imageTeam${idFor}`).title = `${players[player][serversA[a]][roundArray[b]].team}`;
+                      //document.getElementById(`imageTeam${idFor}`).src = `images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`;
+                      checkImage(`images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`, idFor);
+                    }
                   }
                 }
               }
@@ -215,29 +237,31 @@ function getStats() {
         }
       }
     }
-  }
-  getChartStats();
-  if(totalCoins === 0) {
-    document.getElementById('coinAverageStat').innerHTML = '0';
-  }
-  if(coinsTourneyDisplay !== '') {
-    if(totalCoins !== 0) {
-      if(document.getElementById('gameSelect').value === 'all') {
-        document.getElementById('coinAverageStat').innerHTML = `${Math.round((totalCoins / countRound) * 4)}`;
+    getChartStats();
+    if(totalCoins === 0) {
+      document.getElementById('coinAverageStat').innerHTML = '0';
+    }
+    if(coinsTourneyDisplay !== '') {
+      if(totalCoins !== 0) {
+        if(document.getElementById('gameSelect').value === 'all') {
+          document.getElementById('coinAverageStat').innerHTML = `${Math.round((totalCoins / countRound) * 4)}`;
+        }else {
+          document.getElementById('coinAverageStat').innerHTML = `${Math.round(totalCoins / countRound)}`;
+        }
       }else {
-        document.getElementById('coinAverageStat').innerHTML = `${Math.round(totalCoins / countRound)}`;
+        document.getElementById('coinAverageStat').innerHTML = '0'
       }
-    }else {
-      document.getElementById('coinAverageStat').innerHTML = '0'
-    }
-    }
-  sessionStorage.setItem('selectRecall', roundSelect);
-
-  let subCheckRecallVar1 = document.getElementById('subCheck').checked;
-  sessionStorage.setItem('subCheckRecall', subCheckRecallVar1);
-
-  let ncCheckRecallVar1 = document.getElementById('noncanonCheck').checked;
-  sessionStorage.setItem('ncCheckRecall', ncCheckRecallVar1);
+      }
+    sessionStorage.setItem('selectRecall', roundSelect);
+  
+    let subCheckRecallVar1 = document.getElementById('subCheck').checked;
+    sessionStorage.setItem('subCheckRecall', subCheckRecallVar1);
+  
+    let ncCheckRecallVar1 = document.getElementById('noncanonCheck').checked;
+    sessionStorage.setItem('ncCheckRecall', ncCheckRecallVar1);
+  }
+  document.getElementById('wins').innerHTML = winCount;
+  document.getElementById('dodgebolts').innerHTML = (dodgeboltCount + winCount);
 }
 
 //OLD OUTDATED CODE ( LIKE RUDERRR )
