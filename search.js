@@ -379,10 +379,10 @@ function getChartStats() {
       }
     }
   }
-  Bar.data.datasets[0].data = [];
+  /*Bar.data.datasets[0].data = [];
   Bar.data.labels = [];
   Bar.data.labels[0] = 'No Games';
-  Bar.update();
+  Bar.update();*/
   radar.data.labels = [];
   radar.data.labels[0] = 'No Games';
   radar.data.labels[1] = 'No Games';
@@ -393,11 +393,11 @@ function getChartStats() {
   let e = 0;
   for(d = 0; d < games.length; d++) {
     if(eval('coins' + gameOrderName[d]) !== 0) {
-      Bar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameNames[gameOrderName[d]]}`;
-      eval('Bar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
+     // Bar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameNames[gameOrderName[d]]}`;
+     // eval('Bar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
       radar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameNames[gameOrderName[d]]}`;
       eval('radar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
-      Bar.update();
+      //Bar.update();
       radar.update();
       e++;
     }

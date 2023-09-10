@@ -1,6 +1,8 @@
 body {
   background-color: rgb(61, 61, 61);
   margin: 0px;
+  position: absolute;
+  width: 100%;
   height: 2000px;
 }
 
@@ -124,7 +126,7 @@ body {
 
 .chartDivInner {
   display: flex;
-  justify-content: center;
+  justify-content: start;
 }
 
 .gameChart {
