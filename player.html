@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  
     <link rel="icon" type="image/x-icon" href="/images/islandstats-icon-trans-scaled.png">
+    <title id="pagetitle">Players</title>
+    <script>document.getElementById('pagetitle').innerHTML = `Players - ${player}`</script>
   </head>
   <body>
     <div class="top-bar">
@@ -37,7 +39,6 @@
         <div class="playerinfogrid" style="grid-column-start: 1; border-right-style: dashed;">
           <p class="coinAverage" id="coinAverageStat">1500</p><img src="images/coin.webp" class="coinCoinAverage"><img src="images/questionmarkinfo.webp.png" class="tooltiphelpAverage" title="This is an average of how the player should perform in a 1 round tournament">
         </div>
-
         <div class="playerinfogrid" style="grid-column-start: 2;">
           <img id="headImage" class="playerHeadImage" src="https://mc-heads.net/avatar/Notch/100">
         </div>
