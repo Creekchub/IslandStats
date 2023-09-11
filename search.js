@@ -17,6 +17,8 @@ let servers = {
       rounds: 3,
       canon: false,
       gamesM: 1,
+      win: 'purple',
+      dodgebolt: 'cyan'
     }
   },
   hitw: {
