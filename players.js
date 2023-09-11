@@ -240,7 +240,7 @@ let players = {
       }
     },
   },
-  Nugdub: {
+  NugDub: {
     iw: {
       'Chosen Teams 1': {
         hitw: 1315,
