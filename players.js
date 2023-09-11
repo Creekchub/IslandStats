@@ -1,4 +1,34 @@
 let players = {
+  Big_Yoshee: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1050,
+        sb:106,
+        tgttos:519,
+        hitw:940,
+      }
+    },
+  },
+  Frogile: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1080,
+        sb:138,
+        tgttos:828,
+        hitw:750,
+      }
+    },
+  },
+  Dr_Brandini: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1110,
+        sb:232,
+        tgttos:962,
+        hitw:653,
+      }
+    },
+  },
   Darrk_Cobraa: {
     mccic: {
       'O.B Chosen 1': {
@@ -69,7 +99,7 @@ let players = {
       }
     },
   },
-  '1tz_st0rmy': { //stormy //its stormy itsstormy
+  'qwusky': { //stormy //its stormy itsstormy //1tz_st0rmy
     mccic: {
       'O.B Chosen 1': {
         bb:1440,
@@ -1598,7 +1628,7 @@ let players = {
       }
     }
   },
-  ayeetus: {
+  aYeetus: {
     mccic: {
       'O.B Chosen 1': {
         bb:1485,
@@ -1608,7 +1638,7 @@ let players = {
       }
     },
   },
-  FromaPutsti: {
+  FromaPutsi: {
     mccic: {
       'O.B Chosen 1': {
         bb:1335,
@@ -1618,7 +1648,7 @@ let players = {
       }
     },
   },
-  fuey: {
+  Fuey_: {
     mccic: {
       'O.B Chosen 1': {
         bb:795,
