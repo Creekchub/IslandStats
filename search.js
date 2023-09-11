@@ -112,23 +112,12 @@ let gameOrderName = {
   4: 'hitw',
 }
 
+teams = ['red', 'orange', 'yellow', 'lime', 'green', 'cyan', 'aqua', 'blue', 'purple', 'pink'] // MAINTAINENCE IF NEW TEAMS ADDED
+
 //console.log(`Ruderrr's score is: ${ruderrr.ib[1].tgttos}`); //normal call
 //let player = sessionStorage.getItem('playerQuery'); //user INPUTS FOR TEST ( OLD METHOD )
 const urlParams = new URLSearchParams(window.location.search);
 let player = urlParams.get('player');
-
-function checkImage(url, itteration) {
-  var request = new XMLHttpRequest();
-  request.open("GET", url, true);
-  request.send();
-  request.onload = function() {
-    status = request.status;
-    if (request.status == 200) //if(statusText == OK)
-    {
-      document.getElementById(`imageTeam${itteration}`).src = url;
-    }
-  }
-}
 
 function getStats() {
   let idFor = 0;
@@ -227,7 +216,12 @@ function getStats() {
                     if(players[player][serversA[a]][roundArray[b]].team !== undefined) {
                       document.getElementById(`imageTeam${idFor}`).title = `${players[player][serversA[a]][roundArray[b]].team}`;
                       //document.getElementById(`imageTeam${idFor}`).src = `images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`;
-                      checkImage(`images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`, idFor);
+                      //checkImage(`images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`, idFor);
+                      for(imageItt = 0; imageItt < teams.length; imageItt++) {
+                        if(players[player][serversA[a]][roundArray[b]].team === teams[imageItt]) {
+                          document.getElementById(`imageTeam${idFor}`).src = `images/team/${players[player][serversA[a]][roundArray[b]].team}.webp`;
+                        }
+                      }
                     }
                   }
                 }

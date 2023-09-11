@@ -206,6 +206,7 @@ let players = {
         sb: 214,
         bb: 1350,
         tgttos: 1406,
+        team: 'yellow'
       }
     },
   },
@@ -216,6 +217,7 @@ let players = {
         sb: 966,
         bb: 1245,
         tgttos: 1335,
+        team: 'cyan'
       }
     },
   },
@@ -226,6 +228,7 @@ let players = {
         tgttos: 862,
         bb: 1218,
         hitw: 543,
+        team: 'blue'
       }
     }
   },
@@ -236,6 +239,7 @@ let players = {
         tgttos: 1505,
         bb: 1440,
         hitw: 669,
+        team: 'lime'
       }
     }
   },
@@ -246,6 +250,7 @@ let players = {
         tgttos: 1212,
         bb: 1084,
         hitw: 664,
+        team: 'pink'
       }
     }
   },
@@ -256,12 +261,14 @@ let players = {
         tgttos: 1000,
         bb: 994,
         hitw: 713,
+        team: 'red'
       },
       'Chosen Teams 1': {
         hitw: 990,
         sb: 182,
         bb: 900,
         tgttos: 1000,
+        team: 'blue'
       },
     }
   },
@@ -272,6 +279,7 @@ let players = {
         tgttos: 561,
         bb: 891,
         hitw: 873,
+        team: 'cyan'
       }
     }
   },
@@ -282,6 +290,7 @@ let players = {
         sb: 750,
         bb: 1410,
         tgttos: 1321,
+        team: 'green'
       }
     },
   },
@@ -292,6 +301,7 @@ let players = {
         sb: 78,
         bb: 1200,
         tgttos: 763,
+        team: 'red'
       }
     },
   },
@@ -302,7 +312,8 @@ let players = {
         tgttos: 952,
         bb: 1531,
         hitw: 678,
-        sub: true
+        sub: true,
+        team: 'aqua'
       }
     }
   },
@@ -313,13 +324,15 @@ let players = {
         tgttos: 952,
         bb: 1531,
         hitw: 678,
-        sub: true
+        sub: true,
+        team: 'aqua'
       },
       'Chosen Teams 1': {
         hitw: 975,
         sb: 502,
         bb: 1440,
         tgttos: 1262,
+        team: 'purple'
       },
     },
     mccic: {
@@ -339,12 +352,14 @@ let players = {
         tgttos: 1330,
         bb: 1573,
         hitw: 1503,
+        team: 'red'
       },
       'Chosen Teams 1': {
         hitw: 1455,
         sb: 194,
         bb: 1350,
         tgttos: 1288,
+        team: 'yellow'
       },
     }
   },
@@ -355,6 +370,7 @@ let players = {
         tgttos: 946,
         bb: 1170,
         hitw: 815,
+        team: 'lime'
       }
     }
   },
@@ -365,16 +381,18 @@ let players = {
         tgttos: 648,
         bb: 1188,
         hitw: 562,
+        team: 'orange'
       }
     }
   },
-  Envared: {
+  Envared: { //nightmarine
     iw: {
       2: {
         sb: 515,
         tgttos: 1288,
         bb: 1218,
         hitw: 927,
+        team: 'blue'
       }
     }
   },
@@ -385,6 +403,7 @@ let players = {
         tgttos: 1125,
         hitw: 980,
         bb: 1815,
+        team: 'lime'
       },
     },
     iw: {
@@ -392,7 +411,8 @@ let players = {
         sb: 91,
         tgttos: 1362,
         bb: 772,
-        hitw: 942
+        hitw: 942,
+        team: 'green'
       },
       'Chosen Teams 1': {
         hitw: 1240,
@@ -416,6 +436,7 @@ let players = {
         bb: 1370,
         tgttos: 1273,
         hitw: 1623,
+        team: 'purple'
       }
     }
   },
@@ -433,6 +454,7 @@ let players = {
         sb: 544,
         bb: 1755,
         tgttos: 1817,
+        team: 'purple'
       },
     }
   },
@@ -443,6 +465,7 @@ let players = {
         sb: 548,
         bb: 1140,
         tgttos: 1232,
+        team: 'green'
       }
     },
     mccic: {
@@ -461,6 +484,7 @@ let players = {
         sb: 566,
         bb: 1560,
         tgttos: 1242,
+        team: 'red'
       }
     },
   },
@@ -501,6 +525,7 @@ let players = {
         sb:714,
         tgttos:1559,
         hitw:1185,
+        team: 'Greke'
       }
     },
   },
@@ -548,13 +573,15 @@ let players = {
         sb: 248,
         tgttos: 1386,
         bb: 1262,
-        hitw: 1122
+        hitw: 1122,
+        team: 'aqua'
       },
       'Chosen Teams 1': {
         hitw: 1600,
         sb: 400,
         bb: 1065,
         tgttos: 1074,
+        team: 'orange'
       },
     }
   },
@@ -577,6 +604,7 @@ let players = {
         sb: 548,
         bb: 1245,
         tgttos: 1148,
+        team: 'orange'
       }
     },
   },
@@ -587,6 +615,7 @@ let players = {
         sb: 316,
         bb: 1005,
         tgttos: 1096,
+        team: 'aqua'
       }
     },
   },
@@ -604,12 +633,14 @@ let players = {
         tgttos: 1158,
         bb: 994,
         hitw: 1445,
+        team: 'green'
       },
       'Chosen Teams 1': {
         hitw: 925,
         sb: 888,
         bb: 1620,
         tgttos: 1377,
+        team: 'lime'
       },
     },
     it: {
@@ -714,13 +745,15 @@ let players = {
         sb: 289,
         tgttos: 1516,
         bb: 1010,
-        hitw: 1653
+        hitw: 1653,
+        team: 'orange'
       },
       'Chosen Teams 1': {
         hitw: 1345,
         sb: 378,
         bb: 1530,
         tgttos: 1464,
+        team: 'lime'
       },
     }
   },
@@ -731,6 +764,7 @@ let players = {
         sb: 504,
         bb: 1275,
         tgttos: 1113,
+        team: 'green'
       }
     },
   },
@@ -741,6 +775,7 @@ let players = {
         sb: 148,
         bb: 930,
         tgttos: 785,
+        team: 'red'
       }
     },
   },
@@ -768,13 +803,14 @@ let players = {
       }
     }
   },
-  gnighty: { //Gnighty
+  Gnighty: { //Gnighty
     iw: {
       'Chosen Teams 1': {
         hitw: 1165,
         sb: 272,
         bb: 1065,
         tgttos: 1401,
+        team: 'orange'
       }
     },
     mccic: {
@@ -799,7 +835,8 @@ let players = {
         sb: 701,
         tgttos: 1492,
         bb: 1440,
-        hitw: 1882
+        hitw: 1882,
+        team: 'pink'
       }
     }
   },
@@ -810,6 +847,7 @@ let players = {
         sb: 972,
         bb: 1320,
         tgttos: 1133,
+        team: 'aqua'
       }
     },
   },
@@ -826,13 +864,15 @@ let players = {
         sb: 554,
         tgttos: 1022,
         bb: 1337,
-        hitw: 1551
+        hitw: 1551,
+        team: 'cyan'
       },
       'Chosen Teams 1': {
         hitw: 850,
         sb: 1166,
         bb: 1245,
         tgttos: 1211,
+        team: 'orange'
       },
     },
     mccic: {
@@ -870,6 +910,7 @@ let players = {
         sb: 604,
         bb: 1305,
         tgttos: 1305,
+        team: 'purple'
       }
     },
     mccic: {
@@ -899,6 +940,7 @@ let players = {
         sb: 712,
         bb: 1500,
         tgttos: 486,
+        team: 'aqua'
       }
     },
   },
@@ -915,7 +957,8 @@ let players = {
         sb: 1065,
         tgttos: 1382,
         bb: 1470,
-        hitw: 728
+        hitw: 728,
+        team: 'orange'
       }
     }
   },
@@ -943,13 +986,15 @@ let players = {
         sb: 350,
         tgttos: 1250,
         bb: 1010,
-        hitw: 1492
+        hitw: 1492,
+        team: 'orange'
       },
       'Chosen Teams 1': {
         hitw: 890,
         sb: 382,
         bb: 1260,
         tgttos: 1189,
+        team: 'lime'
       },
     },
     it: {
@@ -974,7 +1019,8 @@ let players = {
         sb: 346,
         tgttos: 1062,
         bb: 1143,
-        hitw: 1432
+        hitw: 1432,
+        team: 'purple'
       }
     }
   },
@@ -989,7 +1035,7 @@ let players = {
       }
     }
   },
-  ParkerId7: { //Umendan MAYBE CHECK
+  ParkerId7: {
     iw: {
       1: {
         sb: 358,
@@ -1026,6 +1072,7 @@ let players = {
         sb: 482,
         bb: 1500,
         tgttos: 1461,
+        team: 'green'
       }
     },
   },
@@ -1047,6 +1094,7 @@ let players = {
         sb: 352,
         bb: 1395,
         tgttos: 1501,
+        team: 'blue'
       }
     },
     mccic: {
@@ -1092,7 +1140,8 @@ let players = {
         sb: 426,
         tgttos: 1461,
         bb: 1291,
-        hitw: 1244
+        hitw: 1244,
+        team: 'yellow'
       }
     }
   },
@@ -1109,7 +1158,8 @@ let players = {
         sb: 121,
         tgttos: 961,
         bb: 1383,
-        hitw: 1244
+        hitw: 1244,
+        team: 'yellow'
       }
     }
   },
@@ -1127,13 +1177,15 @@ let players = {
         sb: 180,
         tgttos: 1366,
         bb: 1307,
-        hitw: 980
+        hitw: 980,
+        team: 'aqua'
       },
       'Chosen Teams 1': {
         hitw: 580,
         sb: 306,
         bb: 1065,
         tgttos: 1118,
+        team: 'cyan'
       },
     }
   },
@@ -1151,13 +1203,15 @@ let players = {
         sb: 311,
         tgttos: 1330,
         bb: 1170,
-        hitw: 248
+        hitw: 248,
+        team: 'aqua'
       },
       'Chosen Teams 1': {
         hitw: 1360,
         sb: 724,
         bb: 1155,
         tgttos: 1692,
+        team: 'cyan'
       },
     },
     it: {
@@ -1204,6 +1258,7 @@ let players = {
         sb: 1074,
         bb: 1245,
         tgttos: 982,
+        team: 'cyan'
       }
     },
   },
@@ -1225,6 +1280,7 @@ let players = {
         sb: 474,
         bb: 1410,
         tgttos: 1066,
+        team: 'aqua'
       }
     },
   },
@@ -1252,13 +1308,15 @@ let players = {
         sb: 117,
         tgttos: 814,
         bb: 1278,
-        hitw: 1197
+        hitw: 1197,
+        team: 'orange'
       },
       'Chosen Teams 1': {
         hitw: 1320,
         sb: 226,
         bb: 1080,
         tgttos: 1032,
+        team: 'blue'
       },
     }
   },
@@ -1297,7 +1355,8 @@ let players = {
         sb: 119,
         tgttos: 430,
         bb: 683,
-        hitw: 332
+        hitw: 332,
+        team: 'green'
       }
     }
   },
@@ -1330,6 +1389,7 @@ let players = {
         tgttos: 1013,
         bb: 1440,
         hitw: 1237,
+        team: 'pink'
       }
     }
   },
@@ -1340,22 +1400,25 @@ let players = {
         tgttos: 1790,
         bb: 1573,
         hitw: 1870,
+        team: 'blue'
       },
       'Chosen Teams 1': {
         hitw: 625,
         sb: 374,
         bb: 1800,
         tgttos: 1599,
+        team: 'yellow'
       }, 
     }
   },
-  Men_Magnet: {
+  Men_Magnet: { //Umendan
     iw: {
       2: {
         sb: 819,
         tgttos: 1194,
         bb: 1170,
         hitw: 1062,
+        team: 'lime'
       }
     }
   },
@@ -1366,6 +1429,7 @@ let players = {
         tgttos: 801,
         bb: 1349,
         hitw: 1027,
+        team: 'lime'
       }
     }
   },
@@ -1376,6 +1440,7 @@ let players = {
         tgttos: 1021,
         bb: 1307,
         hitw: 998,
+        team: 'pink'
       }
     }
   },
@@ -1386,6 +1451,7 @@ let players = {
         tgttos: 1110,
         bb: 1132,
         hitw: 1083,
+        team: 'blue'
       }
     }
   },
@@ -1396,6 +1462,7 @@ let players = {
         tgttos: 1557,
         bb: 1027,
         hitw: 1429,
+        team: 'cyan'
       }
     },
     mccic: {
@@ -1414,12 +1481,14 @@ let players = {
         tgttos: 1594,
         bb: 1573,
         hitw: 1716,
+        team: 'red'
       },
       'Chosen Teams 1': {
         hitw: 1480,
         sb: 300,
         bb: 1350,
         tgttos: 1398,
+        team: 'yellow'
       },
     }
   },
@@ -1430,18 +1499,22 @@ let players = {
         tgttos: 1505,
         bb: 1604,
         hitw: 1593,
+        team: 'yellow'
       }
     }
   },
-  ignToxic: {
+  kyutii: { //txiic
     iw: {
       2: {
         sb: 548,
         tgttos: 1218,
         bb: 1054,
         hitw: 1664,
+        team: 'purple'
       }
     },
+  },
+  ignToxic: {
     mccic: {
       'O.B Chosen 1': {
         bb:975,
@@ -1458,16 +1531,18 @@ let players = {
         tgttos: 692,
         bb: 758,
         hitw: 643,
+        team: 'cyan'
       }
     }
   },
-  ItzmeSZ: {
+  ItzmeSZ: { //itsmesz
     iw: {
       'Chosen Teams 1': {
         hitw: 775,
         sb: 618,
         bb: 1305,
         tgttos: 1143,
+        team: 'purple'
       }
     },
   },
@@ -1478,12 +1553,14 @@ let players = {
         tgttos: 1265,
         bb: 1084,
         hitw: 728,
+        team: 'red'
       },
       'Chosen Teams 1': {
         hitw: 950,
         sb: 194,
         bb: 765,
         tgttos: 783,
+        team: 'blue'
       },
     }
   },
@@ -1494,7 +1571,8 @@ let players = {
         tgttos: 584,
         bb: 994,
         hitw: 1300,
-        sub: true
+        sub: true,
+        team: 'purple'
       }
     }
   },
@@ -1505,6 +1583,7 @@ let players = {
         sb: 182,
         bb: 930,
         tgttos: 1004,
+        team: 'red'
       }
     },
   },

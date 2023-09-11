@@ -14,7 +14,7 @@ const uuid = "Creekchub";
 getUUIDToUsername(uuid)
   .then(username => console.log(`Username for UUID ${uuid}: ${username}`))
   .catch(error => console.error(error));*/
-  let games = ['sb', 'tgttos', 'hitw', 'bb', 'pkw'];
+  /*let games = ['sb', 'tgttos', 'hitw', 'bb', 'pkw'];
 
   let scoresIndividualGame = {
     pkw: 300, 
@@ -41,4 +41,17 @@ sortable.forEach(function(item){
 let objSortedLength = Object.keys(objSorted);
 for(a = 0; a < objSortedLength.length; a++) {
   console.log(`${objSortedLength[a]} score: ${objSorted[objSortedLength[a]]}`)
-}
+}*/
+
+
+fetch("images/arrow.webp", { method: "HEAD" }) 
+    .then(response => { 
+        if (response.ok) { 
+            console.log("File exists"); 
+        } else { 
+            console.log("File does not exist"); 
+        } 
+    }) 
+    .catch(error => { 
+        console.log('amoga')
+    }); 
