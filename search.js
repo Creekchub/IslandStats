@@ -121,6 +121,18 @@ teams = ['red', 'orange', 'yellow', 'lime', 'green', 'cyan', 'aqua', 'blue', 'pu
 const urlParams = new URLSearchParams(window.location.search);
 let player = urlParams.get('player');
 
+function getTourney(tourneyServer, tourneyRound, dest) {
+  let amogafinder = Object.keys(players[player][tourneyServer][tourneyRound]);
+  let popupContent = '<p class="popupInner" style="text-align: center; margin-bottom: 2px;">Overview</p>';
+  for(aItt = 0; aItt < amogafinder.length; aItt++) {
+    if(players[player][tourneyServer][tourneyRound][games[aItt]] !== undefined) {
+      popupContent = popupContent + `<p class="popupInner">${gameNames[games[aItt]]} - <span style="position: absolute; right: 0px;">${players[player][tourneyServer][tourneyRound][games[aItt]]} | ${Math.round(players[player][tourneyServer][tourneyRound][games[aItt]] / servers[tourneyServer][tourneyRound].rounds)}<img style="width: 12px;" src="images/coin.webp"></span></p>`
+    }
+  }
+  //popupContent = popupContent + '</span>'
+  document.getElementById(dest).innerHTML = popupContent;
+}
+
 function getStats() {
   let idFor = 0;
   let countRound = 0;
@@ -207,7 +219,7 @@ function getStats() {
                   <div style="display: flex" id="divS${idFor}">
                   </div>
                   <div style="display: flex">
-                    <span id="tourneytag${idFor}" style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} <span style="color: gray;">|</span> ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
+                    <span onclick="document.getElementById('popup${idFor}').style.opacity = 1" onmouseleave="document.getElementById('popup${idFor}').style.opacity = 0" id="tourneytag${idFor}" style="position: relative; cursor: pointer; color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} <span style="color: gray;">|</span> ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}<div id="popup${idFor}" class="popup">The Impostor is Sus</div></span>
                     <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
                   </div>
                   <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
@@ -229,6 +241,7 @@ function getStats() {
                         }
                       }
                     }
+                    getTourney(`${serversA[a]}`, `${roundArray[b]}`, `popup${idFor}`);
                   }
                 }
               }

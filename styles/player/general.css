@@ -274,3 +274,23 @@ body {
   font-size: 14px;
   color: rgb(87, 87, 87);
 }
+
+.popup {
+  position: absolute;
+  background-color: rgb(68, 68, 68);
+  left: -240px;
+  opacity: 0;
+  top: -40px;
+  min-width: 220px;
+  padding: 8px;
+  border-color: rgb(45, 45, 255);
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 4px;
+}
+
+.popupInner {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+}
