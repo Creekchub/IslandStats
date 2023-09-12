@@ -126,7 +126,7 @@ body {
 
 .chartDivInner {
   display: flex;
-  justify-content: start;
+  justify-content: space-evenly
 }
 
 .gameChart {

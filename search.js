@@ -21,7 +21,7 @@ let servers = {
       dodgebolt: 'cyan'
     }
   },
-  hitw: {
+  /*hitw: {
     1: {
       gamesM: 4,
       rounds: 4
@@ -32,11 +32,19 @@ let servers = {
       rounds: 3,
       gamesM: 1,
     }
-  },
+  },*/
   mccic: {
     'O.B Chosen 1': {
       rounds: 3,
       gamesM: 1,
+      win: 'Mod Abuse',
+      dodgebolt: 'Heyday'
+    },
+    'O.B Chosen 2': {
+      rounds: 3,
+      gamesM: 1,
+      win: "Dodgebolt twice? That's really nice!",
+      dodgebolt: 'Big Bingos'
     }
   }
 }
@@ -122,11 +130,15 @@ const urlParams = new URLSearchParams(window.location.search);
 let player = urlParams.get('player');
 
 function getTourney(tourneyServer, tourneyRound, dest) {
-  let amogafinder = Object.keys(players[player][tourneyServer][tourneyRound]);
+  //let amogafinder = Object.keys(players[player][tourneyServer][tourneyRound]);
   let popupContent = '<p class="popupInner" style="text-align: center; margin-bottom: 2px;">Overview</p>';
-  for(aItt = 0; aItt < amogafinder.length; aItt++) {
+  for(aItt = 0; aItt < games.length; aItt++) {
     if(players[player][tourneyServer][tourneyRound][games[aItt]] !== undefined) {
-      popupContent = popupContent + `<p class="popupInner">${gameNames[games[aItt]]} - <span style="position: absolute; right: 0px;">${players[player][tourneyServer][tourneyRound][games[aItt]]} | ${Math.round(players[player][tourneyServer][tourneyRound][games[aItt]] / servers[tourneyServer][tourneyRound].rounds)}<img style="width: 12px;" src="images/coin.webp"></span></p>`
+      let deemoaganumba = players[player][tourneyServer][tourneyRound][games[aItt]];
+      if(games[aItt] === 'sb' || games[aItt] === 'pkw') {//maintainence for new games
+        deemoaganumba = Math.round(deemoaganumba * 1.5)
+      }
+      popupContent = popupContent + `<p class="popupInner">${gameNames[games[aItt]]} - <span style="position: absolute; right: 0px;">${deemoaganumba} | ${Math.round(deemoaganumba / servers[tourneyServer][tourneyRound].rounds)}<img style="width: 12px;" src="images/coin.webp"></span></p>`
     }
   }
   //popupContent = popupContent + '</span>'
@@ -210,14 +222,15 @@ function getStats() {
                   if(coinsTourney !== 0) {
                     idFor++;
                     document.getElementById('statTourneyDiv').innerHTML = document.getElementById('statTourneyDiv').innerHTML + `
-                <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px 30% calc(20% - 45px) 30px; margin-bottom: 8px;">
+                <div style="display: grid; grid-template-columns: calc(30% - 15px) 20% 30px 28% calc(20% - 25px) 30px; margin-bottom: 8px;">
                   <div style="display: flex;">
                     <img src="images/logo/${serversA[a]}.webp" style="width: 30px; grid-column-start: 1; border-radius: 6px;">
                     <span style="grid-column-start: 1; align-self: center; color: white; font-family: Kanit; padding-left: 10px;">${roundArray[b]}</span>
                   </div>
-                  <img id="imageTeam${idFor}" src="images/team/generic.webp" style="width: 30px;">
-                  <div style="display: flex" id="divS${idFor}">
+                  <div id="divS${idFor}">
                   </div>
+                  <img id="imageTeam${idFor}" src="images/team/generic.webp" style="width: 30px;">
+                  <div id="wins${idFor}" style="padding-left: 30%;"></div>
                   <div style="display: flex">
                     <span onclick="document.getElementById('popup${idFor}').style.opacity = 1" onmouseleave="document.getElementById('popup${idFor}').style.opacity = 0" id="tourneytag${idFor}" style="position: relative; cursor: pointer; color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} <span style="color: gray;">|</span> ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}<div id="popup${idFor}" class="popup">The Impostor is Sus</div></span>
                     <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
@@ -225,6 +238,12 @@ function getStats() {
                   <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
                 </div>
                   `//ADD IMAGES AND DODGEBOLT LATER HERE HERE HERE
+                    if(servers[serversA[a]][roundArray[b]].win === players[player][serversA[a]][roundArray[b]].team) {
+                      document.getElementById(`wins${idFor}`).innerHTML = '<img style="width: 26px; height: 26px; margin-left: 28px;" src="images/crown.webp">'
+                    }
+                    if(servers[serversA[a]][roundArray[b]].dodgebolt === players[player][serversA[a]][roundArray[b]].team) {
+                      document.getElementById(`wins${idFor}`).innerHTML = document.getElementById(`wins${idFor}`).innerHTML + '<img style="width: 26px; height: 26px; margin-left: 28px;" src="images/dodgebolt.webp">'
+                    }
                     if(servers[serversA[a]][roundArray[b]].canon === false) {
                       document.getElementById(`divS${idFor}`).innerHTML = document.getElementById(`divS${idFor}`).innerHTML + `<span class="noncanontag" id="noncanontag${idFor}">Noncanon</span>`;
                     }

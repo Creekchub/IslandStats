@@ -1,4 +1,617 @@
-let players = {
+let players = {//top
+  a46h: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:64,
+        pkw:297,
+        hitw:3,
+        bb:3,
+      }
+    }
+  },
+  JJ_didthis: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:258,
+        pkw:3,
+        hitw:325,
+        bb:405,
+      }
+    }
+  },
+  Photon3672: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:180,
+        pkw:136,
+        hitw:570,
+        bb:120,
+      }
+    }
+  },
+  MrSoupyYT: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:116,
+        pkw:130,
+        hitw:3,
+        bb:1005,
+      }
+    }
+  },
+  CoolBoyGoransh: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:92,
+        pkw:812,
+        hitw:3,
+        bb:59,
+      }
+    }
+  },
+  ThatGirlieSky: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:150,
+        pkw:602,
+        hitw:250,
+        bb:375,
+      }
+    }
+  },
+  Zyculous: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:136,
+        pkw:228,
+        hitw:250,
+        bb:765,
+      }
+    }
+  },
+  itscrimson5454: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:160,
+        pkw:298,
+        hitw:700,
+        bb:255,
+      }
+    }
+  },
+  TruffyG: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:94,
+        pkw:358,
+        hitw:395,
+        bb:780,
+      }
+    }
+  },
+  KokoJenn: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:102,
+        pkw:258,
+        hitw:640,
+        bb:810,
+      }
+    }
+  },
+  withered9897: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:376,
+        pkw:420,
+        hitw:895,
+        bb:120,
+      }
+    }
+  },
+  MonkeCalledMonkz: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:124,
+        pkw:420,
+        hitw:400,
+        bb:960,
+      }
+    }
+  },
+  jaz1yn: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:188,
+        pkw:152,
+        hitw:850,
+        bb:720,
+        sub: true,
+      }
+    }
+  },
+  GarlicBr3dza_: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:188,
+        pkw:152,
+        hitw:850,
+        bb:720,
+        sub: true,
+      }
+    }
+  },
+  yyyes: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:244,
+        pkw:372,
+        hitw:145,
+        bb:1290,
+      }
+    }
+  },
+  Megadoodlenotop: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:156,
+        pkw:544,
+        hitw:725,
+        bb:780,
+      }
+    }
+  },
+  Notentity: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:132,
+        pkw:626,
+        hitw:615,
+        bb:923,
+      }
+    }
+  },
+  Murfmellow: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:224,
+        pkw:320,
+        hitw:650,
+        bb:1230,
+      }
+    }
+  },
+  Adszi: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:162,
+        pkw:764,
+        hitw:1035,
+        bb:465,
+      }
+    }
+  },
+  Cakeiou: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:268,
+        pkw:772,
+        hitw:745,
+        bb:645,
+      }
+    }
+  },
+  quizky_: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:176,
+        pkw:664,
+        hitw:1395,
+        bb:465,
+      }
+    }
+  },
+  Noxicate: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:226,
+        pkw:480,
+        hitw:595,
+        bb:1410,
+      }
+    }
+  },
+  Proestofbot: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:190,
+        pkw:528,
+        hitw:1190,
+        bb:1005,
+      }
+    }
+  },
+  CorruptChimpYT: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:98,
+        pkw:658,
+        hitw:805,
+        bb:1365,
+      }
+    }
+  },
+  TheHiddenVoid: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:214,
+        pkw:735,
+        hitw:550,
+        bb:1455,
+      }
+    }
+  },
+  Taycario: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:104,
+        pkw:966,
+        hitw:910,
+        bb:1005,
+      }
+    }
+  },
+  MrPiston: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:294,
+        pkw:766,
+        hitw:1090,
+        bb:1065,
+      }
+    }
+  },
+  SuRReNDer99: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:416,
+        pkw:912,
+        hitw:1400,
+        bb:495,
+      }
+    }
+  },
+  Marino353: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:54,
+        pkw:674,
+        hitw:1310,
+        bb:1185,
+      }
+    }
+  },
+  Coumarine: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:136,
+        pkw:766,
+        hitw:1240,
+        bb:1215,
+        team: 'Big Bingos'
+      }
+    }
+  },
+  Omrooshi: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:190,
+        pkw:723,
+        hitw:1125,
+        bb:1365,
+      }
+    }
+  },
+  Neondelta: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:362,
+        pkw:742,
+        hitw:1100,
+        bb:1215,
+      }
+    }
+  },
+  asherjrd_: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:198,
+        pkw:664,
+        hitw:1425,
+        bb:1140,
+      }
+    }
+  },
+  _Kreesh_: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:500,
+        pkw:934,
+        hitw:805,
+        bb:1200,
+      }
+    }
+  },
+  TellingLand2378: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:502,
+        pkw:936,
+        hitw:1365,
+        bb:675,
+      }
+    }
+  },
+  DippiDab: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:96,
+        pkw:828,
+        hitw:1215,
+        bb:1455,
+      }
+    }
+  },
+  EventHowTo4: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:304,
+        pkw:1036,
+        hitw:595,
+        bb:1725,
+      }
+    }
+  },
+  Enderpro: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:672,
+        pkw:804,
+        hitw:1035,
+        bb:1350,
+        team: "Dodgebolt twice? That's really nice!"
+      }
+    }
+  },
+  delano_XD: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:558,
+        pkw:1074,
+        hitw:1390,
+        bb:1410,
+      }
+    }
+  },
+  Magicmarc: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:768,
+        pkw:742,
+        hitw:1530,
+        bb:1485,
+        team: "Dodgebolt twice? That's really nice!"
+      }
+    }
+  },
+  Toff3_: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:480,
+        sb:114,
+        tgttos:590,
+        hitw:335,
+      }
+    }
+  },
+  XA1thos: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:465,
+        sb:74,
+        tgttos:512,
+        hitw:570,
+      },
+      'O.B Chosen 2': {
+        sb:40,
+        pkw:434,
+        hitw:360,
+        bb:645,
+      }
+    }
+  },
+  Randomiezr: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:645,
+        sb:162,
+        tgttos:423,
+        hitw:605,
+      }
+    }
+  },
+  CamelManza: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:885,
+        sb:226,
+        tgttos:288,
+        hitw:440,
+      }
+    }
+  },
+  s4va: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:480,
+        sb:346,
+        tgttos:631,
+        hitw:580,
+      },
+      'O.B Chosen 2': {
+        sb:198,
+        pkw:372,
+        hitw:245,
+        bb:840,
+      }
+    }
+  },
+  LucyPlaysGames: {
+    mccic: {
+      'O.B Chosen 2': {
+        sb:286,
+        pkw:564,
+        hitw:430,
+        bb:1155,
+        sub: true
+      }
+    }
+  },
+  AzOMatic: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:525,
+        sb:184,
+        tgttos:1094,
+        hitw:370,
+      },
+      'O.B Chosen 2': {
+        sb:286,
+        pkw:564,
+        hitw:430,
+        bb:1155,
+        sub: true
+      }
+    }
+  },
+  Dabmaster0: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:570,
+        sb:510,
+        tgttos:601,
+        hitw:610,
+      }
+    }
+  },
+  Captainiampro: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1155,
+        sb:142,
+        tgttos:569,
+        hitw:475,
+      }
+    }
+  },
+  Reiny: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:990,
+        sb:99,
+        tgttos:924,
+        hitw:375,
+      }
+    }
+  },
+  Lounix_Live: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1155,
+        sb:178,
+        tgttos:348,
+        hitw:725,
+      },
+      'O.B Chosen 2': {
+        sb:246,
+        pkw:726,
+        hitw:1300,
+        bb:1095,
+      }
+    }
+  },
+  oSzabi: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:825,
+        sb:206,
+        tgttos:630,
+        hitw:795,
+      },
+      'O.B Chosen 2': {
+        sb:256,
+        pkw:720,
+        hitw:630,
+        bb:960,
+      }
+    }
+  },
+  _kagari: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1200,
+        sb:218,
+        tgttos:533,
+        hitw:575,
+      }
+    }
+  },
+  MiniMaestro: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:855,
+        sb:168,
+        tgttos:566,
+        hitw:940,
+      }
+    }
+  },
+  SenseiUnknown_: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:780,
+        sb:208,
+        tgttos:877,
+        hitw:700,
+      }
+    }
+  },
+  Sevior: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:870,
+        sb:212,
+        tgttos:837,
+        hitw:655,
+      }
+    }
+  },
+  thedoctor1655: {
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1050,
+        sb:174,
+        tgttos:330,
+        hitw:1325,
+      },
+      'O.B Chosen 2': {
+        sb:426,
+        pkw:674,
+        hitw:1205,
+        bb:675,
+      }
+    }
+  },
   Big_Yoshee: {
     mccic: {
       'O.B Chosen 1': {
@@ -6,6 +619,13 @@ let players = {
         sb:106,
         tgttos:519,
         hitw:940,
+      },
+      'O.B Chosen 2': {
+        sb:270,
+        pkw:796,
+        hitw:755,
+        bb:1305,
+        team: 'Big Bingos'
       }
     },
   },
@@ -26,6 +646,12 @@ let players = {
         sb:232,
         tgttos:962,
         hitw:653,
+      },
+      'O.B Chosen 2': {
+        sb:288,
+        pkw:712,
+        hitw:1170,
+        bb:1455,
       }
     },
   },
@@ -66,6 +692,13 @@ let players = {
         sb:90,
         tgttos:729,
         hitw:1145,
+      },
+      'O.B Chosen 2': {
+        sb:754,
+        pkw:1058,
+        hitw:1315,
+        bb:1710,
+        team: 'Big Bingos'
       }
     },
   },
@@ -86,6 +719,13 @@ let players = {
         sb:226,
         tgttos:967,
         hitw:820,
+      },
+      'O.B Chosen 2': {
+        sb:584,
+        pkw:1023,
+        hitw:1245,
+        bb:1620,
+        team: 'Big Bingos'
       }
     },
   },
@@ -106,6 +746,7 @@ let players = {
         sb:210,
         tgttos:1040,
         hitw:790,
+        team: 'Heyday'
       }
     },
   },
@@ -116,6 +757,12 @@ let players = {
         sb:518,
         tgttos:1212,
         hitw:980,
+      },
+      'O.B Chosen 2': {
+        sb:218,
+        pkw:998,
+        hitw:1360,
+        bb:1365,
       }
     },
   },
@@ -146,6 +793,12 @@ let players = {
         sb:494,
         tgttos:900,
         hitw:1335,
+      },
+      'O.B Chosen 2': {
+        sb:410,
+        pkw:734,
+        hitw:1455,
+        bb:1215,
       }
     },
   },
@@ -166,6 +819,13 @@ let players = {
         sb:320,
         tgttos:993,
         hitw:1330,
+        team: 'Mod Abuse'
+      },
+      'O.B Chosen 2': {
+        sb:512,
+        pkw:866,
+        hitw:855,
+        bb:1035,
       }
     },
   },
@@ -176,6 +836,12 @@ let players = {
         sb:592,
         tgttos:761,
         hitw:1570,
+      },
+      'O.B Chosen 2': {
+        sb:372,
+        pkw:828,
+        hitw:1360,
+        bb:870,
       }
     },
   },
@@ -216,6 +882,13 @@ let players = {
         sb:652,
         tgttos:907,
         hitw:1505,
+        team: 'Mod Abuse'
+      },
+      'O.B Chosen 2': {
+        sb:702,
+        pkw:712,
+        hitw:775,
+        bb:1290,
       }
     },
   },
@@ -311,6 +984,20 @@ let players = {
         hitw: 873,
         team: 'cyan'
       }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:1020,
+        sb:268,
+        tgttos:377,
+        hitw:675,
+      },
+      'O.B Chosen 2': {
+        sb:304,
+        pkw:472,
+        hitw:1025,
+        bb:1365,
+      }
     }
   },
   Envaderam: {
@@ -371,7 +1058,14 @@ let players = {
         sb:694,
         tgttos:1165,
         hitw:1445,
-        sub: true
+        sub: true,
+        team: 'Heyday'
+      },
+      'O.B Chosen 2': {
+        sb:486,
+        pkw:550,
+        hitw:630,
+        bb:1440,
       }
     },
   },
@@ -504,6 +1198,12 @@ let players = {
         sb:474,
         tgttos:1165,
         hitw:1260,
+      },
+      'O.B Chosen 2': {
+        sb:604,
+        pkw:796,
+        hitw:905,
+        bb:1290,
       }
     },
   },
@@ -636,6 +1336,21 @@ let players = {
         team: 'orange'
       }
     },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:855,
+        sb:364,
+        tgttos:1051,
+        hitw:275,
+      },
+      'O.B Chosen 2': {
+        sb:84,
+        pkw:588,
+        hitw:690,
+        bb:765,
+        sub: true
+      }
+    }
   },
   Orlandillo: {
     iw: {
@@ -690,6 +1405,15 @@ let players = {
         hitw: 1695,
         team: 'cyan'
       }
+    },
+    mccic: {
+      'O.B Chosen 2': {
+        sb:820,
+        pkw:1282,
+        hitw:1330,
+        bb:1530,
+        team: "Dodgebolt twice? That's really nice!"
+      }
     }
   },
   Dawld: {
@@ -708,6 +1432,7 @@ let players = {
         sb:734,
         tgttos:1341,
         hitw:1215,
+        team: 'Heyday'
       }
     },
   },
@@ -727,7 +1452,8 @@ let players = {
         sb:694,
         tgttos:1165,
         hitw:1445,
-        sub: true
+        sub: true,
+        team: 'Heyday'
       }
     },
   },
@@ -929,6 +1655,7 @@ let players = {
         sb:357,
         tgttos:1247,
         hitw:1755,
+        team: 'Heyday'
       }
     },
   },
@@ -948,6 +1675,12 @@ let players = {
         sb:310,
         tgttos:1082,
         hitw:775,
+      },
+      'O.B Chosen 2': {
+        sb:128,
+        pkw:990,
+        hitw:1240,
+        bb:1050,
       }
     },
   },
@@ -1132,16 +1865,31 @@ let players = {
         sb:540,
         tgttos:1173,
         hitw:695,
+      },
+      'O.B Chosen 2': {
+        sb:339,
+        pkw:1036,
+        hitw:725,
+        bb:1335,
       }
     },
   },
-  Gre1000: {
+  Gre1000: { //gree
     iw: {
       1: {
         sb: 712,
         bb: 1485,
         tgttos: 685,
         hitw: 1594,
+      }
+    },
+    mccic: {
+      'O.B Chosen 2': {
+        sb:84,
+        pkw:588,
+        hitw:690,
+        bb:765,
+        sub: true
       }
     }
   },
@@ -1387,6 +2135,20 @@ let players = {
         hitw: 332,
         team: 'green'
       }
+    },
+    mccic: {
+      'O.B Chosen 1': {
+        bb:810,
+        sb:158,
+        tgttos:343,
+        hitw:413,
+      },
+      'O.B Chosen 2': {
+        sb:112,
+        pkw:230,
+        hitw:265,
+        bb:645,
+      }
     }
   },
   Deadvid: {
@@ -1500,6 +2262,7 @@ let players = {
         sb:230,
         tgttos:1549,
         hitw:1775,
+        team: 'Mod Abuse'
       }
     },
   },
@@ -1634,6 +2397,12 @@ let players = {
         sb:602,
         tgttos:1267,
         hitw:1465,
+      },
+      'O.B Chosen 2': {
+        sb:680,
+        pkw:858,
+        hitw:1290,
+        bb:1365,
       }
     },
   },
@@ -1644,6 +2413,14 @@ let players = {
         sb:796,
         tgttos:1210,
         hitw:1445,
+        team: 'Mod Abuse'
+      },
+      'O.B Chosen 2': {
+        sb:290,
+        pkw:796,
+        hitw:1320,
+        bb:1440,
+        team: "Dodgebolt twice? That's really nice!"
       }
     },
   },
