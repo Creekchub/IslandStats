@@ -555,7 +555,6 @@ let players = {
         sb:714,
         tgttos:1559,
         hitw:1185,
-        team: 'Greke'
       }
     },
   },

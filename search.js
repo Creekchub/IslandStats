@@ -130,7 +130,11 @@ function getStats() {
   let appendCount1 = 0;
   let winCount = 0;
   let dodgeboltCount = 0;
-  document.getElementById('statTourneyDiv').innerHTML = '';
+  document.getElementById('statTourneyDiv').innerHTML = `
+  <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px 30% calc(20% - 45px) 30px; margin-bottom: 8px; border-bottom-style: solid; border-color: rgba(51, 71, 255, 0.504); border-width: 1px;">
+    <span class="preText">Tournament and Event</span><span class="preText">Team</span><span></span><span class="preText" style="text-align: right">Coins | Coins ÷ Rounds</span><span></span>
+  </div>
+  `;
 
   let roundSelect = document.getElementById('tourneySelect').value
   if(players[player] !== undefined) {
@@ -203,7 +207,7 @@ function getStats() {
                   <div style="display: flex" id="divS${idFor}">
                   </div>
                   <div style="display: flex">
-                    <span id="tourneytag${idFor}" style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} / ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
+                    <span id="tourneytag${idFor}" style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">${coinsTourney} <span style="color: gray;">|</span> ${Math.round(coinsTourney / servers[serversA[a]][roundArray[b]].rounds)}</span>
                     <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
                   </div>
                   <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
@@ -258,6 +262,16 @@ function getStats() {
   }
   document.getElementById('wins').innerHTML = winCount;
   document.getElementById('dodgebolts').innerHTML = (dodgeboltCount + winCount);
+}
+
+function recordChecks() {
+    sessionStorage.setItem('selectRecall', roundSelect);
+  
+    let subCheckRecallVar1 = document.getElementById('subCheck').checked;
+    sessionStorage.setItem('subCheckRecall', subCheckRecallVar1);
+  
+    let ncCheckRecallVar1 = document.getElementById('noncanonCheck').checked;
+    sessionStorage.setItem('ncCheckRecall', ncCheckRecallVar1);
 }
 
 //OLD OUTDATED CODE ( LIKE RUDERRR )

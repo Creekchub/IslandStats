@@ -268,3 +268,9 @@ body {
   padding-bottom: 1px;
   margin-left: 20%;
 }
+
+.preText {
+  font-family: Kanit;
+  font-size: 14px;
+  color: rgb(87, 87, 87);
+}

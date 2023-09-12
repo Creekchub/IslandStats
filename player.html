@@ -37,7 +37,7 @@
     <div class="statsDiv">
       <div class="playerInfoSpan">
         <div class="playerinfogrid" style="grid-column-start: 1; border-right-style: dashed;">
-          <p class="coinAverage" id="coinAverageStat">1500</p><img src="images/coin.webp" class="coinCoinAverage"><img src="images/questionmarkinfo.webp.png" class="tooltiphelpAverage" title="This is an average of how the player should perform in a 1 round tournament">
+          <p class="coinAverage" id="coinAverageStat">0</p><img src="images/coin.webp" class="coinCoinAverage"><img src="images/questionmarkinfo.webp.png" class="tooltiphelpAverage" title="This is an average of how the player should perform in a 1 round tournament">
         </div>
         <div class="playerinfogrid" style="grid-column-start: 2;">
           <img id="headImage" class="playerHeadImage" src="https://mc-heads.net/avatar/Notch/100">
@@ -81,7 +81,7 @@
           </div>
           <img src="images/orange.webp" style="width: 30px;">
           <div style="display: flex">
-            <span style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">1500</span>
+            <span style="color: white; font-family: Kanit; width: 100%; text-align:end; align-self: center">0</span>
             <!--<img src="images/coin.webp" style="width: 20px; align-self: center; padding-left: 4px;">-->
           </div>
           <img src="images/coin.webp" style="width: 20px; padding-top: 5px;">
@@ -185,6 +185,16 @@
       }else {
         document.getElementById('noncanonCheck').checked = false;
       }
+    </script>
+    <script>
+      let deemoagasussy = sessionStorage.getItem('firstLoad');
+      if(deemoagasussy !== '1') {
+        document.getElementById('subCheck').checked = true;
+        document.getElementById('noncanonCheck').checked = true;
+      }
+    </script>
+    <script>
+      sessionStorage.setItem('firstLoad', '1')
     </script>
   <script>
     getDataList();
