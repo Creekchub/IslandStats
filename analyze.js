@@ -266,6 +266,6 @@ function customPlayer(panelC, smallC) {
 function playerSiteNav(panel1, panel2) {
   let playerNameNav = document.getElementById(`nameD${panel1}S${panel2}`).innerHTML;
   if(players[playerNameNav] !== undefined) {
-    window.open(`https://islandstats.net/players.html?player=${playerNameNav}`);
+    window.open(`https://islandstats.net/player.html?player=${playerNameNav}`);
   }
 }
