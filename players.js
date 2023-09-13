@@ -55,7 +55,7 @@ let players = {//top
       },
     }
   },
-  Rainod: {
+  KillToDeathRatio: { //Rainod
     mccic: {
       'O.B Balanced 1': {
         sb:304,
@@ -66,7 +66,7 @@ let players = {//top
       },
     }
   },
-  PokemonMasrer345: {
+  PokemonMaster345: {
     mccic: {
       'O.B Balanced 1': {
         sb:344,
@@ -110,7 +110,7 @@ let players = {//top
       },
     }
   },
-  Qzeb: {
+  Evictable: { //qzeb
     mccic: {
       'O.B Balanced 1': {
         sb:252,
@@ -121,7 +121,7 @@ let players = {//top
       },
     }
   },
-  _XxMastar: {
+  Beefrz: { //_XxMastar
     mccic: {
       'O.B Balanced 1': {
         sb:291,
@@ -144,7 +144,7 @@ let players = {//top
       },
     }
   },
-  PlushGaymer: {
+  PlushGamer12: { //PlushGaymer
     mccic: {
       'O.B Balanced 1': {
         sb:276,
@@ -189,7 +189,7 @@ let players = {//top
       },
     }
   },
-  '13ej': {
+  'OFishL': { //13ej
     mccic: {
       'O.B Balanced 1': {
         sb:168,
@@ -211,7 +211,7 @@ let players = {//top
       }
     }
   },
-  polypolars: {
+  polypxdel: { //polypolars
     mccic: {
       'O.B Balanced 1': {
         sb:382,
@@ -288,7 +288,7 @@ let players = {//top
       }
     }
   },
-  a46h: {
+  sh3l: { //a46h
     mccic: {
       'O.B Chosen 2': {
         sb:64,
@@ -338,7 +338,7 @@ let players = {//top
       }
     }
   },
-  ThatGirlieSky: { //thattransgirl thatgirliesky
+  ThatTransGirl: { //thattransgirl thatgirliesky
     mccic: {
       'O.B Chosen 2': {
         sb:150,
@@ -433,7 +433,7 @@ let players = {//top
       }
     }
   },
-  GarlicBr3dza_: {
+  ToastedBr3dza_: { //GarlicBr3dza_
     mccic: {
       'O.B Chosen 2': {
         sb:188,
@@ -504,7 +504,7 @@ let players = {//top
       }
     }
   },
-  quizky_: {
+  quizky: { //quizky_
     mccic: {
       'O.B Chosen 2': {
         sb:176,
@@ -689,7 +689,7 @@ let players = {//top
       },
     }
   },
-  TellingLand2378: {
+  Te11ing: { //TellingLand2378
     mccic: {
       'O.B Chosen 2': {
         sb:502,
@@ -754,7 +754,7 @@ let players = {//top
       }
     }
   },
-  Magicmarc: {
+  MajesticalMarcus: { //MagicMarc
     mccic: {
       'O.B Chosen 2': {
         sb:768,
@@ -765,7 +765,7 @@ let players = {//top
       }
     }
   },
-  Toff3_: {
+  JustToffee: { //Toff3_
     mccic: {
       'O.B Chosen 1': {
         bb:480,
@@ -775,7 +775,7 @@ let players = {//top
       }
     }
   },
-  XA1thos: {
+  xAntH0s_: { //XA1thos
     mccic: {
       'O.B Chosen 1': {
         bb:465,
@@ -886,7 +886,7 @@ let players = {//top
       },
     }
   },
-  Captainiampro: {
+  DauntlessShield: { //Captainiampro
     mccic: {
       'O.B Chosen 1': {
         bb:1155,
@@ -1210,7 +1210,7 @@ let players = {//top
       }
     },
   },
-  GizzieMisse: {
+  GizzeMisse: {
     mccic: {
       'O.B Chosen 1': {
         bb:1020,
@@ -3066,7 +3066,7 @@ t: {
 
 */
 
-/*async function getUsernameToUUID(username) {
+async function getUsernameToUUID(username) {
   const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`);
   const data = await response.json();
   
@@ -3084,4 +3084,4 @@ for(aa = theNum -20; aa < theNum; aa++) {
   let username = `${playersArray[aa]}`;
   getUsernameToUUID(username)
   .then(uuid => console.log(`${username}: ${uuid}`))
-}*/
+}
