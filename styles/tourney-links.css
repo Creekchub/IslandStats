@@ -38,7 +38,7 @@
 }
 
 .link-text {
-  width: 140px;
+  width: 100%;
   display: block;
   margin: auto;
   margin-top: 0px;
@@ -46,6 +46,7 @@
   font-family: Kanit;
   font-weight: 500;
   color: rgb(228, 228, 228);
+  text-align: center
 }
 
 .discord-text-container {

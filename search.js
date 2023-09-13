@@ -45,8 +45,38 @@ let servers = {
       gamesM: 1,
       win: "Dodgebolt twice? That's really nice!",
       dodgebolt: 'Big Bingos'
+    },
+    'O.B Balanced 1': {
+      rounds: 3,
+      gamesM: 1,
+      win: 'Crimson Clams',
+      dodgebolt: 'Lime Lobsters'
+
+    },
+    'O.B Balanced 2': {
+      rounds: 3,
+      gamesM: 1,
     }
   }
+}
+
+let teamColor = {
+  'Maroon Marlins': '#8E1515',
+  'Crimson Clams': '#EF5050',
+  'Red River-Rats': '#FA0909',
+  'Coral Reefs': '#FFD890',
+  'Orange Octopi': '#FF9E00',
+  'Saffron Starfish': '#D3B142',
+  'Lime Lobsters': '#7CFF07',
+  'Emerald Eels': '#9EC878',
+  'Cyan Crabs': '#19CD99',
+  'Turquoise Tarpoons': '#38D4C3',
+  'Aqua Algae': '#00F7FF',
+  'Blue Blowfish': '#6480FF',
+  'Indigo Isopods': '#6200D1',
+  'Purple Pearls': '#9A27E4',
+  'Pink Pufferfish': '#FA0BFA',
+  'Brown Blobfish': '#744F0A'
 }
 
 
@@ -261,6 +291,11 @@ function getStats() {
                       }
                     }
                     getTourney(`${serversA[a]}`, `${roundArray[b]}`, `popup${idFor}`);
+                    if(players[player][serversA[a]][roundArray[b]].team !== undefined) {
+                      if(teamColor[players[player][serversA[a]][roundArray[b]].team] !== undefined) {
+                        document.getElementById(`imageTeam${idFor}`).style.backgroundColor = teamColor[players[player][serversA[a]][roundArray[b]].team];
+                      }
+                    }
                   }
                 }
               }

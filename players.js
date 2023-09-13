@@ -1,4 +1,293 @@
 let players = {//top
+  Mikeyikey: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:102,
+        hitw:255,
+        pkw:152,
+        tgttos:367,
+        team: 'Purple Pearls',
+      },
+    }
+  },
+  Indian_Skeppy: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:202,
+        hitw:50,
+        pkw:182,
+        tgttos:685,
+        team: 'Turquoise Tarpoons',
+      },
+    }
+  },
+  Yoghurrt: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:116,
+        hitw:555,
+        pkw:696,
+        tgttos:425,
+        team: 'Aqua Algae',
+      },
+    }
+  },
+  Bluly_ :{
+    mccic: {
+      'O.B Balanced 1': {
+        sb:324,
+        hitw:600,
+        pkw:564,
+        tgttos:392,
+        sub: true,
+        team: 'Aqua Algae',
+      },
+    }
+  },
+  oLifes: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:164,
+        hitw:325,
+        pkw:434,
+        tgttos:1031,
+        team: 'Turquoise Tarpoons',
+      },
+    }
+  },
+  Rainod: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:304,
+        hitw:355,
+        pkw:672,
+        tgttos:830,
+        team: 'Red River-Rats',
+      },
+    }
+  },
+  PokemonMasrer345: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:344,
+        hitw:295,
+        pkw:534,
+        tgttos:1033,
+        team: 'Cyan Crabs',
+      },
+    }
+  },
+  '7kay': {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:308,
+        hitw:705,
+        pkw:626,
+        tgttos:587,
+        team: 'Coral Reefs',
+      },
+    }
+  },
+  ImNathy: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:288,
+        hitw:775,
+        pkw:780,
+        tgttos:442,
+        team: 'Maroon Marlins',
+      },
+    }
+  },
+  ShiftySnowman: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:390,
+        hitw:275,
+        pkw:696,
+        tgttos:1040,
+        team: 'Blue Blowfish',
+      },
+    }
+  },
+  Qzeb: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:252,
+        hitw:1250,
+        pkw:678,
+        tgttos:230,
+        team: 'Saffron Starfish',
+      },
+    }
+  },
+  _XxMastar: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:291,
+        hitw:715,
+        pkw:500,
+        tgttos:1051,
+        sub: true,
+        team: 'Orange Octopi',
+      },
+    }
+  },
+  Lyxite: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:176,
+        hitw:1270,
+        pkw:558,
+        tgttos:605,
+        team: 'Saffron Starfish',
+      },
+    }
+  },
+  PlushGaymer: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:276,
+        hitw:650,
+        pkw:704,
+        tgttos:983,
+        sub: true,
+        team: 'Crimson Clams',
+      },
+    }
+  },
+  VentiBeast: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:94,
+        hitw:1295,
+        pkw:758,
+        tgttos:706,
+        team: 'Emerald Eels',
+      },
+    }
+  },
+  PizzaSliderr: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:314,
+        hitw:585,
+        pkw:472,
+        tgttos:1505,
+        team: 'Orange Octopi',
+      },
+    }
+  },
+  TheSlushyDealer: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:238,
+        hitw:1435,
+        pkw:404,
+        tgttos:836,
+        team: 'Orange Octopi',
+      },
+    }
+  },
+  '13ej': {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:168,
+        hitw:1220,
+        pkw:772,
+        tgttos:983,
+        team: 'Crimson Clams',
+      },
+    }
+  },
+  Lizariam: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:322,
+        hitw:1370,
+        pkw:772,
+        tgttos:1103,
+        team: 'Crimson Clams',
+      }
+    }
+  },
+  polypolars: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:382,
+        hitw:1605,
+        pkw:1120,
+        tgttos:878,
+        team: 'Purple Pearls',
+      }
+    }
+  },
+  catholiccatboy: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:520,
+        hitw:1875,
+        pkw:680,
+        tgttos:993,
+        team: 'Lime Lobsters',
+      }
+    }
+  },
+  Moussecolm: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:556,
+        hitw:1385,
+        pkw:812,
+        tgttos:1368,
+        team: 'Pink Pufferfish',
+      }
+    }
+  },
+  Mxdel: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:686,
+        hitw:1735,
+        pkw:712,
+        tgttos:1222,
+        team: 'Purple Pearls',
+      }
+    }
+  },
+  OnlyGolden: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:622,
+        hitw:1525,
+        pkw:998,
+        tgttos:1244,
+        team: 'Coral Reefs',
+      }
+    }
+  },
+  Spongedog: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:450,
+        hitw:1675,
+        pkw:1182,
+        tgttos:1334,
+        team: 'Pink Pufferfish',
+      }
+    }
+  },
+  Awruf: {
+    mccic: {
+      'O.B Balanced 1': {
+        sb:1020,
+        hitw:1780,
+        pkw:1290,
+        tgttos:1574,
+        team: 'Indigo Isopods',
+      }
+    }
+  },
   a46h: {
     mccic: {
       'O.B Chosen 2': {
@@ -49,14 +338,21 @@ let players = {//top
       }
     }
   },
-  ThatGirlieSky: {
+  ThatGirlieSky: { //thattransgirl thatgirliesky
     mccic: {
       'O.B Chosen 2': {
         sb:150,
         pkw:602,
         hitw:250,
         bb:375,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:116,
+        hitw:130,
+        pkw:386,
+        tgttos:550,
+        team: 'Pink Pufferfish',
+      },
     }
   },
   Zyculous: {
@@ -96,7 +392,14 @@ let players = {//top
         pkw:258,
         hitw:640,
         bb:810,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:86,
+        hitw:505,
+        pkw:342,
+        tgttos:287,
+        team: 'Brown Blobfish',
+      },
     }
   },
   withered9897: {
@@ -218,7 +521,15 @@ let players = {//top
         pkw:480,
         hitw:595,
         bb:1410,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:324,
+        hitw:600,
+        pkw:564,
+        tgttos:392,
+        sub: true,
+        team: 'Aqua Algae',
+      },
     }
   },
   Proestofbot: {
@@ -238,7 +549,15 @@ let players = {//top
         pkw:658,
         hitw:805,
         bb:1365,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:276,
+        hitw:650,
+        pkw:704,
+        tgttos:983,
+        sub: true,
+        team: 'Crimson Clams',
+      },
     }
   },
   TheHiddenVoid: {
@@ -248,7 +567,14 @@ let players = {//top
         pkw:735,
         hitw:550,
         bb:1455,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:232,
+        hitw:885,
+        pkw:472,
+        tgttos:553,
+        team: 'Saffron Starfish',
+      },
     }
   },
   Taycario: {
@@ -258,7 +584,14 @@ let players = {//top
         pkw:966,
         hitw:910,
         bb:1005,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:116,
+        hitw:560,
+        pkw:826,
+        tgttos:696,
+        team: 'Emerald Eels',
+      },
     }
   },
   MrPiston: {
@@ -319,6 +652,13 @@ let players = {//top
         pkw:742,
         hitw:1100,
         bb:1215,
+      },
+      'O.B Balanced 1': {
+        sb:308,
+        hitw:1580,
+        pkw:912,
+        tgttos:1394,
+        team: 'Lime Lobsters',
       }
     }
   },
@@ -339,7 +679,14 @@ let players = {//top
         pkw:934,
         hitw:805,
         bb:1200,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:176,
+        hitw:905,
+        pkw:1074,
+        tgttos:1290,
+        team: 'Maroon Marlins',
+      },
     }
   },
   TellingLand2378: {
@@ -349,7 +696,14 @@ let players = {//top
         pkw:936,
         hitw:1365,
         bb:675,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:454,
+        hitw:715,
+        pkw:710,
+        tgttos:699,
+        team: 'Indigo Isopods',
+      },
     }
   },
   DippiDab: {
@@ -359,7 +713,14 @@ let players = {//top
         pkw:828,
         hitw:1215,
         bb:1455,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:236,
+        hitw:655,
+        pkw:912,
+        tgttos:902,
+        team: 'Brown Blobfish',
+      },
     }
   },
   EventHowTo4: {
@@ -463,7 +824,14 @@ let players = {//top
         pkw:372,
         hitw:245,
         bb:840,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:198,
+        hitw:350,
+        pkw:318,
+        tgttos:427,
+        team: 'Indigo Isopods',
+      },
     }
   },
   LucyPlaysGames: {
@@ -491,7 +859,14 @@ let players = {//top
         hitw:430,
         bb:1155,
         sub: true
-      }
+      },
+      'O.B Balanced 1': {
+        sb:306,
+        hitw:550,
+        pkw:610,
+        tgttos:636,
+        team: 'Lime Lobsters',
+      },
     }
   },
   Dabmaster0: {
@@ -501,7 +876,14 @@ let players = {//top
         sb:510,
         tgttos:601,
         hitw:610,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:387,
+        hitw:690,
+        pkw:442,
+        tgttos:627,
+        team: 'Brown Blobfish',
+      },
     }
   },
   Captainiampro: {
@@ -553,7 +935,14 @@ let players = {//top
         pkw:720,
         hitw:630,
         bb:960,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:186,
+        hitw:690,
+        pkw:540,
+        tgttos:1132,
+        team: 'Pink Pufferfish',
+      },
     }
   },
   _kagari: {
@@ -596,7 +985,7 @@ let players = {//top
       }
     }
   },
-  thedoctor1655: {
+  TheDoctor1655: {
     mccic: {
       'O.B Chosen 1': {
         bb:1050,
@@ -609,7 +998,14 @@ let players = {//top
         pkw:674,
         hitw:1205,
         bb:675,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:82,
+        hitw:1270,
+        pkw:523,
+        tgttos:774,
+        team: 'Cyan Crabs',
+      },
     }
   },
   Big_Yoshee: {
@@ -652,7 +1048,14 @@ let players = {//top
         pkw:712,
         hitw:1170,
         bb:1455,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:212,
+        hitw:805,
+        pkw:788,
+        tgttos:966,
+        team: 'Coral Reefs',
+      },
     },
   },
   Darrk_Cobraa: {
@@ -747,7 +1150,14 @@ let players = {//top
         tgttos:1040,
         hitw:790,
         team: 'Heyday'
-      }
+      },
+      'O.B Balanced 1': {
+        sb:116,
+        hitw:690,
+        pkw:418,
+        tgttos:829,
+        team: 'Blue Blowfish',
+      },
     },
   },
   Ushiey: {
@@ -763,7 +1173,14 @@ let players = {//top
         pkw:998,
         hitw:1360,
         bb:1365,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:146,
+        hitw:1870,
+        pkw:226,
+        tgttos:883,
+        team: 'Emerald Eels',
+      },
     },
   },
   eweamy: {
@@ -773,7 +1190,14 @@ let players = {//top
         sb:430,
         tgttos:1283,
         hitw:1115,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:496,
+        hitw:720,
+        pkw:820,
+        tgttos:839,
+        team: 'Maroon Marlins',
+      },
     },
   },
   Darknyes: {
@@ -799,7 +1223,14 @@ let players = {//top
         pkw:734,
         hitw:1455,
         bb:1215,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:212,
+        hitw:795,
+        pkw:950,
+        tgttos:1169,
+        team: 'Cyan Crabs',
+      },
     },
   },
   SkeppyAmp: {
@@ -842,7 +1273,14 @@ let players = {//top
         pkw:828,
         hitw:1360,
         bb:870,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:324,
+        hitw:1350,
+        pkw:574,
+        tgttos:662,
+        team: 'Lime Lobsters',
+      },
     },
   },
   Skullad:{
@@ -862,7 +1300,14 @@ let players = {//top
         sb:220,
         tgttos:1212,
         hitw:1560,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:148,
+        hitw:945,
+        pkw:804,
+        tgttos:787,
+        team: 'Purple Pearls',
+      },
     },
   },
   Point_: {
@@ -889,7 +1334,15 @@ let players = {//top
         pkw:712,
         hitw:775,
         bb:1290,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:291,
+        hitw:715,
+        pkw:500,
+        tgttos:1051,
+        sub: true,
+        team: 'Orange Octopi',
+      },
     },
   },
   Yamsabag: {
@@ -997,7 +1450,14 @@ let players = {//top
         pkw:472,
         hitw:1025,
         bb:1365,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:410,
+        hitw:1020,
+        pkw:396,
+        tgttos:917,
+        team: 'Red River-Rats',
+      },
     }
   },
   Envaderam: {
@@ -1032,6 +1492,15 @@ let players = {//top
         sub: true,
         team: 'aqua'
       }
+    },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:634,
+        hitw:615,
+        pkw:758,
+        tgttos:695,
+        team: 'Blue Blowfish',
+      },
     }
   },
   Yumalol: {
@@ -1066,7 +1535,14 @@ let players = {//top
         pkw:550,
         hitw:630,
         bb:1440,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:230,
+        hitw:675,
+        pkw:812,
+        tgttos:1132,
+        team: 'Turquoise Tarpoons',
+      },
     },
   },
   Mellowjellocello: { //MELLOJELLOCELLO
@@ -1236,7 +1712,16 @@ let players = {//top
         sub: true,
         team: 'green'
       }
-    }
+    },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:626,
+        hitw:1805,
+        pkw:750,
+        tgttos:1542,
+        team: 'Red River-Rats',
+      }
+    },
   },
   Cautiontape14: {
     iw: {
@@ -1312,6 +1797,15 @@ let players = {//top
         tgttos: 1074,
         team: 'orange'
       },
+    },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:430,
+        hitw:245,
+        pkw:958,
+        tgttos:1003,
+        team: 'Cyan Crabs',
+      },
     }
   },
   cxost: {
@@ -1349,7 +1843,14 @@ let players = {//top
         hitw:690,
         bb:765,
         sub: true
-      }
+      },
+      'O.B Balanced 1': {
+        sb:250,
+        hitw:1465,
+        pkw:618,
+        tgttos:943,
+        team: 'Blue Blowfish',
+      },
     }
   },
   Orlandillo: {
@@ -1433,7 +1934,14 @@ let players = {//top
         tgttos:1341,
         hitw:1215,
         team: 'Heyday'
-      }
+      },
+      'O.B Balanced 1': {
+        sb:362,
+        hitw:665,
+        pkw:804,
+        tgttos:1119,
+        team: 'Aqua Algae',
+      },
     },
   },
   Proxpect: { //Prospect
@@ -1522,6 +2030,15 @@ let players = {//top
         team: 'green'
       }
     },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:368,
+        hitw:810,
+        pkw:1036,
+        tgttos:1020,
+        team: 'Red River-Rats',
+      },
+    }
   },
   SethKingOfRats: {
     iw: {
@@ -1605,6 +2122,15 @@ let players = {//top
         team: 'aqua'
       }
     },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:168,
+        hitw:1195,
+        pkw:680,
+        tgttos:1215,
+        team: 'Saffron Starfish',
+      },
+    }
   },
   EeveesXM: {
     iw: {
@@ -1636,7 +2162,14 @@ let players = {//top
         sb:914,
         tgttos:762,
         hitw:705,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:1030,
+        hitw:865,
+        pkw:834,
+        tgttos:789,
+        team: 'Aqua Algae',
+      },
     },
   },
   Cookithy: {
@@ -1871,7 +2404,14 @@ let players = {//top
         pkw:1036,
         hitw:725,
         bb:1335,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:542,
+        hitw:655,
+        pkw:766,
+        tgttos:1245,
+        team: 'Indigo Isopods',
+      },
     },
   },
   Gre1000: { //gree
@@ -1890,6 +2430,13 @@ let players = {//top
         hitw:690,
         bb:765,
         sub: true
+      },
+      'O.B Balanced 1': {
+        sb:266,
+        hitw:1630,
+        pkw:626,
+        tgttos:1055,
+        team: 'Emerald Eels',
       }
     }
   },
@@ -2026,6 +2573,15 @@ let players = {//top
         bb: 1132,
         hitw: 1372
       }
+    },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:266,
+        hitw:1595,
+        pkw:788,
+        tgttos:822,
+        team: 'Maroon Marlins',
+      },
     }
   },
   Xstevey: {
@@ -2060,6 +2616,15 @@ let players = {//top
         team: 'aqua'
       }
     },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:202,
+        hitw:285,
+        pkw:556,
+        tgttos:1067,
+        team: 'Coral Reefs',
+      },
+    }
   },
   Trash_Panda2007: {
     iw: {
@@ -2263,6 +2828,13 @@ let players = {//top
         tgttos:1549,
         hitw:1775,
         team: 'Mod Abuse'
+      },
+      'O.B Balanced 1': {
+        sb:250,
+        hitw:1100,
+        pkw:758,
+        tgttos:1478,
+        team: 'Turquoise Tarpoons',
       }
     },
   },
@@ -2354,6 +2926,15 @@ let players = {//top
         tgttos: 783,
         team: 'blue'
       },
+    },
+    mccic: {
+      'O.B Balanced 1': {
+        sb:232,
+        hitw:260,
+        pkw:364,
+        tgttos:763,
+        team: 'Orange Octopi',
+      },
     }
   },
   DaJamesMayo: {
@@ -2403,6 +2984,13 @@ let players = {//top
         pkw:858,
         hitw:1290,
         bb:1365,
+      },
+      'O.B Balanced 1': {
+        sb:418,
+        hitw:855,
+        pkw:1012,
+        tgttos:1514,
+        team: 'Brown Blobfish',
       }
     },
   },
@@ -2421,6 +3009,13 @@ let players = {//top
         hitw:1320,
         bb:1440,
         team: "Dodgebolt twice? That's really nice!"
+      },
+      'O.B Balanced 1': {
+        sb:702,
+        hitw:1080,
+        pkw:804,
+        tgttos:1149,
+        team: 'Crimson Clams',
       }
     },
   },

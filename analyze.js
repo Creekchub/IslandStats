@@ -124,7 +124,7 @@ function generatePageContent() {
     for(b = 0; b < parseInt(document.getElementById('teamNumberCount').value); b++) {
       pageContent = pageContent + `
       <div class="small-panel">
-      <form class="search-form" id="thePlayerD${a}S${b}" onsubmit="return false">
+      <form class="search-form" id="thePlayerD${a}S${b}" onsubmit="return false" onclick="changeHeadAll();">
         <input class="search-bar-player" id="myPlayerD${a}S${b}" type="text" placeholder="Add Player" list="datalistPlayers" autocomplete="off" oninput="changeHead(${a}, ${b}); changeHeadAll();" onclick="setToBlanks(${a}, ${b});">
         <datalist class="playerlister" id="datalistPlayers">
           <option>TheImpostor</option>
@@ -170,7 +170,7 @@ function generatePageContent() {
           r: {
             beginAtZero: true,
             min: 0,
-            max: (500 * document.getElementById('teamNumberCount').value),
+            max: (600 * document.getElementById('teamNumberCount').value),
             ticks: {
               display: false
             }
@@ -266,6 +266,6 @@ function customPlayer(panelC, smallC) {
 function playerSiteNav(panel1, panel2) {
   let playerNameNav = document.getElementById(`nameD${panel1}S${panel2}`).innerHTML;
   if(players[playerNameNav] !== undefined) {
-    window.open(`https://islandstats.net/players.html?player=${playerNameNav}`);
+    window.open(`https://islandstats.net/player.html?player=${playerNameNav}`);
   }
 }
