@@ -1917,6 +1917,16 @@ let players = {//top
       }
     }
   },
+  'Your Mom': {
+    iw: {
+      1: {
+        sb: 100,
+        tgttos: 1000,
+        bb: 2200,
+        hitw: 2000,
+      }
+    }
+  },
   Dawld: {
     iw: {
       1: {
