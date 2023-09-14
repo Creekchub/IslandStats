@@ -3066,7 +3066,7 @@ t: {
 
 */
 
-async function getUsernameToUUID(username) {
+/*async function getUsernameToUUID(username) {
   const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`);
   const data = await response.json();
   
@@ -3084,4 +3084,4 @@ for(aa = theNum -20; aa < theNum; aa++) {
   let username = `${playersArray[aa]}`;
   getUsernameToUUID(username)
   .then(uuid => console.log(`${username}: ${uuid}`))
-}
+}*/
