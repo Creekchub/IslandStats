@@ -1,4 +1,105 @@
 let players = {//top
+  '_Cicada': {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1420,
+        sb:604,
+        bb:1125,
+        tgttos:0,
+        sub: true
+      },
+    }
+  },
+  PantsOnPanda: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:475,
+        sb:898,
+        bb:915,
+        tgttos:887,
+      },
+    }
+  },
+  TopTenGayPeople: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1015,
+        sb:556,
+        bb:900,
+        tgttos:921,
+      }
+    }
+  },
+  MrSpikez: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1355,
+        sb:460,
+        bb:705,
+        tgttos:987,
+      }
+    }
+  },
+  banterlion: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1305,
+        sb:316,
+        bb:1080,
+        tgttos:1007,
+      }
+    }
+  },
+  tsnaz: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:685,
+        sb:282,
+        bb:1560,
+        tgttos:1209,
+      },
+    }
+  },
+  Glowhead123: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1125,
+        sb:446,
+        bb:1065,
+        tgttos:1247,
+      },
+    }
+  },
+  Fu6u: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1600,
+        sb:326,
+        bb:1553,
+        tgttos:834,
+      },
+    }
+  },
+  Mwystery: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1345,
+        sb:638,
+        bb:1275,
+        tgttos:1114,
+      },
+    }
+  },
+  notfilipebtw: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1995,
+        sb:972,
+        bb:945,
+        tgttos:1565,
+      }
+    }
+  },
   Mikeyikey: {
     mccic: {
       'O.B Balanced 1': {
@@ -165,6 +266,12 @@ let players = {//top
         tgttos:706,
         team: 'Emerald Eels',
       },
+      'O.B Balanced 2': {
+        hitw:1630,
+        sb:130,
+        bb:1215,
+        tgttos:1150,
+      },
     }
   },
   PizzaSliderr: {
@@ -176,6 +283,12 @@ let players = {//top
         tgttos:1505,
         team: 'Orange Octopi',
       },
+      'O.B Balanced 2': {
+        hitw:1450,
+        sb:120,
+        bb:870,
+        tgttos:1161,
+      }
     }
   },
   TheSlushyDealer: {
@@ -189,7 +302,7 @@ let players = {//top
       },
     }
   },
-  'OFishL': { //13ej
+  'OFishL': { //13ej //0fishl
     mccic: {
       'O.B Balanced 1': {
         sb:168,
@@ -198,6 +311,12 @@ let players = {//top
         tgttos:983,
         team: 'Crimson Clams',
       },
+      'O.B Balanced 2': {
+        hitw:1140,
+        sb:46,
+        bb:1050,
+        tgttos:1098,
+      }
     }
   },
   Lizariam: {
@@ -241,6 +360,12 @@ let players = {//top
         pkw:812,
         tgttos:1368,
         team: 'Pink Pufferfish',
+      },
+      'O.B Balanced 2': {
+        hitw:1565,
+        sb:284,
+        bb:1080,
+        tgttos:1896,
       }
     }
   },
@@ -252,6 +377,12 @@ let players = {//top
         pkw:712,
         tgttos:1222,
         team: 'Purple Pearls',
+      },
+      'O.B Balanced 2': {
+        hitw:1190,
+        sb:620,
+        bb:840,
+        tgttos:860,
       }
     }
   },
@@ -277,7 +408,7 @@ let players = {//top
       }
     }
   },
-  Awruf: {
+  AWRUF: { //awruf
     mccic: {
       'O.B Balanced 1': {
         sb:1020,
@@ -285,7 +416,13 @@ let players = {//top
         pkw:1290,
         tgttos:1574,
         team: 'Indigo Isopods',
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:1455,
+        sb:342,
+        bb:1275,
+        tgttos:847,
+      },
     }
   },
   sh3l: { //a46h
@@ -659,7 +796,13 @@ let players = {//top
         pkw:912,
         tgttos:1394,
         team: 'Lime Lobsters',
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:1650,
+        sb:432,
+        bb:960,
+        tgttos:971,
+      },
     }
   },
   asherjrd_: {
@@ -788,7 +931,13 @@ let players = {//top
         pkw:434,
         hitw:360,
         bb:645,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:350,
+        sb:294,
+        bb:1275,
+        tgttos:1296,
+      },
     }
   },
   Randomiezr: {
@@ -962,7 +1111,13 @@ let players = {//top
         sb:168,
         tgttos:566,
         hitw:940,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:1560,
+        sb:248,
+        bb:990,
+        tgttos:526,
+      },
     }
   },
   SenseiUnknown_: {
@@ -1065,7 +1220,13 @@ let players = {//top
         sb:282,
         tgttos:789,
         hitw:900,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:990,
+        sb:182,
+        bb:870,
+        tgttos:1279,
+      },
     },
   },
   CursedArrow: {
@@ -1142,7 +1303,7 @@ let players = {//top
       }
     },
   },
-  'qwusky': { //stormy //its stormy itsstormy //1tz_st0rmy
+  '1tz_st0rmy': { //stormy //its stormy itsstormy //1tz_st0rmy //qwusky
     mccic: {
       'O.B Chosen 1': {
         bb:1440,
@@ -1158,6 +1319,12 @@ let players = {//top
         tgttos:829,
         team: 'Blue Blowfish',
       },
+      'O.B Balanced 2': {
+        hitw:1600,
+        sb:258,
+        bb:825,
+        tgttos:779,
+      }
     },
   },
   Ushiey: {
@@ -1231,6 +1398,12 @@ let players = {//top
         tgttos:1169,
         team: 'Cyan Crabs',
       },
+      'O.B Balanced 2': {
+        hitw:1140,
+        sb:676,
+        bb:1140,
+        tgttos:808,
+      },
     },
   },
   SkeppyAmp: {
@@ -1280,6 +1453,12 @@ let players = {//top
         pkw:574,
         tgttos:662,
         team: 'Lime Lobsters',
+      },
+      'O.B Balanced 2': {
+        hitw:1070,
+        sb:500,
+        bb:1230,
+        tgttos:1544,
       },
     },
   },
@@ -1342,6 +1521,12 @@ let players = {//top
         tgttos:1051,
         sub: true,
         team: 'Orange Octopi',
+      },
+      'O.B Balanced 2': {
+        hitw:1050,
+        sb:399,
+        bb:1410,
+        tgttos:1286,
       },
     },
   },
@@ -1543,6 +1728,12 @@ let players = {//top
         tgttos:1132,
         team: 'Turquoise Tarpoons',
       },
+      'O.B Balanced 2': {
+        hitw:1270,
+        sb:358,
+        bb:1200,
+        tgttos:1240,
+      },
     },
   },
   Mellowjellocello: { //MELLOJELLOCELLO
@@ -1656,6 +1847,14 @@ let players = {//top
         tgttos: 1817,
         team: 'purple'
       },
+    },
+    mccic: {
+      'O.B Balanced 2': {
+        hitw: 1825,
+        sb: 808,
+        bb: 1695,
+        tgttos: 1599,
+      }
     }
   },
   BreadEaterPeter: {
@@ -1680,6 +1879,12 @@ let players = {//top
         pkw:796,
         hitw:905,
         bb:1290,
+      },
+      'O.B Balanced 2': {
+        hitw:1265,
+        sb:348,
+        bb:900,
+        tgttos:959,
       }
     },
   },
@@ -1806,6 +2011,12 @@ let players = {//top
         tgttos:1003,
         team: 'Cyan Crabs',
       },
+      'O.B Balanced 2': {
+        hitw:1505,
+        sb:396,
+        bb:570,
+        tgttos:757,
+      },
     }
   },
   cxost: {
@@ -1818,6 +2029,14 @@ let players = {//top
         sub: true,
         team: 'red'
       }
+    },
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:1115,
+        sb:1116,
+        bb:750,
+        tgttos:827,
+      },
     }
   },
   StezeyMC: {
@@ -1850,6 +2069,12 @@ let players = {//top
         pkw:618,
         tgttos:943,
         team: 'Blue Blowfish',
+      },
+      'O.B Balanced 2': {
+        hitw:845,
+        sb:824,
+        bb:900,
+        tgttos:726,
       },
     }
   },
@@ -1914,6 +2139,12 @@ let players = {//top
         hitw:1330,
         bb:1530,
         team: "Dodgebolt twice? That's really nice!"
+      },
+      'O.B Balanced 2': {
+        hitw:1675,
+        sb:708,
+        bb:1058,
+        tgttos:3,
       }
     }
   },
@@ -1952,6 +2183,12 @@ let players = {//top
         tgttos:1119,
         team: 'Aqua Algae',
       },
+      'O.B Balanced 2': {
+        hitw:1015,
+        sb:412,
+        bb:1215,
+        tgttos:688,
+      },
     },
   },
   Proxpect: { //Prospect
@@ -1972,7 +2209,14 @@ let players = {//top
         hitw:1445,
         sub: true,
         team: 'Heyday'
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:1420,
+        sb:604,
+        bb:1125,
+        tgttos:0,
+        sub: true
+      },
     },
   },
   MeanAtoh: {
@@ -2071,6 +2315,14 @@ let players = {//top
         sub: true,
         team: 'aqua'
       }
+    },
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:773,
+        sb:288,
+        bb:1283,
+        tgttos:885,
+      },
     }
   },
   masmarvelous: {
@@ -2179,6 +2431,12 @@ let players = {//top
         pkw:834,
         tgttos:789,
         team: 'Aqua Algae',
+      },
+      'O.B Balanced 2': {
+        hitw:1535,
+        sb:342,
+        bb:1350,
+        tgttos:1101,
       },
     },
   },
@@ -2422,6 +2680,12 @@ let players = {//top
         tgttos:1245,
         team: 'Indigo Isopods',
       },
+      'O.B Balanced 2': {
+        hitw:1270,
+        sb:334,
+        bb:810,
+        tgttos:1142,
+      }
     },
   },
   Gre1000: { //gree
@@ -2591,6 +2855,12 @@ let players = {//top
         pkw:788,
         tgttos:822,
         team: 'Maroon Marlins',
+      },
+      'O.B Balanced 2': {
+        hitw:1270,
+        sb:584,
+        bb:750,
+        tgttos:1268,
       },
     }
   },
@@ -2845,6 +3115,12 @@ let players = {//top
         pkw:758,
         tgttos:1478,
         team: 'Turquoise Tarpoons',
+      },
+      'O.B Balanced 2': {
+        hitw:1815,
+        sb:387,
+        bb:1688,
+        tgttos:1559,
       }
     },
   },
@@ -2919,6 +3195,14 @@ let players = {//top
         team: 'purple'
       }
     },
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:2085,
+        sb:362,
+        bb:1200,
+        tgttos:1277,
+      }
+    }
   },
   LeonardoPLK: {
     iw: {
@@ -2944,6 +3228,12 @@ let players = {//top
         pkw:364,
         tgttos:763,
         team: 'Orange Octopi',
+      },
+      'O.B Balanced 2': {
+        hitw:930,
+        sb:260,
+        bb:930,
+        tgttos:1101,
       },
     }
   },
@@ -3001,7 +3291,13 @@ let players = {//top
         pkw:1012,
         tgttos:1514,
         team: 'Brown Blobfish',
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:1230,
+        sb:700,
+        bb:1365,
+        tgttos:1169,
+      },
     },
   },
   FromaPutsi: {
@@ -3026,6 +3322,12 @@ let players = {//top
         pkw:804,
         tgttos:1149,
         team: 'Crimson Clams',
+      },
+      'O.B Balanced 2': {
+        hitw:805,
+        sb:996,
+        bb:1365,
+        tgttos:1626,
       }
     },
   },
