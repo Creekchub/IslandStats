@@ -1,13 +1,13 @@
 body {
-  background-color: rgb(61, 61, 61);
-  padding: 0px;
   margin: 0px;
+  background-color: rgb(61, 61, 61);
 }
 
 .panel {
   background-color: rgb(51, 51, 51);
   width: 80%;
   margin-left: 10%;
+  margin-right: 10%;
   border-style: solid;
   border-color: rgb(74, 74, 255);
   border-radius: 6px;
@@ -18,7 +18,7 @@ body {
 
 .small-panel {
   display: inline-block;
-  width: 10%;
+  max-width: 8%;
   padding: 12px;
   padding-left: 16px;
   padding-right: 16px;
@@ -30,7 +30,8 @@ body {
   text-align: center;
   margin-top: 2px;
   margin-bottom: 0px;
-  font-size: 50%;
+  font-size: 16px;
+  overflow-wrap: break-word;
 }
 
 .text-sub {
