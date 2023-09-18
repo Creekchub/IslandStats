@@ -1,4 +1,71 @@
 let players = {//top
+  iSiqht: { //iSight
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:245,
+        sb:166,
+        bb:720,
+        tgttos:450,
+        team: 'Emerald Eels'
+      },
+    }
+  },
+  Ivanthesavior: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:320,
+        sb:288,
+        bb:735,
+        tgttos:408,
+        team: 'Brown Blobfish'
+      },
+    }
+  },
+  eklyst: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:585,
+        sb:66,
+        bb:735,
+        tgttos:730,
+        team: 'Purple Pearls'
+      },
+    }
+  },
+  Crafterkid307: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:500,
+        sb:136,
+        bb:975,
+        tgttos:550,
+        sub: true,
+        team: 'Crimson Clams'
+      },
+    }
+  },
+  PluboAndreas: { //iAxoPower
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:560,
+        sb:328,
+        bb:1350,
+        tgttos:785,
+        team: 'Aqua Algae'
+      },
+    }
+  },
+  GGgamer73: {
+    mccic: {
+      'O.B Balanced 2': {
+        hitw:845,
+        sb:342,
+        bb:870,
+        tgttos:1074,
+        team: 'Brown Blobfish'
+      },
+    }
+  },
   '_Cicada': {
     mccic: {
       'O.B Balanced 2': {
@@ -6,7 +73,8 @@ let players = {//top
         sb:604,
         bb:1125,
         tgttos:0,
-        sub: true
+        sub: true,
+        team: 'Blue Blowfish'
       },
     }
   },
@@ -17,6 +85,7 @@ let players = {//top
         sb:898,
         bb:915,
         tgttos:887,
+        team: 'Brown Blobfish'
       },
     }
   },
@@ -27,6 +96,7 @@ let players = {//top
         sb:556,
         bb:900,
         tgttos:921,
+        team: 'Orange Octopi'
       }
     }
   },
@@ -37,6 +107,7 @@ let players = {//top
         sb:460,
         bb:705,
         tgttos:987,
+        team: 'Pink Pufferfish'
       }
     }
   },
@@ -47,6 +118,7 @@ let players = {//top
         sb:316,
         bb:1080,
         tgttos:1007,
+        team: 'Emerald Eels'
       }
     }
   },
@@ -57,6 +129,7 @@ let players = {//top
         sb:282,
         bb:1560,
         tgttos:1209,
+        team: 'Crimson Clams'
       },
     }
   },
@@ -67,6 +140,7 @@ let players = {//top
         sb:446,
         bb:1065,
         tgttos:1247,
+        team: 'Indigo Isopods'
       },
     }
   },
@@ -77,6 +151,7 @@ let players = {//top
         sb:326,
         bb:1553,
         tgttos:834,
+        team: 'Aqua Algae'
       },
     }
   },
@@ -87,16 +162,18 @@ let players = {//top
         sb:638,
         bb:1275,
         tgttos:1114,
+        team: 'Coral Reefs'
       },
     }
   },
-  notfilipebtw: {
+  notfelipebtw: {
     mccic: {
       'O.B Balanced 2': {
         hitw:1995,
         sb:972,
         bb:945,
         tgttos:1565,
+        team: 'Lime Lobsters'
       }
     }
   },
@@ -108,6 +185,13 @@ let players = {//top
         pkw:152,
         tgttos:367,
         team: 'Purple Pearls',
+      },
+      'O.B Balanced 2': {
+        hitw:220,
+        sb:202,
+        bb:765,
+        tgttos:231,
+        team: 'Lime Lobsters'
       },
     }
   },
@@ -154,6 +238,13 @@ let players = {//top
         tgttos:1031,
         team: 'Turquoise Tarpoons',
       },
+      'O.B Balanced 2': {
+        hitw:155,
+        sb:258,
+        bb:1635,
+        tgttos:522,
+        team: 'Coral Reefs'
+      },
     }
   },
   KillToDeathRatio: { //Rainod
@@ -175,6 +266,13 @@ let players = {//top
         pkw:534,
         tgttos:1033,
         team: 'Cyan Crabs',
+      },
+      'O.B Balanced 2': {
+        hitw:815,
+        sb:490,
+        bb:795,
+        tgttos:818,
+        team: 'Pink Pufferfish'
       },
     }
   },
@@ -208,6 +306,13 @@ let players = {//top
         pkw:696,
         tgttos:1040,
         team: 'Blue Blowfish',
+      },
+      'O.B Balanced 2': {
+        hitw:745,
+        sb:296,
+        bb:1058,
+        tgttos:3,
+        team: 'Blue Blowfish'
       },
     }
   },
@@ -245,7 +350,7 @@ let players = {//top
       },
     }
   },
-  PlushGamer12: { //PlushGaymer
+  PlushGaymer12: { //PlushGamer12
     mccic: {
       'O.B Balanced 1': {
         sb:276,
@@ -254,6 +359,14 @@ let players = {//top
         tgttos:983,
         sub: true,
         team: 'Crimson Clams',
+      },
+      'O.B Balanced 2': {
+        hitw:1100,
+        sb:170,
+        bb:960,
+        tgttos:486,
+        sub: true,
+        team: 'Coral Reefs'
       },
     }
   },
@@ -271,6 +384,7 @@ let players = {//top
         sb:130,
         bb:1215,
         tgttos:1150,
+        team: 'Saffron Starfish'
       },
     }
   },
@@ -288,6 +402,7 @@ let players = {//top
         sb:120,
         bb:870,
         tgttos:1161,
+        team: 'Cyan Crabs'
       }
     }
   },
@@ -316,6 +431,7 @@ let players = {//top
         sb:46,
         bb:1050,
         tgttos:1098,
+        team: 'Brown Blobfish'
       }
     }
   },
@@ -366,6 +482,7 @@ let players = {//top
         sb:284,
         bb:1080,
         tgttos:1896,
+        team: 'Saffron Starfish'
       }
     }
   },
@@ -383,6 +500,7 @@ let players = {//top
         sb:620,
         bb:840,
         tgttos:860,
+        team: 'Maroon Marlins'
       }
     }
   },
@@ -422,10 +540,11 @@ let players = {//top
         sb:342,
         bb:1275,
         tgttos:847,
+        team: 'Turquoise Tarpoons'
       },
     }
   },
-  sh3l: { //a46h
+  SH31: { //a46h
     mccic: {
       'O.B Chosen 2': {
         sb:64,
@@ -452,7 +571,15 @@ let players = {//top
         pkw:136,
         hitw:570,
         bb:120,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:500,
+        sb:136,
+        bb:975,
+        tgttos:550,
+        sub: true,
+        team: 'Crimson Clams'
+      },
     }
   },
   MrSoupyYT: {
@@ -465,7 +592,7 @@ let players = {//top
       }
     }
   },
-  CoolBoyGoransh: {
+  ItzCBG_: { //CoolBoyGoransh
     mccic: {
       'O.B Chosen 2': {
         sb:92,
@@ -556,7 +683,14 @@ let players = {//top
         pkw:420,
         hitw:400,
         bb:960,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:890,
+        sb:80,
+        bb:788,
+        tgttos:3,
+        team: 'Blue Blowfish'
+      },
     }
   },
   jaz1yn: {
@@ -588,7 +722,15 @@ let players = {//top
         pkw:372,
         hitw:145,
         bb:1290,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:1100,
+        sb:170,
+        bb:960,
+        tgttos:486,
+        sub: true,
+        team: 'Coral Reefs'
+      },
     }
   },
   Megadoodlenotop: {
@@ -608,7 +750,14 @@ let players = {//top
         pkw:626,
         hitw:615,
         bb:923,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:615,
+        sb:324,
+        bb:761,
+        tgttos:1164,
+        team: 'Maroon Marlins'
+      },
     }
   },
   Murfmellow: {
@@ -802,6 +951,7 @@ let players = {//top
         sb:432,
         bb:960,
         tgttos:971,
+        team: 'Cyan Crabs'
       },
     }
   },
@@ -847,6 +997,13 @@ let players = {//top
         tgttos:699,
         team: 'Indigo Isopods',
       },
+      'O.B Balanced 2': {
+        hitw:420,
+        sb:274,
+        bb:780,
+        tgttos:814,
+        team: 'Cyan Crabs'
+      },
     }
   },
   DippiDab: {
@@ -873,7 +1030,14 @@ let players = {//top
         pkw:1036,
         hitw:595,
         bb:1725,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:578,
+        sb:260,
+        bb:735,
+        tgttos:800,
+        team: 'Purple Pearls'
+      },
     }
   },
   Enderpro: {
@@ -937,6 +1101,7 @@ let players = {//top
         sb:294,
         bb:1275,
         tgttos:1296,
+        team: 'Red River-Rats'
       },
     }
   },
@@ -980,6 +1145,13 @@ let players = {//top
         pkw:318,
         tgttos:427,
         team: 'Indigo Isopods',
+      },
+      'O.B Balanced 2': {
+        hitw:315,
+        sb:86,
+        bb:645,
+        tgttos:285,
+        team: 'Turquoise Tarpoons'
       },
     }
   },
@@ -1052,7 +1224,14 @@ let players = {//top
         sb:99,
         tgttos:924,
         hitw:375,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:345,
+        sb:218,
+        bb:855,
+        tgttos:788,
+        team: 'Saffron Starfish'
+      },
     }
   },
   Lounix_Live: {
@@ -1092,16 +1271,30 @@ let players = {//top
         tgttos:1132,
         team: 'Pink Pufferfish',
       },
+      'O.B Balanced 2': {
+        hitw:845,
+        sb:370,
+        bb:615,
+        tgttos:1268,
+        team: 'Maroon Marlins'
+      },
     }
   },
-  _kagari: {
+  _Kagari: {
     mccic: {
       'O.B Chosen 1': {
         bb:1200,
         sb:218,
         tgttos:533,
         hitw:575,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:160,
+        sb:76,
+        bb:690,
+        tgttos:246,
+        team: 'Cyan Crabs'
+      },
     }
   },
   MiniMaestro: {
@@ -1117,6 +1310,7 @@ let players = {//top
         sb:248,
         bb:990,
         tgttos:526,
+        team: 'Orange Octopi'
       },
     }
   },
@@ -1160,7 +1354,7 @@ let players = {//top
         pkw:523,
         tgttos:774,
         team: 'Cyan Crabs',
-      },
+      },//1078
     }
   },
   Big_Yoshee: {
@@ -1187,7 +1381,14 @@ let players = {//top
         sb:138,
         tgttos:828,
         hitw:750,
-      }
+      },
+      'O.B Balanced 2': {
+        hitw:360,
+        sb:338,
+        bb:945,
+        tgttos:1078,
+        team: 'Orange Octopi'
+      },
     },
   },
   Dr_Brandini: {
@@ -1211,6 +1412,13 @@ let players = {//top
         tgttos:966,
         team: 'Coral Reefs',
       },
+      'O.B Balanced 2': {
+        hitw:970,
+        sb:258,
+        bb:735,
+        tgttos:822,
+        team: 'Purple Pearls'
+      },
     },
   },
   Darrk_Cobraa: {
@@ -1226,6 +1434,7 @@ let players = {//top
         sb:182,
         bb:870,
         tgttos:1279,
+        team: 'Turquoise Tarpoons'
       },
     },
   },
@@ -1324,6 +1533,7 @@ let players = {//top
         sb:258,
         bb:825,
         tgttos:779,
+        team: 'Turquoise Tarpoons'
       }
     },
   },
@@ -1403,6 +1613,7 @@ let players = {//top
         sb:676,
         bb:1140,
         tgttos:808,
+        team: 'Purple Pearls'
       },
     },
   },
@@ -1459,6 +1670,7 @@ let players = {//top
         sb:500,
         bb:1230,
         tgttos:1544,
+        team: 'Red River-Rats'
       },
     },
   },
@@ -1486,6 +1698,13 @@ let players = {//top
         pkw:804,
         tgttos:787,
         team: 'Purple Pearls',
+      },
+      'O.B Balanced 2': {
+        hitw:565,
+        sb:318,
+        bb:990,
+        tgttos:1244,
+        team: 'Saffron Starfish'
       },
     },
   },
@@ -1527,6 +1746,7 @@ let players = {//top
         sb:399,
         bb:1410,
         tgttos:1286,
+        team: 'Red River-Rats'
       },
     },
   },
@@ -1686,6 +1906,13 @@ let players = {//top
         tgttos:695,
         team: 'Blue Blowfish',
       },
+      'O.B Balanced 2': {
+        hitw:565,
+        sb:180,
+        bb:1065,
+        tgttos:657,
+        team: 'Crimson Clams'
+      },
     }
   },
   Yumalol: {
@@ -1733,6 +1960,7 @@ let players = {//top
         sb:358,
         bb:1200,
         tgttos:1240,
+        team: 'Crimson Clams'
       },
     },
   },
@@ -1854,6 +2082,7 @@ let players = {//top
         sb: 808,
         bb: 1695,
         tgttos: 1599,
+        team: 'Indigo Isopods'
       }
     }
   },
@@ -1885,6 +2114,7 @@ let players = {//top
         sb:348,
         bb:900,
         tgttos:959,
+        team: 'Emerald Eels'
       }
     },
   },
@@ -2016,6 +2246,7 @@ let players = {//top
         sb:396,
         bb:570,
         tgttos:757,
+        team: 'Pink Pufferfish'
       },
     }
   },
@@ -2036,6 +2267,7 @@ let players = {//top
         sb:1116,
         bb:750,
         tgttos:827,
+        team: 'Pink Pufferfish'
       },
     }
   },
@@ -2075,6 +2307,7 @@ let players = {//top
         sb:824,
         bb:900,
         tgttos:726,
+        team: 'Lime Lobsters'
       },
     }
   },
@@ -2145,6 +2378,7 @@ let players = {//top
         sb:708,
         bb:1058,
         tgttos:3,
+        team: 'Blue Blowfish'
       }
     }
   },
@@ -2188,6 +2422,7 @@ let players = {//top
         sb:412,
         bb:1215,
         tgttos:688,
+        team: 'Lime Lobsters'
       },
     },
   },
@@ -2215,7 +2450,8 @@ let players = {//top
         sb:604,
         bb:1125,
         tgttos:0,
-        sub: true
+        sub: true,
+        team: 'Blue Blowfish'
       },
     },
   },
@@ -2322,6 +2558,7 @@ let players = {//top
         sb:288,
         bb:1283,
         tgttos:885,
+        team: 'Aqua Algae'
       },
     }
   },
@@ -2437,6 +2674,7 @@ let players = {//top
         sb:342,
         bb:1350,
         tgttos:1101,
+        team: 'Orange Octopi'
       },
     },
   },
@@ -2685,6 +2923,7 @@ let players = {//top
         sb:334,
         bb:810,
         tgttos:1142,
+        team: 'Emerald Eels'
       }
     },
   },
@@ -2861,6 +3100,7 @@ let players = {//top
         sb:584,
         bb:750,
         tgttos:1268,
+        team: 'Maroon Marlins'
       },
     }
   },
@@ -3121,6 +3361,7 @@ let players = {//top
         sb:387,
         bb:1688,
         tgttos:1559,
+        team: 'Aqua Algae'
       }
     },
   },
@@ -3201,6 +3442,7 @@ let players = {//top
         sb:362,
         bb:1200,
         tgttos:1277,
+        team: 'Indigo Isopods'
       }
     }
   },
@@ -3234,6 +3476,7 @@ let players = {//top
         sb:260,
         bb:930,
         tgttos:1101,
+        team: 'Indigo Isopods'
       },
     }
   },
@@ -3297,6 +3540,7 @@ let players = {//top
         sb:700,
         bb:1365,
         tgttos:1169,
+        team: 'Coral Reefs'
       },
     },
   },
@@ -3328,6 +3572,7 @@ let players = {//top
         sb:996,
         bb:1365,
         tgttos:1626,
+        team: 'Red River-Rats'
       }
     },
   },
@@ -3368,7 +3613,7 @@ t: {
 
 */
 
-/*async function getUsernameToUUID(username) {
+async function getUsernameToUUID(username) {
   const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`);
   const data = await response.json();
   
@@ -3381,9 +3626,9 @@ t: {
 let playersArray = Object.keys(players);
 
 
-let theNum = 100;
+let theNum = 80
 for(aa = theNum -20; aa < theNum; aa++) {
   let username = `${playersArray[aa]}`;
   getUsernameToUUID(username)
   .then(uuid => console.log(`${username}: ${uuid}`))
-}*/
+}

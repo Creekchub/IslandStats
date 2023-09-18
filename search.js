@@ -56,8 +56,8 @@ let servers = {
     'O.B Balanced 2': {
       rounds: 3,
       gamesM: 1,
-      win: 'unkown',
-      dodgebolt: 'unkown'
+      win: 'Aqua Algae',
+      dodgebolt: 'Indigo Isopods'
     }
   }
 }
