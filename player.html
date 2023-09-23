@@ -56,6 +56,14 @@
             <input type="checkbox" id="noncanonCheck" class="checkBox" onclick="getStats();"><label for="noncanonCheck" class="checkBoxTag">Noncanon</label>
           </div>
         </div>
+        <div style="display: flex; align-items: center">
+          <div>
+            <input class="radioInput" type="radio" id="plobby" name="radioValue" value="plobby" onchange="getStats();">
+            <label class="radioLabel" for="plobby" id="labelplobby">Plobby</label><br>
+            <input class="radioInput" type="radio" id="publiclobby" name="radioValue" value="public" onchange="getStats();">
+            <label class="radioLabel" for="publiclobby" id="labelpublic">Public</label><br>  
+          </div>
+        </div>
         <div>
           <select class="selectBox" id="tourneySelect" style="margin-bottom: 4px;" onchange="getStats();">
             <option value="all">Show all Tournaments</option> <!--MAINTAINENCE IF NEW SERVER ADDED-->
@@ -189,10 +197,19 @@
       }
     </script>
     <script>
+      let amogagetta = sessionStorage.getItem('lobbyType');
+      if(amogagetta === 'private') {
+        document.getElementById('plobby').checked = true;
+      }else {
+        document.getElementById('publiclobby').checked = true;
+      }
+    </script>
+    <script>
       let deemoagasussy = sessionStorage.getItem('firstLoad');
       if(deemoagasussy !== '1') {
         document.getElementById('subCheck').checked = true;
         document.getElementById('noncanonCheck').checked = true;
+        document.getElementById('publiclobby').checked = true;
       }
     </script>
     <script>

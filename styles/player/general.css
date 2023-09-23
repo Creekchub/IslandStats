@@ -294,3 +294,12 @@ body {
   margin-bottom: 0px;
   text-align: left;
 }
+
+.radioLabel {
+  font-family: Kanit;
+  color: white;
+  border-bottom-width: 1px;
+}
+
+.radioInput {
+}
