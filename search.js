@@ -775,3 +775,14 @@ function setChartColors() {
     eval(games[deemoager] + 'Bar.update();')
   }
 }
+
+function getList() { //gets list of players that participated in specific tournament
+  let playerListArray = Object.keys(players);
+  for(a = 0; a < playerListArray.length; a++) {
+    if(players[playerListArray[a]]['iw'] !== undefined) {
+      if(players[playerListArray[a]]['iw']['Chosen Teams 1']) {
+        console.log(playerListArray[a])
+      }
+    }
+  }
+}
