@@ -327,7 +327,7 @@ let players = {//top
       },
     }
   },
-  Beefrz: { //_XxMastar
+  Be9f: { //_XxMastar Beefrz
     mccic: {
       'O.B Balanced 1': {
         sb:291,
@@ -339,7 +339,7 @@ let players = {//top
       },
     }
   },
-  Lyxite: {
+  LyxiteIsHere: {
     mccic: {
       'O.B Balanced 1': {
         sb:176,
@@ -3613,7 +3613,7 @@ t: {
 
 */
 
-/*async function getUsernameToUUID(username) {
+async function getUsernameToUUID(username) {
   const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`);
   const data = await response.json();
   
@@ -3626,9 +3626,9 @@ t: {
 let playersArray = Object.keys(players);
 
 
-let theNum = 80
+let theNum = 40
 for(aa = theNum -20; aa < theNum; aa++) {
   let username = `${playersArray[aa]}`;
   getUsernameToUUID(username)
   .then(uuid => console.log(`${username}: ${uuid}`))
-}*/
+}
