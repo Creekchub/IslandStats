@@ -22,6 +22,11 @@ let servers = {
       win: 'purple',
       dodgebolt: 'cyan',
       lobby: 'public',
+    },
+    4: {
+      rounds: 3,
+      gamesM: 1,
+      lobby: 'plobby'
     }
   },
   /*hitw: {
