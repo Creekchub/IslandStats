@@ -155,7 +155,7 @@ let players = {//top
       },
     }
   },
-  Mwstery: {
+  Mwstery: { //konzid
     mccic: {
       'O.B Balanced 2': {
         hitw:1345,
@@ -164,6 +164,15 @@ let players = {//top
         tgttos:1114,
         team: 'Coral Reefs'
       },
+      iw: {
+        1: {
+          sb: 858,
+          bb: 1320,
+          tgttos: 1202,
+          hitw: 1685,
+          team: 'lime'
+        }
+      }
     }
   },
   notfelipebtw: {
@@ -2722,17 +2731,6 @@ let players = {//top
         bb:1050,
       }
     },
-  },
-  Konzid: {
-    iw: {
-      1: {
-        sb: 858,
-        bb: 1320,
-        tgttos: 1202,
-        hitw: 1685,
-        team: 'lime'
-      }
-    }
   },
   KomaSwirls: {
     iw: {
