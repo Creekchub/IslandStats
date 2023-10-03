@@ -455,7 +455,7 @@ let players = {//top
       }
     }
   },
-  polypxdel: { //polypolars
+  polypolars: { //polypolars //polypxdel
     mccic: {
       'O.B Balanced 1': {
         sb:382,
@@ -535,7 +535,7 @@ let players = {//top
       }
     }
   },
-  AWRUF: { //awruf
+  wrrf: { //awruf //wrrf
     mccic: {
       'O.B Balanced 1': {
         sb:1020,
@@ -2013,7 +2013,7 @@ let players = {//top
       }
     }
   },
-  Envared: { //nightmarine
+  Envarad: { //nightmarine //Envared
     iw: {
       2: {
         sb: 515,
@@ -2138,7 +2138,7 @@ let players = {//top
       }
     },
   },
-  Rotomm: {
+  rotomm: {
     it: {
       2: {
         sb: 778,
@@ -2320,7 +2320,7 @@ let players = {//top
       },
     }
   },
-  Orlandillo: {
+  Orencio: { //Orlandillo
     iw: {
       'Chosen Teams 1': {
         hitw: 695,
@@ -2583,7 +2583,7 @@ let players = {//top
       }
     }
   },
-  Gnighty: { //Gnighty
+  Top1Gay: { //Gnighty
     iw: {
       'Chosen Teams 1': {
         hitw: 1165,
@@ -2875,7 +2875,7 @@ let players = {//top
       }
     },
   },
-  PurplePrincess81: {
+  RealJeffBezos176: { //PurplePrincess81
     iw: {
       1: {
         sb: 808,
@@ -3202,7 +3202,7 @@ let players = {//top
       }
     }
   },
-  LoadingSiren597: {
+  TheMikeyikey: { //LoadingSiren597
     iw: {
       1: {
         sb: 288,
@@ -3381,7 +3381,7 @@ let players = {//top
       },
     }
   },
-  Sneapky: {
+  WizeSoom: { //Sneapky
     iw: {
       2: {
         sb: 564,
@@ -3624,7 +3624,7 @@ t: {
 let playersArray = Object.keys(players);
 
 
-let theNum = 40
+let theNum = 240
 for(aa = theNum -20; aa < theNum; aa++) {
   let username = `${playersArray[aa]}`;
   getUsernameToUUID(username)
