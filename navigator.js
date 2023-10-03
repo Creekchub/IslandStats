@@ -3,7 +3,7 @@ function changeIW() {
 }
 
 function changeMCCIC() {
-  window.open("https://discord.gg/mcc-island");
+  window.open("https://discord.gg/S6yw3vsHTr");
 }
 
 function changeIT() {
