@@ -155,7 +155,7 @@ let players = {//top
       },
     }
   },
-  Mwystery: {
+  Mwstery: {
     mccic: {
       'O.B Balanced 2': {
         hitw:1345,
