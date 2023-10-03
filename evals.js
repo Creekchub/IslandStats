@@ -44,7 +44,7 @@ for(a = 0; a < objSortedLength.length; a++) {
 }*/
 
 
-fetch("images/arrow.webp", { method: "HEAD" }) 
+/*fetch("images/arrow.webp", { method: "HEAD" }) 
     .then(response => { 
         if (response.ok) { 
             console.log("File exists"); 
@@ -54,4 +54,14 @@ fetch("images/arrow.webp", { method: "HEAD" })
     }) 
     .catch(error => { 
         console.log('amoga')
-    }); 
+    });*/
+
+    var str1 = "Hel7lo";
+    var str2 = "hel7lo";
+    
+    if (str1.toLowerCase() === str2.toLowerCase()) {
+      console.log("Strings are equal (case-insensitive)");
+    } else {
+      console.log("Strings are not equal");
+    }
+    

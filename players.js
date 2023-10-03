@@ -164,14 +164,14 @@ let players = {//top
         tgttos:1114,
         team: 'Coral Reefs'
       },
-      iw: {
-        1: {
-          sb: 858,
-          bb: 1320,
-          tgttos: 1202,
-          hitw: 1685,
-          team: 'lime'
-        }
+    },
+    iw: {
+      1: {
+        sb: 858,
+        bb: 1320,
+        tgttos: 1202,
+        hitw: 1685,
+        team: 'lime'
       }
     }
   },
