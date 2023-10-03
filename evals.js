@@ -55,13 +55,4 @@ for(a = 0; a < objSortedLength.length; a++) {
     .catch(error => { 
         console.log('amoga')
     });*/
-
-    var str1 = "Hel7lo";
-    var str2 = "hel7lo";
-    
-    if (str1.toLowerCase() === str2.toLowerCase()) {
-      console.log("Strings are equal (case-insensitive)");
-    } else {
-      console.log("Strings are not equal");
-    }
     

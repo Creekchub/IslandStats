@@ -173,6 +173,21 @@ teams = ['red', 'orange', 'yellow', 'lime', 'green', 'cyan', 'aqua', 'blue', 'pu
 const urlParams = new URLSearchParams(window.location.search);
 let player = urlParams.get('player');
 
+if(player !== null) {
+  let playerArray = Object.keys(players);
+
+let keyVar = 'deez';
+for(a = 0; a < playerArray.length; a++) {
+  if(player.toLowerCase() === playerArray[a].toLowerCase()) {
+    keyVar = a;
+  }
+}
+
+if(keyVar !== 'deez')  {
+  player = playerArray[keyVar]
+}
+}
+
 function getTourney(tourneyServer, tourneyRound, dest) {
   //let amogafinder = Object.keys(players[player][tourneyServer][tourneyRound]);
   let popupContent = '<p class="popupInner" style="text-align: center; margin-bottom: 2px;">Overview</p>';
