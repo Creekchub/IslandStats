@@ -909,7 +909,7 @@ let players = {//top
       }
     }
   },
-  Marino353: {
+  Marinos353: {
     mccic: {
       'O.B Chosen 2': {
         sb:54,
