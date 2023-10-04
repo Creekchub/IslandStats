@@ -70,7 +70,14 @@ let servers = {
       win: 'Aqua Algae',
       dodgebolt: 'Indigo Isopods',
       lobby: 'public',
-    }
+    },
+    'Pride 1': {
+      rounds: 3,
+      gamesM: 1,
+      win: 'Pälz',
+      dodgebolt: 'Heyday',
+      lobby: 'public',
+    },
   }
 }
 
@@ -472,8 +479,8 @@ function getChartStats() {
     lobbyCheck = 'plobby';
   }
   for(ab = 0; ab < games.length; ab++) { //makes variables for use
-    eval('var coins' + games[ab] + ' = 0');
-    eval('var count' + games[ab] + ' = 0');
+    eval('var coins' + games[ab] + '= 0');
+    eval('var count' + games[ab] + '= 0');
   };
   let roundSelect = document.getElementById('tourneySelect').value;
 
@@ -519,7 +526,7 @@ function getChartStats() {
   radar.update();
   let e = 0;
   for(d = 0; d < games.length; d++) {
-    if(eval('coins' + gameOrderName[d]) !== 0) {
+    if(eval('count' + gameOrderName[d]) !== 0) {
      // Bar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameNames[gameOrderName[d]]}`;
      // eval('Bar.data.datasets[0].data[' + gameOrderRadar[gameOrderName[e]] + '] = coins' + gameOrderName[d] + ' / count' + gameOrderName[d]);
       radar.data.labels[gameOrderRadar[gameOrderName[e]]] = `${gameNames[gameOrderName[d]]}`;

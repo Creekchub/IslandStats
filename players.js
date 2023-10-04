@@ -1,4 +1,154 @@
 let players = {//top
+  MrMidni6ht:{
+    mccic: {
+      'Pride 1': {
+        hitw:220,
+        sb:50,
+        bb:135,
+        tgttos:236,
+      },
+    }
+  },
+  PanduBhai_: { //CreamIsOP
+    mccic: {
+      'Pride 1': {
+        hitw:250,
+        sb:160,
+        bb:45,
+        tgttos:275,
+      },
+    }
+  },
+  StrikerQT: {
+    mccic: {
+      'Pride 1': {
+        hitw:140,
+        sb:82,
+        bb:135,
+        tgttos:383,
+      },
+    }
+  },
+  CraftisMineHun: {
+    mccic: {
+      'Pride 1': {
+        hitw:430,
+        sb:70,
+        bb:0,
+        tgttos:598,
+      },
+    }
+  },
+  wellzfargo: {
+    mccic: {
+      'Pride 1': {
+        hitw:930,
+        sb:346,
+        bb:615,
+        tgttos:0,
+      },
+    }
+  },
+  LuckyAlfred: {
+    mccic: {
+      'Pride 1': {
+        hitw:630,
+        sb:190,
+        bb:405,
+        tgttos:1022,
+        sub: true,
+      },
+    }
+  },
+  Revolverz: {
+    mccic: {
+      'Pride 1': {
+        hitw:1090,
+        sb:500,
+        bb:660,
+        tgttos:0,
+      },
+    }
+  },
+  dentonboi: {
+    mccic: {
+      'Pride 1': {
+        hitw:445,
+        sb:182,
+        bb:465,
+        tgttos:1274,
+      },
+    }
+  },
+  Fatterdow: { //TeapoLive
+    mccic: {
+      'Pride 1': {
+        hitw:1418,
+        sb:492,
+        bb:615,
+        tgttos:0,
+      },
+    }
+  },
+  Xaderr: {
+    mccic: {
+      'Pride 1': {
+        hitw:1125,
+        sb:672,
+        bb:885,
+        tgttos:0,
+      },
+    }
+  },
+  Luxvored: {
+    mccic: {
+      'Pride 1': {
+        hitw:980,
+        sb:452,
+        bb:495,
+        tgttos:852,
+        sub: true,
+      },
+      'Pride 1': {
+        hitw:630,
+        sb:190,
+        bb:405,
+        tgttos:1022,
+        sub: true,
+      },
+    }
+  },
+  Greninjablade: {
+    mccic: {
+      'Pride 1': {
+        hitw:1065,
+        sb:440,
+        bb:1200,
+        tgttos:960,
+      },
+    }
+  },
+  PigIsVibing: {
+    mccic: {
+      'Pride 1': {
+        hitw:880,
+        sb:764,
+        bb:1065,
+        tgttos:1181,
+      },
+    }
+  },
+  Mariotwist: {
+    mccic: {
+      'Pride 1': {
+        hitw:995,
+        sb:520,
+        bb:1260,
+        tgttos:1552,
+        team: 'Pälz'
+      },
+    }
+  },
   iSiqht: { //iSight
     mccic: {
       'O.B Balanced 2': {
@@ -46,6 +196,12 @@ let players = {//top
   },
   PluboAndreas: { //iAxoPower
     mccic: {
+      'Pride 1': {
+        hitw:345,
+        sb:200,
+        bb:945,
+        tgttos:825,
+      },
       'O.B Balanced 2': {
         hitw:560,
         sb:328,
@@ -124,6 +280,13 @@ let players = {//top
   },
   tsnaz: {
     mccic: {
+      'Pride 1': {
+        hitw:1510,
+        sb:676,
+        bb:1800,
+        tgttos:1243,
+        team: 'Pälz'
+      },
       'O.B Balanced 2': {
         hitw:685,
         sb:282,
@@ -157,6 +320,13 @@ let players = {//top
   },
   Mwstery: { //konzid
     mccic: {
+      'Pride 1': {
+        hitw:1170,
+        sb:652,
+        bb:1230,
+        tgttos:1141,
+        team: 'Heyday',
+      },
       'O.B Balanced 2': {
         hitw:1345,
         sb:638,
@@ -186,26 +356,15 @@ let players = {//top
       }
     }
   },
-  Mikeyikey: {
-    mccic: {
-      'O.B Balanced 1': {
-        sb:102,
-        hitw:255,
-        pkw:152,
-        tgttos:367,
-        team: 'Purple Pearls',
-      },
-      'O.B Balanced 2': {
-        hitw:220,
-        sb:202,
-        bb:765,
-        tgttos:231,
-        team: 'Lime Lobsters'
-      },
-    }
-  },
+
   Indian_Skeppy: {
     mccic: {
+      'Pride 1': {
+        hitw:370,
+        sb:148,
+        bb:225,
+        tgttos:356,
+      },
       'O.B Balanced 1': {
         sb:202,
         hitw:50,
@@ -217,6 +376,12 @@ let players = {//top
   },
   Yoghurrt: {
     mccic: {
+      'Pride 1': {
+        hitw:1105,
+        sb:168,
+        bb:795,
+        tgttos:559,
+      },
       'O.B Balanced 1': {
         sb:116,
         hitw:555,
@@ -226,8 +391,14 @@ let players = {//top
       },
     }
   },
-  Bluly_ :{
+  bluly_ :{
     mccic: {
+      'Pride 1': {
+        hitw:370,
+        sb:204,
+        bb:375,
+        tgttos:590,
+      },
       'O.B Balanced 1': {
         sb:324,
         hitw:600,
@@ -258,6 +429,12 @@ let players = {//top
   },
   KillToDeathRatio: { //Rainod
     mccic: {
+      'Pride 1': {
+        hitw:500,
+        sb:350,
+        bb:975,
+        tgttos:685,
+      },
       'O.B Balanced 1': {
         sb:304,
         hitw:355,
@@ -361,6 +538,12 @@ let players = {//top
   },
   PlushGaymer12: { //PlushGamer12
     mccic: {
+      'Pride 1': {
+        hitw:785,
+        sb:36,
+        bb:780,
+        tgttos:808,
+      },
       'O.B Balanced 1': {
         sb:276,
         hitw:650,
@@ -399,6 +582,12 @@ let players = {//top
   },
   PizzaSliderr: {
     mccic: {
+      'Pride 1': {
+        hitw:905,
+        sb:402,
+        bb:1170,
+        tgttos:618,
+      },
       'O.B Balanced 1': {
         sb:314,
         hitw:585,
@@ -468,13 +657,19 @@ let players = {//top
   },
   catholiccatboy: {
     mccic: {
+      'Pride 1': {
+        hitw:1100,
+        sb:464,
+        bb:960,
+        tgttos:1178,
+      },
       'O.B Balanced 1': {
         sb:520,
         hitw:1875,
         pkw:680,
         tgttos:993,
         team: 'Lime Lobsters',
-      }
+      },
     }
   },
   Moussecolm: {
@@ -575,6 +770,12 @@ let players = {//top
   },
   Photon3672: {
     mccic: {
+      'Pride 1': {
+        hitw:275,
+        sb:64,
+        bb:720,
+        tgttos:329,
+      },
       'O.B Chosen 2': {
         sb:180,
         pkw:136,
@@ -603,6 +804,12 @@ let players = {//top
   },
   ItzCBG_: { //CoolBoyGoransh
     mccic: {
+      'Pride 1': {
+        hitw:313,
+        sb:70,
+        bb:0,
+        tgttos:528,
+      },
       'O.B Chosen 2': {
         sb:92,
         pkw:812,
@@ -660,6 +867,12 @@ let players = {//top
   },
   KokoJenn: {
     mccic: {
+      'Pride 1': {
+        hitw:1305,
+        sb:138,
+        bb:240,
+        tgttos:705,
+      },
       'O.B Chosen 2': {
         sb:102,
         pkw:258,
@@ -687,6 +900,12 @@ let players = {//top
   },
   MonkeCalledMonkz: {
     mccic: {
+      'Pride 1': {
+        hitw:585,
+        sb:32,
+        bb:0,
+        tgttos:715,
+      },
       'O.B Chosen 2': {
         sb:124,
         pkw:420,
@@ -811,6 +1030,12 @@ let players = {//top
   },
   Noxicate: {
     mccic: {
+      'Pride 1': {
+        hitw:750,
+        sb:228,
+        bb:1140,
+        tgttos:422,
+      },
       'O.B Chosen 2': {
         sb:226,
         pkw:480,
@@ -857,6 +1082,12 @@ let players = {//top
   },
   TheHiddenVoid: {
     mccic: {
+      'Pride 1': {
+        hitw:1170,
+        sb:216,
+        bb:705,
+        tgttos:399,
+      },
       'O.B Chosen 2': {
         sb:214,
         pkw:735,
@@ -874,6 +1105,12 @@ let players = {//top
   },
   Taycario: {
     mccic: {
+      'Pride 1': {
+        hitw:1065,
+        sb:120,
+        bb:705,
+        tgttos:784,
+      },
       'O.B Chosen 2': {
         sb:104,
         pkw:966,
@@ -887,16 +1124,6 @@ let players = {//top
         tgttos:696,
         team: 'Emerald Eels',
       },
-    }
-  },
-  MrPiston: {
-    mccic: {
-      'O.B Chosen 2': {
-        sb:294,
-        pkw:766,
-        hitw:1090,
-        bb:1065,
-      }
     }
   },
   SuRReNDer99: {
@@ -932,12 +1159,18 @@ let players = {//top
   },
   Omrooshi: {
     mccic: {
+      'Pride 1': {
+        hitw:2040,
+        sb:182,
+        bb:600,
+        tgttos:935,
+      },
       'O.B Chosen 2': {
         sb:190,
         pkw:723,
         hitw:1125,
         bb:1365,
-      }
+      },
     }
   },
   Neondelta: {
@@ -1034,6 +1267,12 @@ let players = {//top
   },
   EventHowTo4: {
     mccic: {
+      'Pride 1': {
+        hitw:1050,
+        sb:120,
+        bb:735,
+        tgttos:1182,
+      },
       'O.B Chosen 2': {
         sb:304,
         pkw:1036,
@@ -1093,6 +1332,12 @@ let players = {//top
   },
   xAntH0s_: { //XA1thos
     mccic: {
+      'Pride 1': {
+        hitw:610,
+        sb:122,
+        bb:135,
+        tgttos:513,
+      },
       'O.B Chosen 1': {
         bb:465,
         sb:74,
@@ -1228,6 +1473,13 @@ let players = {//top
   },
   Reiny: {
     mccic: {
+      'Pride 1': {
+        hitw:980,
+        sb:452,
+        bb:495,
+        tgttos:852,
+        sub: true,
+      },
       'O.B Chosen 1': {
         bb:990,
         sb:99,
@@ -1308,6 +1560,12 @@ let players = {//top
   },
   MiniMaestro: {
     mccic: {
+      'Pride 1': {
+        hitw:645,
+        sb:512,
+        bb:810,
+        tgttos:521,
+      },
       'O.B Chosen 1': {
         bb:855,
         sb:168,
@@ -1385,6 +1643,12 @@ let players = {//top
   },
   Frogile: {
     mccic: {
+      'Pride 1': {
+        hitw:640,
+        sb:140,
+        bb:675,
+        tgttos:710,
+      },
       'O.B Chosen 1': {
         bb:1080,
         sb:138,
@@ -1402,6 +1666,12 @@ let players = {//top
   },
   Dr_Brandini: {
     mccic: {
+      'Pride 1': {
+        hitw:1540,
+        sb:342,
+        bb:1185,
+        tgttos:655,
+      },
       'O.B Chosen 1': {
         bb:1110,
         sb:232,
@@ -1449,6 +1719,12 @@ let players = {//top
   },
   CursedArrow: {
     mccic: {
+      'Pride 1': {
+        hitw:890,
+        sb:146,
+        bb:1110,
+        tgttos:900,
+      },
       'O.B Chosen 1': {
         bb:705,
         sb:320,
@@ -1459,6 +1735,12 @@ let players = {//top
   },
   HiStuffGuy: {
     mccic: {
+      'Pride 1': {
+        hitw:920,
+        sb:416,
+        bb:810,
+        tgttos:895,
+      },
       'O.B Chosen 1': {
         bb:1155,
         sb:326,
@@ -1548,6 +1830,12 @@ let players = {//top
   },
   Ushiey: {
     mccic: {
+      'Pride 1': {
+        hitw:1245,
+        sb:544,
+        bb:1335,
+        tgttos:972,
+      },
       'O.B Chosen 1': {
         bb:975,
         sb:518,
@@ -1598,6 +1886,12 @@ let players = {//top
   },
   GizzeMisse: {
     mccic: {
+      'Pride 1': {
+        hitw:1470,
+        sb:230,
+        bb:1125,
+        tgttos:1148,
+      },
       'O.B Chosen 1': {
         bb:1020,
         sb:494,
@@ -1638,6 +1932,12 @@ let players = {//top
   },
   frogqy: {
     mccic: {
+      'Pride 1': {
+        hitw:1315,
+        sb:232,
+        bb:570,
+        tgttos:1114,
+      },
       'O.B Chosen 1': {
         bb:1155,
         sb:320,
@@ -1695,11 +1995,23 @@ let players = {//top
   },
   MisterPiston: {
     mccic: {
+      'Pride 1': {
+        hitw:865,
+        sb:286,
+        bb:495,
+        tgttos:1426,
+      },
       'O.B Chosen 1': {
         bb:1080,
         sb:220,
         tgttos:1212,
         hitw:1560,
+      },
+      'O.B Chosen 2': {
+        sb:294,
+        pkw:766,
+        hitw:1090,
+        bb:1065,
       },
       'O.B Balanced 1': {
         sb:148,
@@ -1729,6 +2041,12 @@ let players = {//top
   },
   CyaNideJ: {
     mccic: {
+      'Pride 1': {
+        hitw:1500,
+        sb:718,
+        bb:1200,
+        tgttos:859,
+      },
       'O.B Chosen 1': {
         bb:1200,
         sb:652,
@@ -1769,7 +2087,7 @@ let players = {//top
       }
     },
   },
-  MrManzo: {
+  Manzoose: { //MrManzo
     iw: {
       'Chosen Teams 1': {
         hitw: 1570,
@@ -1853,6 +2171,12 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:700,
+        sb:362,
+        bb:1155,
+        tgttos:410,
+      },
       'O.B Chosen 1': {
         bb:1020,
         sb:268,
@@ -1908,6 +2232,12 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1215,
+        sb:228,
+        bb:1140,
+        tgttos:673,
+      },
       'O.B Balanced 1': {
         sb:634,
         hitw:615,
@@ -1943,6 +2273,14 @@ let players = {//top
       },
     },
     mccic: {
+      'Pride 1': {
+        hitw:1745,
+        sb:106,
+        bb:1530,
+        tgttos:690,
+        sub: true,
+        team: 'Pälz'
+      },
       'O.B Chosen 1': {
         bb:1485,
         sb:694,
@@ -2086,13 +2424,20 @@ let players = {//top
       },
     },
     mccic: {
+      'Pride 1': {
+        hitw:1020,
+        sb:432,
+        bb:1350,
+        tgttos:1376,
+        team: 'Pälz'
+      },
       'O.B Balanced 2': {
         hitw: 1825,
         sb: 808,
         bb: 1695,
         tgttos: 1599,
         team: 'Indigo Isopods'
-      }
+      },
     }
   },
   BreadEaterPeter: {
@@ -2106,6 +2451,12 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:995,
+        sb:432,
+        bb:975,
+        tgttos:1252,
+      },
       'O.B Chosen 1': {
         bb:795,
         sb:474,
@@ -2124,7 +2475,7 @@ let players = {//top
         bb:900,
         tgttos:959,
         team: 'Emerald Eels'
-      }
+      },
     },
   },
   Unacceptableness: {
@@ -2158,13 +2509,19 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1680,
+        sb:280,
+        bb:1725,
+        tgttos:995,
+      },
       'O.B Balanced 1': {
         sb:626,
         hitw:1805,
         pkw:750,
         tgttos:1542,
         team: 'Red River-Rats',
-      }
+      },
     },
   },
   Cautiontape14: {
@@ -2196,6 +2553,14 @@ let players = {//top
         hitw: 1775,
         team: 'purple'
       }
+    },
+    mccic: {
+      'Pride 1': {
+        hitw:780,
+        sb:69,
+        bb:1320,
+        tgttos:1264,
+      },
     }
   },
   Dunkinlmao: {
@@ -2243,6 +2608,12 @@ let players = {//top
       },
     },
     mccic: {
+      'Pride 1': {
+        hitw:1225,
+        sb:128,
+        bb:900,
+        tgttos:1256,
+      },
       'O.B Balanced 1': {
         sb:430,
         hitw:245,
@@ -2291,6 +2662,12 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1045,
+        sb:362,
+        bb:660,
+        tgttos:1338,
+      },
       'O.B Chosen 1': {
         bb:855,
         sb:364,
@@ -2375,6 +2752,13 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1555,
+        sb:694,
+        bb:1545,
+        tgttos:1337,
+        team: 'Heyday',
+      },
       'O.B Chosen 2': {
         sb:820,
         pkw:1282,
@@ -2388,7 +2772,7 @@ let players = {//top
         bb:1058,
         tgttos:3,
         team: 'Blue Blowfish'
-      }
+      },
     }
   },
   'Your Mom': {
@@ -2412,6 +2796,13 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1165,
+        sb:766,
+        bb:1185,
+        tgttos:1547,
+        team: 'Heyday',
+      },
       'O.B Chosen 1': {
         bb:1395,
         sb:734,
@@ -2594,12 +2985,18 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:895,
+        sb:654,
+        bb:1065,
+        tgttos:1612,
+      },
       'O.B Chosen 1': {
         bb:1200,
         sb:660,
         tgttos:1124,
         hitw:1240,
-      }
+      },
     },
   },
   SomethingNeon: {
@@ -2665,6 +3062,12 @@ let players = {//top
       },
     },
     mccic: {
+      'Pride 1': {
+        hitw:1215,
+        sb:688,
+        bb:1290,
+        tgttos:1007,
+      },
       'O.B Chosen 1': {
         bb:705,
         sb:914,
@@ -2698,13 +3101,20 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1305,
+        sb:704,
+        bb:1320,
+        tgttos:1319,
+        team: 'Heyday',
+      },
       'O.B Chosen 1': {
         bb:1530,
         sb:357,
         tgttos:1247,
         hitw:1755,
         team: 'Heyday'
-      }
+      },
     },
   },
   Yasamas: {
@@ -2935,6 +3345,12 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1010,
+        sb:660,
+        bb:885,
+        tgttos:676,
+      },
       'O.B Chosen 2': {
         sb:84,
         pkw:588,
@@ -3220,6 +3636,12 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:30,
+        sb:768,
+        bb:615,
+        tgttos:572,
+      },
       'O.B Chosen 1': {
         bb:810,
         sb:158,
@@ -3231,7 +3653,21 @@ let players = {//top
         pkw:230,
         hitw:265,
         bb:645,
-      }
+      },
+      'O.B Balanced 1': {
+        sb:102,
+        hitw:255,
+        pkw:152,
+        tgttos:367,
+        team: 'Purple Pearls',
+      },
+      'O.B Balanced 2': {
+        hitw:220,
+        sb:202,
+        bb:765,
+        tgttos:231,
+        team: 'Lime Lobsters'
+      },
     }
   },
   Deadvid: {
@@ -3360,7 +3796,13 @@ let players = {//top
         bb:1688,
         tgttos:1559,
         team: 'Aqua Algae'
-      }
+      },
+      'Pride 1': {
+        hitw:1880,
+        sb:216,
+        bb:1245,
+        tgttos:1504,
+      },
     },
   },
   Voidol: {
@@ -3405,12 +3847,18 @@ let players = {//top
   },
   ignToxic: {
     mccic: {
+      'Pride 1': {
+        hitw:1555,
+        sb:198,
+        bb:1110,
+        tgttos:1119,
+      },
       'O.B Chosen 1': {
         bb:975,
         sb:282,
         tgttos:765,
         hitw:1520,
-      }
+      },
     },
   },
   SuitSnap: {
@@ -3435,13 +3883,21 @@ let players = {//top
       }
     },
     mccic: {
+      'Pride 1': {
+        hitw:1745,
+        sb:106,
+        bb:1530,
+        tgttos:690,
+        sub: true,
+        team: 'Pälz'
+      },
       'O.B Balanced 2': {
         hitw:2085,
         sb:362,
         bb:1200,
         tgttos:1277,
         team: 'Indigo Isopods'
-      }
+      },
     }
   },
   LeonardoPLK: {
@@ -3514,6 +3970,12 @@ let players = {//top
   },
   aYeetus: {
     mccic: {
+      'Pride 1': {
+        hitw:1345,
+        sb:618,
+        bb:1200,
+        tgttos:1488,
+      },
       'O.B Chosen 1': {
         bb:1485,
         sb:602,
@@ -3544,6 +4006,12 @@ let players = {//top
   },
   FromaPutsi: {
     mccic: {
+      'Pride 1': {
+        hitw:1415,
+        sb:200,
+        bb:1440,
+        tgttos:949,
+      },
       'O.B Chosen 1': {
         bb:1335,
         sb:796,
@@ -3571,7 +4039,7 @@ let players = {//top
         bb:1365,
         tgttos:1626,
         team: 'Red River-Rats'
-      }
+      },
     },
   },
   Fuey_: {
@@ -3599,19 +4067,19 @@ let players = {//top
 /*
 
 t: {
-  iw: {
-    'Chosen Teams 1': {
-      sb: ,
-      tgttos: ,
-      bb: ,
+  mccic: {
+    'Pride 1': {
       hitw: ,
+      sb: ,
+      bb: ,
+      tgttos: ,
     }
   }
 },
 
 */
 
-/*async function getUsernameToUUID(username) {
+async function getUsernameToUUID(username) {
   const response = await fetch(`https://api.mojang.com/users/profiles/minecraft/${username}`);
   const data = await response.json();
   
@@ -3624,10 +4092,10 @@ t: {
 let playersArray = Object.keys(players);
 
 
-let theNum = 240
+let theNum = 40
 for(aa = theNum -20; aa < theNum; aa++) {
   let username = `${playersArray[aa]}`;
   getUsernameToUUID(username)
   .then(uuid => console.log(`${username}: ${uuid}`))
-}*/
+}
 
