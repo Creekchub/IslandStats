@@ -134,6 +134,9 @@
         plugins: {
           labels: {
             fontColor: 'rgba(84, 87, 255, 0.879);'
+          },
+          legend: {
+            display: false
           }
         },
         responsive: false,
@@ -142,10 +145,28 @@
             beginAtZero: true,
             min: 0,
             max: 600,
-          }
-        }
+            ticks: {
+              display: false
+            },
+            pointLabels: {
+              display: true,
+              color: 'white',
+              font: {
+                size: 14,
+                weight: 800,
+              }
+            },
+            /*angleLines: {
+              color: 'red'
+            },*/
+            /*grid: {
+              color: 'blue'
+            },*/
+          },
+        },
       }
     };
+    Chart.defaults.font.size = 12
     const radar = new Chart(
       document.getElementById('radar'), 
        configRadar,
@@ -156,16 +177,13 @@
       data: dataBar,
       options: {
         plugins: {
-          legend: {
-            display: false
-          }
         },
         responsive: false,
         scales: {
           y: {
             max: 600, //the cap
-          }
-        }
+          },
+        },
       }
     };
     /*const Bar = new Chart(
