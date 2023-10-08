@@ -56,3 +56,14 @@ for(a = 0; a < objSortedLength.length; a++) {
         console.log('amoga')
     });*/
     
+
+    let date1 = new Date('2023-10-10'); // October 7, 2023
+    let date2 = new Date('2023-10-08'); // October 8, 2023
+    
+    if (date1 < date2) {
+        console.log("date1 is before date2");
+    } else if (date1 > date2) {
+        console.log("date1 is after date2");
+    } else {
+        console.log("date1 is equal to date2");
+    }

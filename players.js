@@ -1,3 +1,5 @@
+// vscode-fold=3
+
 let players = {//top
   MrMidni6ht:{
     mccic: {

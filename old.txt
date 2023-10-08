@@ -1,0 +1,24 @@
+//appendCount++;
+                    /*let oneRoundCoins = document.createElement('div');
+                    oneRoundCoins.setAttribute('class', 'displayDivText');
+                    oneRoundCoins.setAttribute('id', `coinTextAppend${appendCount}`);
+                    if(servers[serversA[a]][roundArray[b]].canon === false) {
+                      oneRoundCoins.setAttribute('style', 'color:orange');
+                    }
+                    document.getElementById('displayDivDis2').append(oneRoundCoins);
+                    document.getElementById(`coinTextAppend${appendCount}`).innerHTML = `${coinsTourney}<img src="images/coin.webp" class="coinImage">`;
+                    if(players[player][serversA[a]][roundArray[b]].sub) {
+                      document.getElementById(`coinTextAppend${appendCount}`).innerHTML = document.getElementById(`coinTextAppend${appendCount}`).innerHTML + '<p class="subTag">Sub</p>'
+                    }
+    
+                    appendCount1++;
+                    let oneRoundTag = document.createElement('p');
+                    oneRoundTag.setAttribute('id', `coinTag${appendCount1}`);
+                    oneRoundTag.setAttribute('class', 'displayDivText');
+                    document.getElementById('displayDivDis1').append(oneRoundTag);
+                    document.getElementById(`coinTag${appendCount1}`).innerHTML = `${serverNames[serversA[a]].full} - ${roundArray[b]}`*/
+                    //document.getElementById('statTourneyDiv').innerHTML = ''
+
+
+
+                    was on line 335 of search.js
