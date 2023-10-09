@@ -115,7 +115,8 @@
       datasets: [{
         label: 'Coins',
         data: [],
-        borderWidth: 2
+        borderWidth: 2,
+        backgroundColor: '#1A2DCE'
       },
     ],
     };
@@ -124,6 +125,8 @@
       datasets: [{
         label: 'Coins',
         data: [],
+        backgroundColor: '#5162EC',
+        borderColor: '#02F4FF',
       },
     ],
     };
@@ -137,7 +140,7 @@
           },
           legend: {
             display: false
-          }
+          },
         },
         responsive: false,
         scales: {
@@ -156,12 +159,12 @@
                 weight: 800,
               }
             },
-            /*angleLines: {
-              color: 'red'
-            },*/
-            /*grid: {
-              color: 'blue'
-            },*/
+            angleLines: {
+              color: 'black'
+            },
+            grid: {
+              color: 'black'
+            },
           },
         },
       }

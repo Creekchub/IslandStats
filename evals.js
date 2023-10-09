@@ -57,7 +57,7 @@ for(a = 0; a < objSortedLength.length; a++) {
     });*/
     
 
-    let date1 = new Date('2023-10-10'); // October 7, 2023
+    /*let date1 = new Date('2023-10-10'); // October 7, 2023
     let date2 = new Date('2023-10-08'); // October 8, 2023
     
     if (date1 < date2) {
@@ -66,4 +66,18 @@ for(a = 0; a < objSortedLength.length; a++) {
         console.log("date1 is after date2");
     } else {
         console.log("date1 is equal to date2");
-    }
+    }*/
+
+const data = [
+  { id: 1, date: new Date('2023-10-10') },
+  { id: 2, date: new Date('2023-10-08') },
+  { id: 3, date: new Date('2023-10-09') },
+];
+
+
+data.sort((a, b) => a.date - b.date);
+
+for(a = 0; a < data.length; a++) {
+    console.log(data[a])
+}
+

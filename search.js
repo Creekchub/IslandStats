@@ -281,6 +281,7 @@ function makeBlock(idFor, serversA, a, roundArray, b, coinsTourney) {
 }
 
 function getStats() {
+  let  orderArray = [];
   let lobbyCheck;
   if(document.getElementById('publiclobby').checked) {
     lobbyCheck = 'public';
@@ -346,6 +347,14 @@ function getStats() {
                     if(coinsTourney !== 0) {
                       idFor++;
                       makeBlock(idFor, serversA, a, roundArray, b, coinsTourney);
+                      //console.log(idFor);
+                      //console.log(servers[serversA[a]][roundArray[b]].date);
+                      let singleBlock = {
+                        id: idFor,
+                        date: servers[serversA[a]][roundArray[b]].date,
+                        inner: document.getElementById(`blockDiv${idFor}`).innerHTML,
+                      }
+                      orderArray.push(singleBlock);
                     }
                   }
                 }
@@ -385,6 +394,16 @@ function getStats() {
   }
   document.getElementById('wins').innerHTML = winCount;
   document.getElementById('dodgebolts').innerHTML = (dodgeboltCount + winCount);
+  orderArray.sort((a, b) => a.date - b.date);
+  document.getElementById('statTourneyDiv').innerHTML = '';
+  document.getElementById('statTourneyDiv').innerHTML = `
+  <div style="display: grid; grid-template-columns: calc(50% - 15px) 30px 30% calc(20% - 45px) 30px; margin-bottom: 8px; border-bottom-style: solid; border-color: rgba(51, 71, 255, 0.504); border-width: 1px;">
+    <span class="preText">Tournament and Event</span><span class="preText">Team</span><span></span><span class="preText" style="text-align: right">Coins | Coins ÷ Rounds</span><span></span>
+  </div>
+  `;
+  for(a = 0; a < orderArray.length; a++) {
+    document.getElementById('statTourneyDiv').innerHTML = document.getElementById('statTourneyDiv').innerHTML + `<div id="blockDiv${idFor}" style="display: grid; grid-template-columns: calc(30% - 15px) 20% 30px 28% calc(20% - 25px) 30px; margin-bottom: 8px;">${orderArray[a].inner}</div>`;
+  }
 }
 
 function recordChecks() {
