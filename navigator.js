@@ -17,3 +17,7 @@ function changeIB() {
 function shortcutHome() {
   window.open()
 }
+
+function changeMayor() {
+  window.open("https://www.reddit.com/r/mccisland/comments/173xqz2/rmccisland_mayor_event/")
+}
