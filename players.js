@@ -196,7 +196,7 @@ let players = {//top
       },
     }
   },
-  PluboAndreas: { //iAxoPower
+  ActuallyAxo: { //iAxoPower //PluboAndreas
     mccic: {
       'Pride 1': {
         hitw:345,
@@ -280,7 +280,7 @@ let players = {//top
       }
     }
   },
-  tsnaz: {
+  tsnazalicious: { //tsnaz
     mccic: {
       'Pride 1': {
         hitw:1510,
@@ -538,7 +538,7 @@ let players = {//top
       },
     }
   },
-  PlushGaymer12: { //PlushGamer12
+  FemGaymer12: { //PlushGamer12 //PlushGaymer12
     mccic: {
       'Pride 1': {
         hitw:785,
@@ -710,7 +710,7 @@ let players = {//top
       }
     }
   },
-  OnlyGolden: {
+  OTGolden: { //OnlyGolden
     mccic: {
       'O.B Balanced 1': {
         sb:622,
@@ -1311,7 +1311,7 @@ let players = {//top
       }
     }
   },
-  MajesticalMarcus: { //MagicMarc
+  MysticalMarc: { //MagicMarc //MajesticMarcus
     mccic: {
       'O.B Chosen 2': {
         sb:768,
@@ -2408,7 +2408,7 @@ let players = {//top
       }
     }
   },
-  Brunted: {
+  BOOnted: { //Brunted
     iw: {
       1: {
         sb: 1212,
@@ -3019,7 +3019,7 @@ let players = {//top
       }
     }
   },
-  SourishCandle69: {
+  SpookySour69: { //SourishCandle69
     iw: {
       'Chosen Teams 1': {
         hitw: 1250,
@@ -3734,7 +3734,7 @@ let players = {//top
       }
     }
   },
-  NotCM: {
+  DylanWangus: { //NotCM
     iw: {
       2: {
         sb: 762,
@@ -4094,7 +4094,7 @@ t: {
 let playersArray = Object.keys(players);
 
 
-let theNum = 40
+let theNum = 240
 for(aa = theNum -20; aa < theNum; aa++) {
   let username = `${playersArray[aa]}`;
   getUsernameToUUID(username)
