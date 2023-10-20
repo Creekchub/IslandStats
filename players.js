@@ -804,7 +804,7 @@ let players = {//top
       }
     }
   },
-  ItzCBG_: { //CoolBoyGoransh
+  CoolBoyGoransh: { //CoolBoyGoransh //ItzCBG_
     mccic: {
       'Pride 1': {
         hitw:313,
@@ -2089,7 +2089,7 @@ let players = {//top
       }
     },
   },
-  Manzoose: { //MrManzo
+  MrManzo: { //MrManzo
     iw: {
       'Chosen Teams 1': {
         hitw: 1570,
@@ -2828,7 +2828,7 @@ let players = {//top
       },
     },
   },
-  Proxpect: { //Prospect
+  Prospect_79: { //Prospect //Proxpect
     iw: {
       1: {
         sb: 926,
@@ -2912,7 +2912,7 @@ let players = {//top
       },
     }
   },
-  Bitslap: {
+  SpookySlap: { //Bitslap
     iw: {
       'Chosen Teams 1': {
         hitw: 1230,
@@ -2976,7 +2976,7 @@ let players = {//top
       }
     }
   },
-  Top1Gay: { //Gnighty
+  Top1Trans: { //Gnighty //Top1Gay
     iw: {
       'Chosen Teams 1': {
         hitw: 1165,
